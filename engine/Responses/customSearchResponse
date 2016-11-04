@@ -1,0 +1,369 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - Test",
+    "totalResults": "251000000",
+    "searchTerms": "Test",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "008214837905171502064:yuy4kpi9ui0"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - Test",
+    "totalResults": "251000000",
+    "searchTerms": "Test",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "008214837905171502064:yuy4kpi9ui0"
+   }
+  ]
+ },
+ "context": {
+  "title": "Google"
+ },
+ "searchInformation": {
+  "searchTime": 0.420596,
+  "formattedSearchTime": "0.42",
+  "totalResults": "251000000",
+  "formattedTotalResults": "251,000,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Speedtest.net by Ookla - The Global Broadband Speed Test",
+   "htmlTitle": "Speedtest.net by Ookla - The Global Broadband Speed \u003cb\u003eTest\u003c/b\u003e",
+   "link": "http://www.speedtest.net/",
+   "displayLink": "www.speedtest.net",
+   "snippet": "Test your Internet connection bandwidth to locations around the world with this \ninteractive broadband speed test from Ookla.",
+   "htmlSnippet": "\u003cb\u003eTest\u003c/b\u003e your Internet connection bandwidth to locations around the world with this \u003cbr\u003e\ninteractive broadband speed \u003cb\u003etest\u003c/b\u003e from Ookla.",
+   "cacheId": "M47_v0xF3m8J",
+   "formattedUrl": "www.speedtest.net/",
+   "htmlFormattedUrl": "www.speed\u003cb\u003etest\u003c/b\u003e.net/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "305",
+      "height": "160",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEnXvseTrR-L9bKZpR6P5SKP76QCVreYou4goWjqbZQpPXmivc_i5YidE"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Speedtest.net by Ookla - The Global Broadband Speed Test",
+      "og:type": "website",
+      "og:site_name": "Speedtest.net",
+      "og:url": "http://www.speedtest.net/",
+      "og:image": "http://c.speedtest.net/images/share-logo.png",
+      "twitter:card": "app",
+      "twitter:site": "@ookla",
+      "twitter:description": "Test your mobile network speed, wherever you may be.  Download the free Ookla Speedtest app for iOS, Amazon, Android or Windows Phone.",
+      "twitter:app:id:iphone": "300704847",
+      "twitter:app:id:ipad": "300704847",
+      "twitter:app:id:googleplay": "org.zwanoo.android.speedtest",
+      "twitter:account_id": "43123762"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://c.speedtest.net/images/share-logo.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Online tests and testing software | Test.com",
+   "htmlTitle": "Online \u003cb\u003etests\u003c/b\u003e and \u003cb\u003etesting\u003c/b\u003e software | \u003cb\u003eTest\u003c/b\u003e.com",
+   "link": "https://www.test.com/",
+   "displayLink": "www.test.com",
+   "snippet": "Online tests and testing for certification, practice tests, test making tools, medical \ntesting and more.",
+   "htmlSnippet": "Online \u003cb\u003etests\u003c/b\u003e and \u003cb\u003etesting\u003c/b\u003e for certification, practice \u003cb\u003etests\u003c/b\u003e, \u003cb\u003etest\u003c/b\u003e making tools, medical \u003cbr\u003e\n\u003cb\u003etesting\u003c/b\u003e and more.",
+   "cacheId": "S92tylTr1V8J",
+   "formattedUrl": "https://www.test.com/",
+   "htmlFormattedUrl": "https://www.\u003cb\u003etest\u003c/b\u003e.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "229",
+      "height": "220",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTkvUhNxn8Sd8p0dfg25gs02sigx-3W_I1ZAcLZp_C8OjUnp3wBS1dv9EE"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.test.com/img/Testing.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Mobile-Friendly Test",
+   "htmlTitle": "Mobile-Friendly \u003cb\u003eTest\u003c/b\u003e",
+   "link": "https://www.google.com/webmasters/tools/mobile-friendly/",
+   "displayLink": "www.google.com",
+   "snippet": "This test will analyze a URL and report if the page has a mobile-friendly design. \nLearn more about the mobile-friendly criteria and how it may affect Google's ...",
+   "htmlSnippet": "This \u003cb\u003etest\u003c/b\u003e will analyze a URL and report if the page has a mobile-friendly design. \u003cbr\u003e\nLearn more about the mobile-friendly criteria and how it may affect Google&#39;s&nbsp;...",
+   "cacheId": "WBvZnqZfQukJ",
+   "formattedUrl": "https://www.google.com/webmasters/tools/mobile-friendly/",
+   "htmlFormattedUrl": "https://www.google.com/webmasters/tools/mobile-friendly/",
+   "pagemap": {
+    "metatags": [
+     {
+      "viewport": "initial-scale=1, width=device-width"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Test - Wikipedia",
+   "htmlTitle": "\u003cb\u003eTest\u003c/b\u003e - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Test",
+   "displayLink": "en.wikipedia.org",
+   "snippet": "Test, TEST or Tester may refer to: Test (assessment), an assessment intended to \nmeasure the respondents' knowledge or other abilities; Medical test, to detect, ...",
+   "htmlSnippet": "\u003cb\u003eTest\u003c/b\u003e, \u003cb\u003eTEST\u003c/b\u003e or Tester may refer to: \u003cb\u003eTest\u003c/b\u003e (assessment), an assessment intended to \u003cbr\u003e\nmeasure the respondents&#39; knowledge or other abilities; Medical \u003cb\u003etest\u003c/b\u003e, to detect,&nbsp;...",
+   "cacheId": "R94CAo00wOYJ",
+   "formattedUrl": "https://en.wikipedia.org/wiki/Test",
+   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/\u003cb\u003eTest\u003c/b\u003e",
+   "pagemap": {
+    "metatags": [
+     {
+      "referrer": "origin-when-cross-origin"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Free Personality Test | 16Personalities",
+   "htmlTitle": "Free Personality \u003cb\u003eTest\u003c/b\u003e | 16Personalities",
+   "link": "https://www.16personalities.com/free-personality-test",
+   "displayLink": "www.16personalities.com",
+   "snippet": "Free personality test - take it to find out why our readers say that this personality \ntest is so accurate, “it's a little bit creepy.” No registration required!",
+   "htmlSnippet": "Free personality \u003cb\u003etest\u003c/b\u003e - take it to find out why our readers say that this personality \u003cbr\u003e\n\u003cb\u003etest\u003c/b\u003e is so accurate, “it&#39;s a little bit creepy.” No registration required!",
+   "cacheId": "SQzntHUEffkJ",
+   "formattedUrl": "https://www.16personalities.com/free-personality-test",
+   "htmlFormattedUrl": "https://www.16personalities.com/free-personality-\u003cb\u003etest\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "179",
+      "height": "178",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhWL2xD-nKJlXxf5LApp7ATC39ozadzyApXfC-5XZ0_VbydIFVcDA8aSc"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
+      "fb:app_id": "326516237427150",
+      "og:site_name": "16Personalities",
+      "og:url": "https://www.16personalities.com/free-personality-test",
+      "og:title": "Free personality test | 16Personalities",
+      "og:image": "https://www.16personalities.com/images/headers/fb/logo.png",
+      "msapplication-tilecolor": "#ffffff",
+      "msapplication-tileimage": "/images/favicons/mstile-144x144.png",
+      "theme-color": "#ffffff"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.16personalities.com/images/headers/fb/logo.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Speakeasy Speed Test - Powered by MegaPath | MegaPath",
+   "htmlTitle": "Speakeasy Speed \u003cb\u003eTest\u003c/b\u003e - Powered by MegaPath | MegaPath",
+   "link": "https://www.speakeasy.net/speedtest/",
+   "displayLink": "www.speakeasy.net",
+   "snippet": "Speed Test, Explained. How Does our Speed Test Work? The Speakeasy Speed \nTest checks your connection's download and upload speeds from within your ...",
+   "htmlSnippet": "Speed \u003cb\u003eTest\u003c/b\u003e, Explained. How Does our Speed \u003cb\u003eTest\u003c/b\u003e Work? The Speakeasy Speed \u003cbr\u003e\n\u003cb\u003eTest\u003c/b\u003e checks your connection&#39;s download and upload speeds from within your&nbsp;...",
+   "cacheId": "sCEGhiP0qxEJ",
+   "formattedUrl": "https://www.speakeasy.net/speedtest/",
+   "htmlFormattedUrl": "https://www.speakeasy.net/speed\u003cb\u003etest\u003c/b\u003e/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "120",
+      "height": "120",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQH_BUH2RmscEHC7s2TAaaV_CNhG4IsuyLw1WxMRDHXgVx0F_px6Hu79w"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "og:site_name": "MegaPath",
+      "og:title": "Speakeasy Speed Test - Powered by MegaPath",
+      "og:type": "article",
+      "og:description": "Speakeasy, a MegaPath Brand, offers industry leading business voice, data and IT solutions. We ensure the speed, performance and reliability of all our services by managing our own nationwide private network. Test Availability Today.",
+      "og:image": "https://www.megapath.com/speakeasy/includes/themes/responsive2016/images/MP_logo_151x151.jpg",
+      "og:image:secure_url": "https://www.megapath.com/speakeasy/includes/themes/responsive2016/images/MP_logo_151x151.jpg",
+      "og:image:type": "image/jpeg"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.megapath.com/speakeasy/includes/themes/responsive2016/images/MP_logo_151x151.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Personality test based on C. Jung and I. Briggs Myers type theory",
+   "htmlTitle": "Personality \u003cb\u003etest\u003c/b\u003e based on C. Jung and I. Briggs Myers type theory",
+   "link": "http://www.humanmetrics.com/cgi-win/jtypes2.asp",
+   "displayLink": "www.humanmetrics.com",
+   "snippet": "This free personality test is based on Carl Jung's and Isabel Briggs Myers' ... the \nresults of this test as an input into the Jung Marriage Test™ and the Demo of the\n ...",
+   "htmlSnippet": "This free personality \u003cb\u003etest\u003c/b\u003e is based on Carl Jung&#39;s and Isabel Briggs Myers&#39; ... the \u003cbr\u003e\nresults of this \u003cb\u003etest\u003c/b\u003e as an input into the Jung Marriage \u003cb\u003eTest\u003c/b\u003e™ and the Demo of the\u003cbr\u003e\n&nbsp;...",
+   "cacheId": "w_lAt3mgXcoJ",
+   "formattedUrl": "www.humanmetrics.com/cgi-win/jtypes2.asp",
+   "htmlFormattedUrl": "www.humanmetrics.com/cgi-win/jtypes2.asp",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "225",
+      "height": "225",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQb0jhmI6y77bbSguZUOWDtd59QyRxs4blGTXMpWgiMMDgmdrQDnzRVuJk"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0",
+      "fb:app_id": "1389440114700789"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://www.humanmetrics.com/images/PersonalityTypesJtt.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "TEST – An Official Journal of the Spanish Society of Statistics and ...",
+   "htmlTitle": "\u003cb\u003eTEST\u003c/b\u003e – An Official Journal of the Spanish Society of Statistics and ...",
+   "link": "http://www.springer.com/statistics/journal/11749",
+   "displayLink": "www.springer.com",
+   "snippet": "TEST is an international journal of statistics and probability, sponsored by the \nSpanish Society of Statistics and Operations Research. Its scope includes both ...",
+   "htmlSnippet": "\u003cb\u003eTEST\u003c/b\u003e is an international journal of statistics and probability, sponsored by the \u003cbr\u003e\nSpanish Society of Statistics and Operations Research. Its scope includes both&nbsp;...",
+   "cacheId": "HFwxKrUIJt0J",
+   "formattedUrl": "www.springer.com/statistics/journal/11749",
+   "htmlFormattedUrl": "www.springer.com/statistics/journal/11749",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "122",
+      "height": "185",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcOjjgxoMTrmdyo-_-Ryu7wOm4tgPzauI5XVJscuKacFscK2rnqQML8cc"
+     }
+    ],
+    "metatags": [
+     {
+      "audience": "all",
+      "distribution": "global",
+      "imagetoolbar": "no",
+      "og:title": "TEST – An Official Journal of the Spanish Society of Statistics and Operations Research",
+      "og:site_name": "springer.com",
+      "og:type": "product",
+      "og:url": "http://www.springer.com/statistics/journal/11749",
+      "og:image": "https://images.springer.com/sgw/journals/medium/11749.jpg",
+      "og:description": "TEST is an international journal of statistics and probability, sponsored by the Spanish Society of Statistics and Operations Research. Its scope includes both established and emerging areas, and English is the journal’s official ...",
+      "fb:admins": "100001154999617",
+      "baidu-site-verification": "TmRbZpCsUoGaQLMq"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://images.springer.com/sgw/journals/medium/11749.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "XFINITY Speed Test",
+   "htmlTitle": "XFINITY Speed \u003cb\u003eTest\u003c/b\u003e",
+   "link": "http://speedtest.xfinity.com/",
+   "displayLink": "speedtest.xfinity.com",
+   "snippet": "XFINITY Speed Test tests your internet connection speed.",
+   "htmlSnippet": "XFINITY Speed \u003cb\u003eTest tests\u003c/b\u003e your internet connection speed.",
+   "cacheId": "snNGJxOQROIJ",
+   "formattedUrl": "speedtest.xfinity.com/",
+   "htmlFormattedUrl": "speed\u003cb\u003etest\u003c/b\u003e.xfinity.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "240",
+      "height": "108",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJ0rhw_OWT1b6n4Vy0Fwz3IM7Ym8Aw7ol8jXP2qAqCoo7qju-N8IAQNKM"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://stage.results.speedtest.comcast.net/result/158230202.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "ProjectImplicit",
+   "htmlTitle": "ProjectImplicit",
+   "link": "https://implicit.harvard.edu/",
+   "displayLink": "implicit.harvard.edu",
+   "snippet": "Log In · Take a Test · About Us · Education · Help · Contact Us · Donate · \nCopyright 2011 · ProjectImplicit All rights Reserved Disclaimer · Privacy Policy.",
+   "htmlSnippet": "Log In &middot; Take a \u003cb\u003eTest\u003c/b\u003e &middot; About Us &middot; Education &middot; Help &middot; Contact Us &middot; Donate &middot; \u003cbr\u003e\nCopyright 2011 &middot; ProjectImplicit All rights Reserved Disclaimer &middot; Privacy Policy.",
+   "cacheId": "D9S-lVHah4kJ",
+   "formattedUrl": "https://implicit.harvard.edu/",
+   "htmlFormattedUrl": "https://implicit.harvard.edu/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "266",
+      "height": "175",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTa8awRM7wYPGf_H9amKSLONdKCXM9-Xhgd8KQlewF-E2TQkYJWd0OuMMDk"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://pnl.bwh.harvard.edu/wp-content/uploads/2014/10/ProjectImplicit_image.jpg"
+     }
+    ]
+   }
+  }
+ ]
+}
