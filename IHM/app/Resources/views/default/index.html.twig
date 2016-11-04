@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="topSearch"></div>
+            <div id="homeSearch">
+                <div style="width:40%;margin:auto;text-align: center;">
+                    <a href="{{ path('homepage') }}">
+                        <h1>Web</h1>
+                    <img id="logoCenter" src="{{ asset('facant.jpg') }}">
+                    </a>
+                </div>
+                <form style="width:80%;margin-left:auto;margin-right:auto;margin-top:20px">
+                    <div class="form-group">
+                        <input id="keywords" style="height:3em" type="text" class="form-control" placeholder="Entrez vos mots-clés">
+                    </div>
+                    <div class="form-group" style="text-align: center;">
+                        <input {# type="submit" #} onclick="hideHome()" class="btn btn-info" value="Rechercher">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+<style>
+    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 21px; margin-bottom: 1em; }
+    p { margin: 0 0 1em 0; }
+    a { color: #0000F0; }
+    a:hover { text-decoration: none; }
+    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
+    #wrapper { background: #FFF; margin: 1em auto; width: 95%; }
+    #container { padding: 2em; }
+    #welcome, #status { margin-bottom: 2em; }
+    #welcome h1 span { display: block; font-size: 75%; }
+    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
+    #icon-book { display: none; }
+    
+    @media (min-width: 768px) {
+        #wrapper { width: 95%; margin: 1em auto; }
+        #icon-book { display: inline-block; }
+        #status a, #next a { display: block; }
+
+        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+    }
+</style>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        function hideHome()
+        {
+            var keywords = $('#keywords').val();
+            if (keywords.match(/[a-z]/i)) {
+                $('#homeSearch').fadeOut(500,displayOnTop(keywords));
+            }
+        }
+        function displayOnTop(keywords)
+        {
+            recordSearch(keywords);
+            var topHtml = '<div id="topSearch" class="row display-table">';
+            topHtml += '<div class="col-md-1 display-cell">';
+                topHtml += '<a href="{{ path('homepage') }}"><img src="{{ asset('facant.jpg') }}"></a>';
+            topHtml += '</div>';
+            topHtml += '<div class="col-md-5 display-cell">';
+
+                topHtml += '<input type="text" class="form-control" value="'+keywords+'">';
+                topHtml += '<button class="btn btn-info">Rechercher</button>';
+            topHtml += '</div>';
+            topHtml += '<div class="col-md-6 display-cell">';
+
+            topHtml += '</div>';
+            topHtml += '</div>';
+            topHtml += '<hr>';
+            $('#topSearch').hide().html(topHtml).fadeToggle(500);
+        }
+        
+        function recordSearch(keywords)
+        {
+            var arrayKeywords = [];
+            if(keywords.indexOf(' ')==-1)
+            {
+                arrayKeywords.push(keywords);
+            }
+            else 
+            {
+                arrayKeywords = keywords.split(' ');
+            }
+            for(var i=0;i<arrayKeywords.length;i++)
+            {
+                if(!arrayKeywords[i].match(/[a-z]/i))
+                {
+                    arrayKeywords.splice(i,1);
+                    i--;
+                }
+            }
+            //Ajax pour compléter la base via le controller Search
+        }
+    </script>
+{% endblock %}
