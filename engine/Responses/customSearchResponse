@@ -7,9 +7,9 @@
  "queries": {
   "request": [
    {
-    "title": "Google Custom Search - Test",
-    "totalResults": "251000000",
-    "searchTerms": "Test",
+    "title": "Google Custom Search - test",
+    "totalResults": "254000000",
+    "searchTerms": "test",
     "count": 10,
     "startIndex": 1,
     "inputEncoding": "utf8",
@@ -20,9 +20,9 @@
   ],
   "nextPage": [
    {
-    "title": "Google Custom Search - Test",
-    "totalResults": "251000000",
-    "searchTerms": "Test",
+    "title": "Google Custom Search - test",
+    "totalResults": "254000000",
+    "searchTerms": "test",
     "count": 10,
     "startIndex": 11,
     "inputEncoding": "utf8",
@@ -36,10 +36,10 @@
   "title": "Google"
  },
  "searchInformation": {
-  "searchTime": 0.420596,
-  "formattedSearchTime": "0.42",
-  "totalResults": "251000000",
-  "formattedTotalResults": "251,000,000"
+  "searchTime": 0.534736,
+  "formattedSearchTime": "0.53",
+  "totalResults": "254000000",
+  "formattedTotalResults": "254,000,000"
  },
  "items": [
   {
@@ -336,31 +336,31 @@
   },
   {
    "kind": "customsearch#result",
-   "title": "ProjectImplicit",
-   "htmlTitle": "ProjectImplicit",
-   "link": "https://implicit.harvard.edu/",
-   "displayLink": "implicit.harvard.edu",
-   "snippet": "Log In · Take a Test · About Us · Education · Help · Contact Us · Donate · \nCopyright 2011 · ProjectImplicit All rights Reserved Disclaimer · Privacy Policy.",
-   "htmlSnippet": "Log In &middot; Take a \u003cb\u003eTest\u003c/b\u003e &middot; About Us &middot; Education &middot; Help &middot; Contact Us &middot; Donate &middot; \u003cbr\u003e\nCopyright 2011 &middot; ProjectImplicit All rights Reserved Disclaimer &middot; Privacy Policy.",
-   "cacheId": "D9S-lVHah4kJ",
-   "formattedUrl": "https://implicit.harvard.edu/",
-   "htmlFormattedUrl": "https://implicit.harvard.edu/",
+   "title": "EnChroma: Color Blindness Test | EnChroma",
+   "htmlTitle": "EnChroma: Color Blindness \u003cb\u003eTest\u003c/b\u003e | EnChroma",
+   "link": "http://enchroma.com/test/instructions/",
+   "displayLink": "enchroma.com",
+   "snippet": "Before starting the test, turn off any screen color filters and remove any color \nfiltering eyewear. The EnChroma color vision test is for informational purposes \nonly.",
+   "htmlSnippet": "Before starting the \u003cb\u003etest\u003c/b\u003e, turn off any screen color filters and remove any color \u003cbr\u003e\nfiltering eyewear. The EnChroma color vision \u003cb\u003etest\u003c/b\u003e is for informational purposes \u003cbr\u003e\nonly.",
+   "cacheId": "FWENwNBMx0MJ",
+   "formattedUrl": "enchroma.com/test/instructions/",
+   "htmlFormattedUrl": "enchroma.com/\u003cb\u003etest\u003c/b\u003e/instructions/",
    "pagemap": {
     "cse_thumbnail": [
      {
-      "width": "266",
-      "height": "175",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTa8awRM7wYPGf_H9amKSLONdKCXM9-Xhgd8KQlewF-E2TQkYJWd0OuMMDk"
+      "width": "259",
+      "height": "194",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTXMoaY8kgLVzpZZuDkf6BkS47SGTw1dpRdfZGis61587owQHFDiVSj0mkD"
      }
     ],
     "metatags": [
      {
-      "viewport": "width=device-width, initial-scale=1"
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=1"
      }
     ],
     "cse_image": [
      {
-      "src": "http://pnl.bwh.harvard.edu/wp-content/uploads/2014/10/ProjectImplicit_image.jpg"
+      "src": "http://enchroma.com/wp-content/uploads/2012/09/fall-colors-cvd-vs-normal.jpg"
      }
     ]
    }
