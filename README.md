@@ -1,32 +1,32 @@
 # How to setup Symfony project 
 
 First, go into IHM folder with the command line and execute 
-’’’shell
+```shell
 php composer.phar install
-’’’
+```
 
 Then, execute 
-’’’shell
+```shell
 bower install
-’’’
+```
 
 Then, run 
-’’’shell
+```shell
 php bin/symfony_requirements
-’’’
+```
 Check the results, if it is all green, you can step to the next step
 
 Then, run 
-’’’shell
+```shell
 php bin/console doctrine:database:create
-’’’
+```
 
 Then, set a new VirtualHost which leads to the 'web' folder into the IHM folder
 
 You can now access with your preferred browser to the project by typing the name of the VHost you just created :
-’’’html
+```html
 http://host/app_dev.php
-’’’  
+```  
 
 Enjoy
 
