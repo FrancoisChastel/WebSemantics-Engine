@@ -29,3 +29,5 @@ Antoine Breton api keys :
  - Google Custom Search : AIzaSyB55Q4tpXmOmXrRaYU2MC7IvfGRn-VQa6c
  - 
 
+Nathan Haim api keys :
+ - Google Custom Search : AIzaSyDD_G35f_j1hmzNMdLESHWsliwYVbjP2BA
