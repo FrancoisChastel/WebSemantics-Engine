@@ -7,9 +7,9 @@
  "queries": {
   "request": [
    {
-    "title": "Google Custom Search - test",
-    "totalResults": "254000000",
-    "searchTerms": "test",
+    "title": "Google Custom Search - Cobain",
+    "totalResults": "2610000",
+    "searchTerms": "Cobain",
     "count": 10,
     "startIndex": 1,
     "inputEncoding": "utf8",
@@ -20,9 +20,9 @@
   ],
   "nextPage": [
    {
-    "title": "Google Custom Search - test",
-    "totalResults": "254000000",
-    "searchTerms": "test",
+    "title": "Google Custom Search - Cobain",
+    "totalResults": "2610000",
+    "searchTerms": "Cobain",
     "count": 10,
     "startIndex": 11,
     "inputEncoding": "utf8",
@@ -36,331 +36,626 @@
   "title": "Google"
  },
  "searchInformation": {
-  "searchTime": 0.534736,
-  "formattedSearchTime": "0.53",
-  "totalResults": "254000000",
-  "formattedTotalResults": "254,000,000"
+  "searchTime": 0.437797,
+  "formattedSearchTime": "0.44",
+  "totalResults": "2610000",
+  "formattedTotalResults": "2,610,000"
  },
  "items": [
   {
    "kind": "customsearch#result",
-   "title": "Speedtest.net by Ookla - The Global Broadband Speed Test",
-   "htmlTitle": "Speedtest.net by Ookla - The Global Broadband Speed \u003cb\u003eTest\u003c/b\u003e",
-   "link": "http://www.speedtest.net/",
-   "displayLink": "www.speedtest.net",
-   "snippet": "Test your Internet connection bandwidth to locations around the world with this \ninteractive broadband speed test from Ookla.",
-   "htmlSnippet": "\u003cb\u003eTest\u003c/b\u003e your Internet connection bandwidth to locations around the world with this \u003cbr\u003e\ninteractive broadband speed \u003cb\u003etest\u003c/b\u003e from Ookla.",
-   "cacheId": "M47_v0xF3m8J",
-   "formattedUrl": "www.speedtest.net/",
-   "htmlFormattedUrl": "www.speed\u003cb\u003etest\u003c/b\u003e.net/",
-   "pagemap": {
-    "cse_thumbnail": [
-     {
-      "width": "305",
-      "height": "160",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEnXvseTrR-L9bKZpR6P5SKP76QCVreYou4goWjqbZQpPXmivc_i5YidE"
-     }
-    ],
-    "metatags": [
-     {
-      "og:title": "Speedtest.net by Ookla - The Global Broadband Speed Test",
-      "og:type": "website",
-      "og:site_name": "Speedtest.net",
-      "og:url": "http://www.speedtest.net/",
-      "og:image": "http://c.speedtest.net/images/share-logo.png",
-      "twitter:card": "app",
-      "twitter:site": "@ookla",
-      "twitter:description": "Test your mobile network speed, wherever you may be.  Download the free Ookla Speedtest app for iOS, Amazon, Android or Windows Phone.",
-      "twitter:app:id:iphone": "300704847",
-      "twitter:app:id:ipad": "300704847",
-      "twitter:app:id:googleplay": "org.zwanoo.android.speedtest",
-      "twitter:account_id": "43123762"
-     }
-    ],
-    "cse_image": [
-     {
-      "src": "http://c.speedtest.net/images/share-logo.png"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "Online tests and testing software | Test.com",
-   "htmlTitle": "Online \u003cb\u003etests\u003c/b\u003e and \u003cb\u003etesting\u003c/b\u003e software | \u003cb\u003eTest\u003c/b\u003e.com",
-   "link": "https://www.test.com/",
-   "displayLink": "www.test.com",
-   "snippet": "Online tests and testing for certification, practice tests, test making tools, medical \ntesting and more.",
-   "htmlSnippet": "Online \u003cb\u003etests\u003c/b\u003e and \u003cb\u003etesting\u003c/b\u003e for certification, practice \u003cb\u003etests\u003c/b\u003e, \u003cb\u003etest\u003c/b\u003e making tools, medical \u003cbr\u003e\n\u003cb\u003etesting\u003c/b\u003e and more.",
-   "cacheId": "S92tylTr1V8J",
-   "formattedUrl": "https://www.test.com/",
-   "htmlFormattedUrl": "https://www.\u003cb\u003etest\u003c/b\u003e.com/",
-   "pagemap": {
-    "cse_thumbnail": [
-     {
-      "width": "229",
-      "height": "220",
-      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTkvUhNxn8Sd8p0dfg25gs02sigx-3W_I1ZAcLZp_C8OjUnp3wBS1dv9EE"
-     }
-    ],
-    "metatags": [
-     {
-      "viewport": "width=device-width, initial-scale=1.0"
-     }
-    ],
-    "cse_image": [
-     {
-      "src": "https://www.test.com/img/Testing.png"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "Mobile-Friendly Test",
-   "htmlTitle": "Mobile-Friendly \u003cb\u003eTest\u003c/b\u003e",
-   "link": "https://www.google.com/webmasters/tools/mobile-friendly/",
-   "displayLink": "www.google.com",
-   "snippet": "This test will analyze a URL and report if the page has a mobile-friendly design. \nLearn more about the mobile-friendly criteria and how it may affect Google's ...",
-   "htmlSnippet": "This \u003cb\u003etest\u003c/b\u003e will analyze a URL and report if the page has a mobile-friendly design. \u003cbr\u003e\nLearn more about the mobile-friendly criteria and how it may affect Google&#39;s&nbsp;...",
-   "cacheId": "WBvZnqZfQukJ",
-   "formattedUrl": "https://www.google.com/webmasters/tools/mobile-friendly/",
-   "htmlFormattedUrl": "https://www.google.com/webmasters/tools/mobile-friendly/",
-   "pagemap": {
-    "metatags": [
-     {
-      "viewport": "initial-scale=1, width=device-width"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "Test - Wikipedia",
-   "htmlTitle": "\u003cb\u003eTest\u003c/b\u003e - Wikipedia",
-   "link": "https://en.wikipedia.org/wiki/Test",
+   "title": "Kurt Cobain - Wikipedia",
+   "htmlTitle": "Kurt \u003cb\u003eCobain\u003c/b\u003e - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Kurt_Cobain",
    "displayLink": "en.wikipedia.org",
-   "snippet": "Test, TEST or Tester may refer to: Test (assessment), an assessment intended to \nmeasure the respondents' knowledge or other abilities; Medical test, to detect, ...",
-   "htmlSnippet": "\u003cb\u003eTest\u003c/b\u003e, \u003cb\u003eTEST\u003c/b\u003e or Tester may refer to: \u003cb\u003eTest\u003c/b\u003e (assessment), an assessment intended to \u003cbr\u003e\nmeasure the respondents&#39; knowledge or other abilities; Medical \u003cb\u003etest\u003c/b\u003e, to detect,&nbsp;...",
-   "cacheId": "R94CAo00wOYJ",
-   "formattedUrl": "https://en.wikipedia.org/wiki/Test",
-   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/\u003cb\u003eTest\u003c/b\u003e",
+   "snippet": "Kurt Donald Cobain (February 20, 1967 – April 5, 1994) was an American \nmusician who was best known as the lead singer, guitarist, and primary \nsongwriter of ...",
+   "htmlSnippet": "Kurt Donald \u003cb\u003eCobain\u003c/b\u003e (February 20, 1967 – April 5, 1994) was an American \u003cbr\u003e\nmusician who was best known as the lead singer, guitarist, and primary \u003cbr\u003e\nsongwriter of&nbsp;...",
+   "cacheId": "reTRjDbwVGcJ",
+   "formattedUrl": "https://en.wikipedia.org/wiki/Kurt_Cobain",
+   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/Kurt_\u003cb\u003eCobain\u003c/b\u003e",
    "pagemap": {
+    "hcard": [
+     {
+      "fn": "Kurt Cobain",
+      "nickname": "Kurt Donald Cobain",
+      "bday": "1967-02-20",
+      "role": "Musician singer songwriter guitarist visual artist",
+      "note": "Vocals guitar"
+     },
+     {
+      "fn": "Nirvana"
+     },
+     {
+      "fn": "Courtney Love"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "176",
+      "height": "165",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8XDpv_G9l4t4gIyS0bFLPe1bMgaD6vnpJtFlkmy74Kv-lstm2E8HZNrU"
+     }
+    ],
+    "person": [
+     {
+      "role": "Musician singer songwriter guitarist visual artist"
+     }
+    ],
     "metatags": [
      {
       "referrer": "origin-when-cross-origin"
      }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "Free Personality Test | 16Personalities",
-   "htmlTitle": "Free Personality \u003cb\u003eTest\u003c/b\u003e | 16Personalities",
-   "link": "https://www.16personalities.com/free-personality-test",
-   "displayLink": "www.16personalities.com",
-   "snippet": "Free personality test - take it to find out why our readers say that this personality \ntest is so accurate, “it's a little bit creepy.” No registration required!",
-   "htmlSnippet": "Free personality \u003cb\u003etest\u003c/b\u003e - take it to find out why our readers say that this personality \u003cbr\u003e\n\u003cb\u003etest\u003c/b\u003e is so accurate, “it&#39;s a little bit creepy.” No registration required!",
-   "cacheId": "SQzntHUEffkJ",
-   "formattedUrl": "https://www.16personalities.com/free-personality-test",
-   "htmlFormattedUrl": "https://www.16personalities.com/free-personality-\u003cb\u003etest\u003c/b\u003e",
-   "pagemap": {
-    "cse_thumbnail": [
-     {
-      "width": "179",
-      "height": "178",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhWL2xD-nKJlXxf5LApp7ATC39ozadzyApXfC-5XZ0_VbydIFVcDA8aSc"
-     }
-    ],
-    "metatags": [
-     {
-      "viewport": "width=device-width, initial-scale=1, maximum-scale=1",
-      "fb:app_id": "326516237427150",
-      "og:site_name": "16Personalities",
-      "og:url": "https://www.16personalities.com/free-personality-test",
-      "og:title": "Free personality test | 16Personalities",
-      "og:image": "https://www.16personalities.com/images/headers/fb/logo.png",
-      "msapplication-tilecolor": "#ffffff",
-      "msapplication-tileimage": "/images/favicons/mstile-144x144.png",
-      "theme-color": "#ffffff"
-     }
     ],
     "cse_image": [
      {
-      "src": "https://www.16personalities.com/images/headers/fb/logo.png"
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Nirvana_around_1992.jpg/220px-Nirvana_around_1992.jpg"
      }
     ]
    }
   },
   {
    "kind": "customsearch#result",
-   "title": "Speakeasy Speed Test - Powered by MegaPath | MegaPath",
-   "htmlTitle": "Speakeasy Speed \u003cb\u003eTest\u003c/b\u003e - Powered by MegaPath | MegaPath",
-   "link": "https://www.speakeasy.net/speedtest/",
-   "displayLink": "www.speakeasy.net",
-   "snippet": "Speed Test, Explained. How Does our Speed Test Work? The Speakeasy Speed \nTest checks your connection's download and upload speeds from within your ...",
-   "htmlSnippet": "Speed \u003cb\u003eTest\u003c/b\u003e, Explained. How Does our Speed \u003cb\u003eTest\u003c/b\u003e Work? The Speakeasy Speed \u003cbr\u003e\n\u003cb\u003eTest\u003c/b\u003e checks your connection&#39;s download and upload speeds from within your&nbsp;...",
-   "cacheId": "sCEGhiP0qxEJ",
-   "formattedUrl": "https://www.speakeasy.net/speedtest/",
-   "htmlFormattedUrl": "https://www.speakeasy.net/speed\u003cb\u003etest\u003c/b\u003e/",
-   "pagemap": {
-    "cse_thumbnail": [
-     {
-      "width": "120",
-      "height": "120",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQH_BUH2RmscEHC7s2TAaaV_CNhG4IsuyLw1WxMRDHXgVx0F_px6Hu79w"
-     }
-    ],
-    "metatags": [
-     {
-      "viewport": "width=device-width, initial-scale=1.0",
-      "og:site_name": "MegaPath",
-      "og:title": "Speakeasy Speed Test - Powered by MegaPath",
-      "og:type": "article",
-      "og:description": "Speakeasy, a MegaPath Brand, offers industry leading business voice, data and IT solutions. We ensure the speed, performance and reliability of all our services by managing our own nationwide private network. Test Availability Today.",
-      "og:image": "https://www.megapath.com/speakeasy/includes/themes/responsive2016/images/MP_logo_151x151.jpg",
-      "og:image:secure_url": "https://www.megapath.com/speakeasy/includes/themes/responsive2016/images/MP_logo_151x151.jpg",
-      "og:image:type": "image/jpeg"
-     }
-    ],
-    "cse_image": [
-     {
-      "src": "https://www.megapath.com/speakeasy/includes/themes/responsive2016/images/MP_logo_151x151.jpg"
-     }
-    ]
-   }
-  },
-  {
-   "kind": "customsearch#result",
-   "title": "Personality test based on C. Jung and I. Briggs Myers type theory",
-   "htmlTitle": "Personality \u003cb\u003etest\u003c/b\u003e based on C. Jung and I. Briggs Myers type theory",
-   "link": "http://www.humanmetrics.com/cgi-win/jtypes2.asp",
-   "displayLink": "www.humanmetrics.com",
-   "snippet": "This free personality test is based on Carl Jung's and Isabel Briggs Myers' ... the \nresults of this test as an input into the Jung Marriage Test™ and the Demo of the\n ...",
-   "htmlSnippet": "This free personality \u003cb\u003etest\u003c/b\u003e is based on Carl Jung&#39;s and Isabel Briggs Myers&#39; ... the \u003cbr\u003e\nresults of this \u003cb\u003etest\u003c/b\u003e as an input into the Jung Marriage \u003cb\u003eTest\u003c/b\u003e™ and the Demo of the\u003cbr\u003e\n&nbsp;...",
-   "cacheId": "w_lAt3mgXcoJ",
-   "formattedUrl": "www.humanmetrics.com/cgi-win/jtypes2.asp",
-   "htmlFormattedUrl": "www.humanmetrics.com/cgi-win/jtypes2.asp",
+   "title": "Frances Bean Cobain (@alka_seltzer666) | Twitter",
+   "htmlTitle": "Frances Bean \u003cb\u003eCobain\u003c/b\u003e (@alka_seltzer666) | Twitter",
+   "link": "https://twitter.com/alka_seltzer666?lang=en",
+   "displayLink": "twitter.com",
+   "snippet": "The latest Tweets from Frances Bean Cobain (@alka_seltzer666). 宇宙魔女 (\nSpace Witch) with a sleepy conscience. artist. Horror Movies Enthusiast. \nBookworm.",
+   "htmlSnippet": "The latest Tweets from Frances Bean \u003cb\u003eCobain\u003c/b\u003e (@alka_seltzer666). 宇宙魔女 (\u003cbr\u003e\nSpace Witch) with a sleepy conscience. artist. Horror Movies Enthusiast. \u003cbr\u003e\nBookworm.",
+   "cacheId": "vtHZpp8_gScJ",
+   "formattedUrl": "https://twitter.com/alka_seltzer666?lang=en",
+   "htmlFormattedUrl": "https://twitter.com/alka_seltzer666?lang=en",
    "pagemap": {
     "cse_thumbnail": [
      {
       "width": "225",
       "height": "225",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQb0jhmI6y77bbSguZUOWDtd59QyRxs4blGTXMpWgiMMDgmdrQDnzRVuJk"
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTWbY9f3EWer1EnViCK0renhED24wX8iX433e-wwaEyz3-tPkKUdbwh7qA"
      }
     ],
     "metatags": [
      {
-      "viewport": "width=device-width, initial-scale=1.0",
-      "fb:app_id": "1389440114700789"
+      "msapplication-tileimage": "//abs.twimg.com/favicons/win8-tile-144.png",
+      "msapplication-tilecolor": "#00aced",
+      "swift-page-name": "profile"
      }
     ],
     "cse_image": [
      {
-      "src": "http://www.humanmetrics.com/images/PersonalityTypesJtt.png"
+      "src": "https://pbs.twimg.com/profile_images/795224943415861248/jU-f-Skc_400x400.jpg"
      }
     ]
    }
   },
   {
    "kind": "customsearch#result",
-   "title": "TEST – An Official Journal of the Spanish Society of Statistics and ...",
-   "htmlTitle": "\u003cb\u003eTEST\u003c/b\u003e – An Official Journal of the Spanish Society of Statistics and ...",
-   "link": "http://www.springer.com/statistics/journal/11749",
-   "displayLink": "www.springer.com",
-   "snippet": "TEST is an international journal of statistics and probability, sponsored by the \nSpanish Society of Statistics and Operations Research. Its scope includes both ...",
-   "htmlSnippet": "\u003cb\u003eTEST\u003c/b\u003e is an international journal of statistics and probability, sponsored by the \u003cbr\u003e\nSpanish Society of Statistics and Operations Research. Its scope includes both&nbsp;...",
-   "cacheId": "HFwxKrUIJt0J",
-   "formattedUrl": "www.springer.com/statistics/journal/11749",
-   "htmlFormattedUrl": "www.springer.com/statistics/journal/11749",
+   "title": "Kurt Cobain Death Scene Photos",
+   "htmlTitle": "Kurt \u003cb\u003eCobain\u003c/b\u003e Death Scene Photos",
+   "link": "http://www.cbsnews.com/pictures/new-kurt-cobain-death-scene-photos/",
+   "displayLink": "www.cbsnews.com",
+   "snippet": "Mar 27, 2014 ... Thirty five never-before-seen pictures from the death investigation of Kurt Cobain, \nthe rock legend and frontman for the band Nirvana who was ...",
+   "htmlSnippet": "Mar 27, 2014 \u003cb\u003e...\u003c/b\u003e Thirty five never-before-seen pictures from the death investigation of Kurt \u003cb\u003eCobain\u003c/b\u003e, \u003cbr\u003e\nthe rock legend and frontman for the band Nirvana who was&nbsp;...",
+   "cacheId": "AnI99FstX-UJ",
+   "formattedUrl": "www.cbsnews.com/pictures/new-kurt-cobain-death-scene-photos/",
+   "htmlFormattedUrl": "www.cbsnews.com/pictures/new-kurt-\u003cb\u003ecobain\u003c/b\u003e-death-scene-photos/",
    "pagemap": {
     "cse_thumbnail": [
      {
-      "width": "122",
-      "height": "185",
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcOjjgxoMTrmdyo-_-Ryu7wOm4tgPzauI5XVJscuKacFscK2rnqQML8cc"
+      "width": "276",
+      "height": "183",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTJIMA85MhVh5i-0Es1X6arliPb8ct3GPN-64ms9nC9YBdcfwYRoMPlrMiL"
      }
     ],
     "metatags": [
      {
-      "audience": "all",
-      "distribution": "global",
-      "imagetoolbar": "no",
-      "og:title": "TEST – An Official Journal of the Spanish Society of Statistics and Operations Research",
-      "og:site_name": "springer.com",
-      "og:type": "product",
-      "og:url": "http://www.springer.com/statistics/journal/11749",
-      "og:image": "https://images.springer.com/sgw/journals/medium/11749.jpg",
-      "og:description": "TEST is an international journal of statistics and probability, sponsored by the Spanish Society of Statistics and Operations Research. Its scope includes both established and emerging areas, and English is the journal’s official ...",
-      "fb:admins": "100001154999617",
-      "baidu-site-verification": "TmRbZpCsUoGaQLMq"
+      "al:web:url": "http://www.cbsnews.com/pictures/new-kurt-cobain-death-scene-photos/",
+      "al:ios:app_name": "CBS News",
+      "al:ios:app_store_id": "334256223",
+      "al:ios:url": "cbsnewsapp://pictures/new-kurt-cobain-death-scene-photos/",
+      "al:android:app_name": "CBS News",
+      "al:android:package": "com.treemolabs.apps.cbsnews",
+      "og:type": "article",
+      "og:url": "http://www.cbsnews.com/pictures/new-kurt-cobain-death-scene-photos/",
+      "og:title": "Kurt Cobain death scene photos",
+      "og:description": "Previously unreleased photos from the death scene of the grunge rocker and Nirvana frontman",
+      "og:image": "http://cbsnews1.cbsistatic.com/hub/i/2014/04/04/a30e48c5-07a0-4802-90ac-3b3e2daf10ef/newcobain2.jpg",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "fb:app_id": "1536620209892267",
+      "twitter:app:country": "US",
+      "twitter:app:name:iphone": "CBS News",
+      "twitter:app:id:iphone": "334256223",
+      "twitter:app:url:iphone": "cbsnewsapp://pictures/new-kurt-cobain-death-scene-photos/",
+      "twitter:app:name:ipad": "CBS News",
+      "twitter:app:id:ipad": "334256223",
+      "twitter:app:url:ipad": "cbsnewsapp://pictures/new-kurt-cobain-death-scene-photos/",
+      "twitter:app:name:googleplay": "CBS News",
+      "twitter:app:id:googleplay": "com.treemolabs.apps.cbsnews",
+      "twitter:app:url:googleplay": "http://www.cbsnews.com/pictures/new-kurt-cobain-death-scene-photos/",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@CBSNews",
+      "twitter:title": "Kurt Cobain death scene photos",
+      "twitter:description": "Previously unreleased photos from the death scene of the grunge rocker and Nirvana frontman",
+      "twitter:image": "http://cbsnews1.cbsistatic.com/hub/i/2014/04/04/a30e48c5-07a0-4802-90ac-3b3e2daf10ef/newcobain2.jpg",
+      "article:publisher": "https://www.facebook.com/Crimesider",
+      "article:published_time": "2016-03-17T21:06:52Z",
+      "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+      "handheldfriendly": "True",
+      "mobileoptimized": "320"
      }
     ],
     "cse_image": [
      {
-      "src": "https://images.springer.com/sgw/journals/medium/11749.jpg"
+      "src": "http://cbsnews1.cbsistatic.com/hub/i/2014/04/04/a30e48c5-07a0-4802-90ac-3b3e2daf10ef/newcobain2.jpg"
      }
     ]
    }
   },
   {
    "kind": "customsearch#result",
-   "title": "XFINITY Speed Test",
-   "htmlTitle": "XFINITY Speed \u003cb\u003eTest\u003c/b\u003e",
-   "link": "http://speedtest.xfinity.com/",
-   "displayLink": "speedtest.xfinity.com",
-   "snippet": "XFINITY Speed Test tests your internet connection speed.",
-   "htmlSnippet": "XFINITY Speed \u003cb\u003eTest tests\u003c/b\u003e your internet connection speed.",
-   "cacheId": "snNGJxOQROIJ",
-   "formattedUrl": "speedtest.xfinity.com/",
-   "htmlFormattedUrl": "speed\u003cb\u003etest\u003c/b\u003e.xfinity.com/",
+   "title": "Death of Kurt Cobain - Wikipedia",
+   "htmlTitle": "Death of Kurt \u003cb\u003eCobain\u003c/b\u003e - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Death_of_Kurt_Cobain",
+   "displayLink": "en.wikipedia.org",
+   "snippet": "Kurt Cobain, the lead singer of the grunge band Nirvana, was found dead at his \nhome, located at 171 Lake Washington Boulevard East in Seattle, Washington, ...",
+   "htmlSnippet": "Kurt \u003cb\u003eCobain\u003c/b\u003e, the lead singer of the grunge band Nirvana, was found dead at his \u003cbr\u003e\nhome, located at 171 Lake Washington Boulevard East in Seattle, Washington,&nbsp;...",
+   "cacheId": "qShTJ1fHiFEJ",
+   "formattedUrl": "https://en.wikipedia.org/wiki/Death_of_Kurt_Cobain",
+   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/Death_of_Kurt_\u003cb\u003eCobain\u003c/b\u003e",
    "pagemap": {
+    "hcard": [
+     {
+      "fn": "Nirvana"
+     }
+    ],
     "cse_thumbnail": [
      {
-      "width": "240",
-      "height": "108",
-      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQJ0rhw_OWT1b6n4Vy0Fwz3IM7Ym8Aw7ol8jXP2qAqCoo7qju-N8IAQNKM"
+      "width": "176",
+      "height": "117",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScyQayP_mE8rdYOGrVoxmdYpJGD3oTFAoqCacn7-qVuu7iI-COhish1iU"
      }
     ],
     "metatags": [
      {
-      "viewport": "width=device-width"
+      "referrer": "origin-when-cross-origin"
      }
     ],
     "cse_image": [
      {
-      "src": "http://stage.results.speedtest.comcast.net/result/158230202.png"
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/KurtCobainHouse.jpg/220px-KurtCobainHouse.jpg"
      }
     ]
    }
   },
   {
    "kind": "customsearch#result",
-   "title": "EnChroma: Color Blindness Test | EnChroma",
-   "htmlTitle": "EnChroma: Color Blindness \u003cb\u003eTest\u003c/b\u003e | EnChroma",
-   "link": "http://enchroma.com/test/instructions/",
-   "displayLink": "enchroma.com",
-   "snippet": "Before starting the test, turn off any screen color filters and remove any color \nfiltering eyewear. The EnChroma color vision test is for informational purposes \nonly.",
-   "htmlSnippet": "Before starting the \u003cb\u003etest\u003c/b\u003e, turn off any screen color filters and remove any color \u003cbr\u003e\nfiltering eyewear. The EnChroma color vision \u003cb\u003etest\u003c/b\u003e is for informational purposes \u003cbr\u003e\nonly.",
-   "cacheId": "FWENwNBMx0MJ",
-   "formattedUrl": "enchroma.com/test/instructions/",
-   "htmlFormattedUrl": "enchroma.com/\u003cb\u003etest\u003c/b\u003e/instructions/",
+   "title": "Cobain: Montage of Heck (2015) - IMDb",
+   "htmlTitle": "\u003cb\u003eCobain\u003c/b\u003e: Montage of Heck (2015) - IMDb",
+   "link": "http://www.imdb.com/title/tt4229236/",
+   "displayLink": "www.imdb.com",
+   "snippet": "Documentary · An authorized documentary on the late musician Kurt Cobain, \nfrom his early days in Aberdeen, Washington to his success and downfall with the\n ...",
+   "htmlSnippet": "Documentary &middot; An authorized documentary on the late musician Kurt \u003cb\u003eCobain\u003c/b\u003e, \u003cbr\u003e\nfrom his early days in Aberdeen, Washington to his success and downfall with the\u003cbr\u003e\n&nbsp;...",
+   "cacheId": "2l6oCIxt8q0J",
+   "formattedUrl": "www.imdb.com/title/tt4229236/",
+   "htmlFormattedUrl": "www.imdb.com/title/tt4229236/",
    "pagemap": {
     "cse_thumbnail": [
      {
-      "width": "259",
-      "height": "194",
-      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTXMoaY8kgLVzpZZuDkf6BkS47SGTw1dpRdfZGis61587owQHFDiVSj0mkD"
+      "width": "163",
+      "height": "310",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR3p8IVZIRExjFMFoQTuE3zcliN_NSzWgxgUeUGxm_6cHWD4zddrcdfPMI"
+     }
+    ],
+    "audience": [
+     {
+      "url": "View content advisory"
+     }
+    ],
+    "movie": [
+     {
+      "name": "Cobain: Montage of Heck (2015)",
+      "contentrating": "TV-MA",
+      "duration": "PT145M",
+      "genre": "Documentary",
+      "datepublished": "2015-05-04",
+      "image": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyOTcxMTU2NV5BMl5BanBnXkFtZTgwNjcyMDg3NDE@._V1_UY268_CR3,0,182,268_AL_.jpg",
+      "trailer": "http://www.imdb.com/video/imdb/vi1263972633?playlistId=tt4229236&ref_=tt_ov_vi",
+      "description": "An authorized documentary on the late musician Kurt Cobain, from his early days in Aberdeen, Washington to his success and downfall with the grunge band Nirvana.",
+      "headline": "2015 Reps Banner Year for Music Docs",
+      "provider": "Variety - Film News",
+      "url": "Show HTML",
+      "awards": "Nominated for 7 Primetime Emmys.",
+      "thumbnailurl": "http://www.imdb.com/title/tt4229236/mediaviewer/rm4255053568?context=default&ref_=tt_pv_md_1",
+      "keywords": "Plot Keywords: drug addiction | musician | media | intimacy | depression | See All (59) »"
+     }
+    ],
+    "person": [
+     {
+      "url": "Brett Morgen",
+      "name": "Brett Morgen"
+     },
+     {
+      "url": "Brett Morgen",
+      "name": "Brett Morgen"
+     },
+     {
+      "url": "Aaron Burckhard",
+      "name": "Aaron Burckhard"
+     },
+     {
+      "url": "Chad Channing",
+      "name": "Chad Channing"
+     },
+     {
+      "url": "Don Cobain",
+      "name": "Don Cobain"
+     },
+     {
+      "url": "Aaron Burckhard",
+      "name": "Aaron Burckhard"
+     },
+     {
+      "url": "Chad Channing",
+      "name": "Chad Channing"
+     },
+     {
+      "url": "Don Cobain",
+      "name": "Don Cobain"
+     },
+     {
+      "url": "Jenny Cobain",
+      "name": "Jenny Cobain"
+     },
+     {
+      "url": "Kim Cobain",
+      "name": "Kim Cobain"
+     },
+     {
+      "url": "Kurt Cobain",
+      "name": "Kurt Cobain"
+     },
+     {
+      "url": "Dale Crover",
+      "name": "Dale Crover"
+     },
+     {
+      "url": "Jason Everman",
+      "name": "Jason Everman"
+     },
+     {
+      "url": "Dave Foster",
+      "name": "Dave Foster"
+     },
+     {
+      "url": "Dave Grohl",
+      "name": "Dave Grohl"
+     },
+     {
+      "url": "Courtney Love",
+      "name": "Courtney Love"
+     },
+     {
+      "url": "Tracey Marander",
+      "name": "Tracey Marander"
+     },
+     {
+      "url": "Nirvana",
+      "name": "Nirvana"
+     },
+     {
+      "url": "Krist Novoselic",
+      "name": "Krist Novoselic"
+     },
+     {
+      "url": "Wendy O'Connor",
+      "name": "Wendy O'Connor"
+     }
+    ],
+    "review": [
+     {
+      "name": "Simple but worth a watch",
+      "author": "magicmarker-37731",
+      "datepublished": "2015-04-30",
+      "reviewbody": "I have read a couple Bios of Nirvana and found this doc to be fairly simplistic. Still I enjoyed seeing the unseen footage and cartoon montages. What I was really hoping for was a bit more..."
+     }
+    ],
+    "aggregaterating": [
+     {
+      "ratingvalue": "7.6",
+      "bestrating": "10",
+      "ratingcount": "21,175",
+      "reviewcount": "71 user"
+     }
+    ],
+    "organization": [
+     {
+      "url": "HBO Documentary Films",
+      "name": "HBO Documentary Films"
+     },
+     {
+      "url": "Primary Wave Entertainment",
+      "name": "Primary Wave Entertainment"
+     },
+     {
+      "url": "Public Road Productions",
+      "name": "Public Road Productions"
+     }
+    ],
+    "rating": [
+     {
+      "worstrating": "1",
+      "ratingvalue": "8",
+      "bestrating": "10"
      }
     ],
     "metatags": [
      {
-      "viewport": "width=device-width, initial-scale=1, maximum-scale=1"
+      "apple-itunes-app": "app-id=342792525, app-argument=imdb:///title/tt4229236?src=mdot",
+      "og:url": "http://www.imdb.com/title/tt4229236/",
+      "theme-color": "#000000",
+      "pageid": "tt4229236",
+      "pagetype": "title",
+      "subpagetype": "main",
+      "og:image": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyOTcxMTU2NV5BMl5BanBnXkFtZTgwNjcyMDg3NDE@._V1_UY1200_CR108,0,630,1200_AL_.jpg",
+      "og:type": "video.movie",
+      "fb:app_id": "115109575169727",
+      "og:title": "Cobain: Montage of Heck (2015)",
+      "og:site_name": "IMDb",
+      "title": "Cobain: Montage of Heck (2015) - IMDb",
+      "og:description": "Directed by Brett Morgen.  With Aaron Burckhard, Chad Channing, Don Cobain, Jenny Cobain. An authorized documentary on the late musician Kurt Cobain, from his early days in Aberdeen, Washington to his success and downfall with the grunge band Nirvana.",
+      "request_id": "0KPQRCYKP21WQSFFAJ7M"
+     }
+    ],
+    "videoobject": [
+     {
+      "duration": "T1M1S",
+      "url": "http://www.imdb.com/video/imdb/vi1263972633?ref_=tt_pv_vi_aiv_1",
+      "image": "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/no-video-slate-856072904._CB526935781_.png"
+     }
+    ],
+    "moviereview": [
+     {
+      "ratingstars": "4.0",
+      "best": "10",
+      "originalrating": "7.6",
+      "votes": "21,175",
+      "ratingcount": "71 user",
+      "image_href": "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/unknown-1394846836._CB527141414_.png",
+      "name": "Cobain: Montage of Heck (2015)",
+      "release_date": "2015-05-04",
+      "release_year": "2015",
+      "runtime": "PT145M",
+      "genre": "Documentary/Animation",
+      "directed_by": "Brett Morgen",
+      "starring": "Aaron Burckhard, Chad Channing, Don Cobain",
+      "summary": "An authorized documentary on the late musician Kurt Cobain, from his early days in Aberdeen, Washington to his success and downfall with the grunge band..."
      }
     ],
     "cse_image": [
      {
-      "src": "http://enchroma.com/wp-content/uploads/2012/09/fall-colors-cvd-vs-normal.jpg"
+      "src": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyOTcxMTU2NV5BMl5BanBnXkFtZTgwNjcyMDg3NDE@._V1_UY1200_CR108,0,630,1200_AL_.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Frances Bean Cobain (@space_witch666) • Instagram photos and ...",
+   "htmlTitle": "Frances Bean \u003cb\u003eCobain\u003c/b\u003e (@space_witch666) • Instagram photos and ...",
+   "link": "https://www.instagram.com/space_witch666/?hl=en",
+   "displayLink": "www.instagram.com",
+   "snippet": "Frances Bean Cobain. 宇宙魔女 (Space Witch) with a sleepy conscience. artist. \nHorror Movies Enthusiast. Bookworm. comic book aficionado. supernatural ...",
+   "htmlSnippet": "Frances Bean \u003cb\u003eCobain\u003c/b\u003e. 宇宙魔女 (Space Witch) with a sleepy conscience. artist. \u003cbr\u003e\nHorror Movies Enthusiast. Bookworm. comic book aficionado. supernatural&nbsp;...",
+   "cacheId": "92Zq0NgWag0J",
+   "formattedUrl": "https://www.instagram.com/space_witch666/?hl=en",
+   "htmlFormattedUrl": "https://www.instagram.com/space_witch666/?hl=en",
+   "pagemap": {
+    "metatags": [
+     {
+      "mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-capable": "yes",
+      "apple-mobile-web-app-status-bar-style": "black",
+      "viewport": "width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1",
+      "al:ios:app_name": "Instagram",
+      "al:ios:app_store_id": "389801252",
+      "al:ios:url": "instagram://user?username=space_witch666",
+      "al:android:app_name": "Instagram",
+      "al:android:package": "com.instagram.android",
+      "al:android:url": "https://www.instagram.com/_u/space_witch666/",
+      "og:type": "profile",
+      "og:image": "https://scontent-iad3-1.cdninstagram.com/t51.2885-19/s150x150/14488243_1067679713352766_6417885187060793344_a.jpg",
+      "og:title": "Frances Bean Cobain (@space_witch666) • Instagram photos and videos",
+      "og:description": "宇宙魔女 (Space Witch) with a sleepy conscience. artist. Horror Movies Enthusiast. Bookworm. comic book aficionado. supernatural favors & voodoo vibes.",
+      "og:url": "https://www.instagram.com/space_witch666/"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://scontent-iad3-1.cdninstagram.com/t51.2885-19/s150x150/14488243_1067679713352766_6417885187060793344_a.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Kurt Cobain's suicide note",
+   "htmlTitle": "Kurt \u003cb\u003eCobain&#39;s\u003c/b\u003e suicide note",
+   "link": "http://kurtcobainssuicidenote.com/kurt_cobains_suicide_note.html",
+   "displayLink": "kurtcobainssuicidenote.com",
+   "snippet": "The suicide note of Kurt Cobain, and the mystery surrounding it.",
+   "htmlSnippet": "The suicide note of Kurt \u003cb\u003eCobain\u003c/b\u003e, and the mystery surrounding it.",
+   "cacheId": "Fxv8Nj3WgjgJ",
+   "formattedUrl": "kurtcobainssuicidenote.com/kurt_cobains_suicide_note.html",
+   "htmlFormattedUrl": "kurt\u003cb\u003ecobains\u003c/b\u003esuicidenote.com/kurt_\u003cb\u003ecobains\u003c/b\u003e_suicide_note.html",
+   "pagemap": {
+    "metatags": [
+     {
+      "author": "Josh Highland",
+      "identifier-url": "http://www.kurtcobainssuicidenote.com",
+      "reply-to": "josh@notpopular.com",
+      "category": "Music"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Ian Cobain | The Guardian",
+   "htmlTitle": "Ian \u003cb\u003eCobain\u003c/b\u003e | The Guardian",
+   "link": "https://www.theguardian.com/profile/iancobain",
+   "displayLink": "www.theguardian.com",
+   "snippet": "Ian Cobain is a senior reporter for the Guardian and author of Cruel Britannia and \nThe History Thieves. Twitter: @IanCobain · • PGP public key. November 2016 ...",
+   "htmlSnippet": "Ian \u003cb\u003eCobain\u003c/b\u003e is a senior reporter for the Guardian and author of Cruel Britannia and \u003cbr\u003e\nThe History Thieves. Twitter: @IanCobain &middot; • PGP public key. November 2016&nbsp;...",
+   "cacheId": "kQ0apIiKFf4J",
+   "formattedUrl": "https://www.theguardian.com/profile/iancobain",
+   "htmlFormattedUrl": "https://www.theguardian.com/profile/ian\u003cb\u003ecobain\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "112",
+      "height": "112",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRG0mqwtE2h3SjAcwcVlZmVByMnnnYET-LrF--nxnLHF0oU8Ndv8CHOdA"
+     }
+    ],
+    "metatags": [
+     {
+      "format-detection": "telephone=no",
+      "handheldfriendly": "True",
+      "viewport": "width=device-width,minimum-scale=1,initial-scale=1",
+      "apple-mobile-web-app-title": "Guardian",
+      "application-name": "The Guardian",
+      "msapplication-tilecolor": "#005689",
+      "theme-color": "#005689",
+      "msapplication-tileimage": "https://assets.guim.co.uk/images/favicons/f06f6996e193d1ddcd614ea852322d25/windows_tile_144_b.png",
+      "apple-itunes-app": "app-id=409128287, app-argument=https://www.theguardian.com/profile/iancobain, affiliate-data=ct=newsmartappbanner&pt=304191",
+      "referrer": "unsafe-url",
+      "og:url": "http://www.theguardian.com/profile/iancobain",
+      "og:description": "\u003cp\u003eIan Cobain is a senior reporter for the Guardian and author of&nbsp;\u003ca href=\"https://www.theguardian.com/books/2012/nov/23/cruel-britannia-ian-cobain-review\"\u003eCruel Britannia\u003c/a\u003e&nbsp;and&nbsp;\u003ca href=\"http://portobellobooks.com/the-history-thieves\"\u003eThe History Thieves\u003c/a\u003e\u003c/p\u003e\u003cp\u003eTwitter: \u003ca href=\"https://twitter.com/IanCobain\"\u003e@IanCobain\u003cbr\u003e\u003c/a\u003e\u003cbr\u003e\u003ca href=\"http://static.guim.co.uk/ni/1434388541122/PGP-key-PDF.pdf\"\u003e• PGP public key\u003c/a\u003e\u003c/p\u003e",
+      "og:image": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/contributor/2007/09/28/ian_cobain_140x140.jpg?w=140&q=55&auto=format&usm=12&fit=max&s=2cd0843d9b11b7338e13dcdf243581e8",
+      "al:ios:url": "gnmguardian://profile/iancobain?contenttype=list&source=applinks",
+      "og:type": "website",
+      "al:ios:app_store_id": "409128287",
+      "fb:app_id": "180444840287",
+      "al:ios:app_name": "The Guardian",
+      "og:site_name": "the Guardian",
+      "twitter:app:id:iphone": "409128287",
+      "twitter:app:name:googleplay": "The Guardian",
+      "twitter:app:name:ipad": "The Guardian",
+      "twitter:site": "@guardian",
+      "twitter:app:url:ipad": "gnmguardian://profile/iancobain?contenttype=list&source=twitter",
+      "twitter:card": "summary",
+      "twitter:app:name:iphone": "The Guardian",
+      "twitter:app:id:ipad": "409128287",
+      "twitter:app:id:googleplay": "com.guardian",
+      "twitter:app:url:iphone": "gnmguardian://profile/iancobain?contenttype=list&source=twitter",
+      "twitter:url": "https://www.theguardian.com/profile/iancobain",
+      "og:title": "Ian Cobain | The Guardian"
+     }
+    ],
+    "webpage": [
+     {
+      "keywords": "UK security and counter-terrorism"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/contributor/2007/09/28/ian_cobain_140x140.jpg?w=140&q=55&auto=format&usm=12&fit=max&s=2cd0843d9b11b7338e13dcdf243581e8"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Conspiracy Theorists Think Peruvian Singer Is Actually Kurt Cobain ...",
+   "htmlTitle": "Conspiracy Theorists Think Peruvian Singer Is Actually Kurt \u003cb\u003eCobain\u003c/b\u003e ...",
+   "link": "http://www.huffingtonpost.com/entry/conspiracy-theorists-think-peruvian-singer-is-actually-kurt-cobain_us_57d80958e4b09d7a687f9714",
+   "displayLink": "www.huffingtonpost.com",
+   "snippet": "Sep 13, 2016 ... Kurt Cobain died more than 20 years ago, but that fact hasn't stopped conspiracy \ntheorists from claiming the Nirvana singer is alive and well.",
+   "htmlSnippet": "Sep 13, 2016 \u003cb\u003e...\u003c/b\u003e Kurt \u003cb\u003eCobain\u003c/b\u003e died more than 20 years ago, but that fact hasn&#39;t stopped conspiracy \u003cbr\u003e\ntheorists from claiming the Nirvana singer is alive and well.",
+   "cacheId": "AYFyZhdGljEJ",
+   "formattedUrl": "www.huffingtonpost.com/.../conspiracy-theorists-think-peruvian-singer-is- actually-kurt-cobain_us_57d80958e4b09d7a687f9714",
+   "htmlFormattedUrl": "www.huffingtonpost.com/.../conspiracy-theorists-think-peruvian-singer-is- actually-kurt-\u003cb\u003ecobain\u003c/b\u003e_us_57d80958e4b09d7a687f9714",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "318",
+      "height": "159",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2b0UdOgKNBE_YdcdCsAppNxKGzcm69bafIVFvJPqj30q8co7ZOKIRcGCM"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=1000",
+      "og:title": "Conspiracy Theorists Think Peruvian Singer Is Actually Kurt Cobain",
+      "og:type": "article",
+      "og:image": "http://img.huffingtonpost.com/asset/2000_1000/57d80b161800001034bd1184.jpeg?cache=xh06slixrc",
+      "og:image:url": "http://img.huffingtonpost.com/asset/2000_1000/57d80b161800001034bd1184.jpeg?cache=xh06slixrc",
+      "og:image:type": "image/jpeg",
+      "og:image:width": "2000",
+      "og:image:height": "1000",
+      "og:url": "http://www.huffingtonpost.com/entry/conspiracy-theorists-think-peruvian-singer-is-actually-kurt-cobain_us_57d80958e4b09d7a687f9714",
+      "og:site_name": "The Huffington Post",
+      "og:locale": "en_US",
+      "og:description": "This is a new one ...",
+      "article:tag": "Conspiracy Theories,kurt cobain",
+      "article:section": "Entertainment",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@HuffPostEnt",
+      "twitter:title": "Conspiracy Theorists Think Peruvian Singer Is Actually Kurt Cobain",
+      "twitter:image": "http://img.huffingtonpost.com/asset/2000_1000/57d80b161800001034bd1184.jpeg?cache=xh06slixrc",
+      "twitter:image:width": "2000",
+      "twitter:image:height": "1000",
+      "twitter:description": "This is a new one ...",
+      "twitter:creator": "@juliabruc",
+      "sailthru.date": "2016-09-13 11:45:21 -0400",
+      "sailthru.expire_date": "2016-09-14 11:45:21 -0400",
+      "article:published_time": "2016-09-13 11:45:21 -0400",
+      "article:modified_time": "2016-09-13 13:38:33 -0400",
+      "al:ios:url": "huffpostnews:///?editionID=us&entryID=us_57d80958e4b09d7a687f9714",
+      "al:ios:app_store_id": "306621789",
+      "al:ios:app_name": "The Huffington Post",
+      "fb:app_id": "46744042133",
+      "taboola.category": "entertainment"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://img.huffingtonpost.com/asset/2000_1000/57d80b161800001034bd1184.jpeg?cache=xh06slixrc"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Journals: Kurt Cobain: 9781573223591: Amazon.com: Books",
+   "htmlTitle": "Journals: Kurt \u003cb\u003eCobain\u003c/b\u003e: 9781573223591: Amazon.com: Books",
+   "link": "https://www.amazon.com/Journals-Kurt-Cobain/dp/157322359X",
+   "displayLink": "www.amazon.com",
+   "snippet": "These journal entries by Nirvana front man Cobain record his thoughts from the \nlate 1980s until his suicide in 1994. There are no real answers to his death to be\n ...",
+   "htmlSnippet": "These journal entries by Nirvana front man \u003cb\u003eCobain\u003c/b\u003e record his thoughts from the \u003cbr\u003e\nlate 1980s until his suicide in 1994. There are no real answers to his death to be\u003cbr\u003e\n&nbsp;...",
+   "cacheId": "HynrcDLr1VAJ",
+   "formattedUrl": "https://www.amazon.com/Journals-Kurt-Cobain/dp/157322359X",
+   "htmlFormattedUrl": "https://www.amazon.com/Journals-Kurt-\u003cb\u003eCobain\u003c/b\u003e/dp/157322359X",
+   "pagemap": {
+    "scraped": [
+     {
+      "image_link": "https://images-na.ssl-images-amazon.com/images/I/41OpUAtXDJL.jpg"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "196",
+      "height": "257",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSpRGj0CUDkLvjgUb1uoLJeLbcr5rjt77PUwZBBcVFkIooPdgf0Dm-FVWk"
+     }
+    ],
+    "metatags": [
+     {
+      "title": "Journals: Kurt Cobain: 9781573223591: Amazon.com: Books"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://images-na.ssl-images-amazon.com/images/I/41OpUAtXDJL._SX258_BO1,204,203,200_.jpg"
      }
     ]
    }
