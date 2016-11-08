@@ -1,0 +1,22 @@
+{
+  "name": "webfacant",
+  "homepage": "https://github.com/FrancoisChastel/WebSemantics-Engine",
+  "authors": [
+    "antoinepay <antoine.payan@hotmail.fr>"
+  ],
+  "description": "Front Web for Web Semantics project",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "assets/"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+	"materialize":"^0.97.8"
+  }
+}

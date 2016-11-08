@@ -1,0 +1,29 @@
+.s2 a img
+{
+    width: 80%;
+    border-radius: 10px;
+    margin:auto;
+}
+
+.display-table{
+    display: table;
+    table-layout: fixed;
+}
+
+.display-cell{
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+#logoCenter
+{
+    width: 50%;
+    margin:auto;
+    border-radius:5px;
+}
+
+.btn
+{
+    margin:10px
+}
