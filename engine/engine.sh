@@ -21,15 +21,44 @@ function checkResult
 ##   MAIN		##
 ##############
 
+# Variables
+isDebug=false
+nbResponses=10
 
 # Parsing parameters
-if [ -z ${1+x} ]; 
+#--------------------- Boucle de traitement des paramètres-----------------------
+
+for ((o=1; $#; o++))
+	do
+		case $1 in
+        -d)
+           isDebug=true           
+           ;;
+			  -n)
+			   	nbResponses=$2;
+			     ;;
+				-h)
+					echo -e "SYNTAXE: ./engine.sh [OPTIONS] request \nOPTIONS: \n\t-d unable debug (print verbose on stdout) \n \t-n [number of responses] \n" 
+					exit 0
+					;;
+				*)
+					InputRequest=$1
+					;;
+			esac
+		shift;
+	done
+
+
+
+if [ -z ${InputRequest+x} ]; 
 	then 
 		echo "Please specify à query. Example : ./engine.sh \"Kurt Cobain\""; 
 		exit 1;
 fi
-InputRequest=$1
 
+
+
+# -------------------- Script Begin --------------------------------------
 
 # Defining variables
 ApiKeyCustomSearch=`cat keys | jq -r .customSearch.apiKey`
@@ -69,6 +98,6 @@ echo "]}"  >> Responses/tmpUrlUri # format line
 
 cat Responses/tmpUrlUri | jq . > Responses/FormatedUrlUri # format line
 
-rm tmpUrlUri
+rm Responses/tmpUrlUri
 
 
