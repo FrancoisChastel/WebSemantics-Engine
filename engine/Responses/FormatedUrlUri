@@ -1,0 +1,269 @@
+{
+  "websites": [
+    {
+      "URL": "https://en.wikipedia.org/wiki/Paris",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Seine",
+          "http://dbpedia.org/resource/France",
+          "http://dbpedia.org/resource/French_Revolution",
+          "http://dbpedia.org/resource/Arrondissements_of_Paris",
+          "http://dbpedia.org/resource/6th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/Nicolas_Sarkozy",
+          "http://dbpedia.org/resource/Versailles",
+          "http://dbpedia.org/resource/Paris_Commune",
+          "http://dbpedia.org/resource/8th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/Rive_Gauche",
+          "http://dbpedia.org/resource/7th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/1st_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/National_Guard_(France)",
+          "http://dbpedia.org/resource/London",
+          "http://dbpedia.org/resource/Siege_of_Paris",
+          "http://dbpedia.org/resource/La_Défense",
+          "http://dbpedia.org/resource/University_of_Paris",
+          "http://dbpedia.org/resource/Chicago",
+          "http://dbpedia.org/resource/Franco-Prussian_War",
+          "http://dbpedia.org/resource/Stade_de_France",
+          "http://dbpedia.org/resource/2nd_millennium",
+          "http://dbpedia.org/resource/Storming_of_the_Bastille",
+          "http://dbpedia.org/resource/Population",
+          "http://dbpedia.org/resource/French_Third_Republic",
+          "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/14th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/President_of_France",
+          "http://dbpedia.org/resource/Lyon",
+          "http://dbpedia.org/resource/Eiffel_Tower"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/University_of_Paris",
+          "http://dbpedia.org/resource/France",
+          "http://dbpedia.org/resource/Paris_Mosque",
+          "http://dbpedia.org/resource/Paris_Fire_Brigade",
+          "http://dbpedia.org/resource/Île_de_la_Cité"
+        ]
+      }
+    },
+    {
+      "URL": "http://en.parisinfo.com/",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/8th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/Exposition_Universelle_(1900)",
+          "http://dbpedia.org/resource/Le_Lido",
+          "http://dbpedia.org/resource/Moulin_Rouge",
+          "http://dbpedia.org/resource/Milwaukee_Brewers"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Grand_Palais"
+        ]
+      }
+    },
+    {
+      "URL": "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Eiffel_Tower",
+          "http://dbpedia.org/resource/Gustave_Eiffel",
+          "http://dbpedia.org/resource/7th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/France"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Eiffel_Tower",
+          "http://dbpedia.org/resource/Twitter",
+          "http://dbpedia.org/resource/Europe",
+          "http://dbpedia.org/resource/European_Court_of_Human_Rights",
+          "http://dbpedia.org/resource/Seine"
+        ]
+      }
+    },
+    {
+      "URL": "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/United_States",
+          "http://dbpedia.org/resource/United_Kingdom",
+          "http://dbpedia.org/resource/Radio",
+          "http://dbpedia.org/resource/New_York_City",
+          "http://dbpedia.org/resource/Olympic_Games",
+          "http://dbpedia.org/resource/Common_law",
+          "http://dbpedia.org/resource/U.S._state",
+          "http://dbpedia.org/resource/TripAdvisor",
+          "http://dbpedia.org/resource/English_language",
+          "http://dbpedia.org/resource/Book",
+          "http://dbpedia.org/resource/Enter_key",
+          "http://dbpedia.org/resource/Republic_of_Ireland",
+          "http://dbpedia.org/resource/Plurality_voting_system"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/TripAdvisor",
+          "http://dbpedia.org/resource/United_States"
+        ]
+      }
+    },
+    {
+      "URL": "https://twitter.com/hashtag/paris",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Notre_Dame_de_Paris",
+          "http://dbpedia.org/resource/Communes_of_the_Jura_department"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Musée_Grévin",
+          "http://dbpedia.org/resource/France"
+        ]
+      }
+    },
+    {
+      "URL": "https://www.lonelyplanet.com/france/paris",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/France",
+          "http://dbpedia.org/resource/Gustave_Eiffel",
+          "http://dbpedia.org/resource/Eiffel_Tower",
+          "http://dbpedia.org/resource/Seine",
+          "http://dbpedia.org/resource/7th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/Tourism",
+          "http://dbpedia.org/resource/Paris_Las_Vegas",
+          "http://dbpedia.org/resource/Eiffel_Tower_(Paris,_Tennessee)",
+          "http://dbpedia.org/resource/Exposition_Universelle_(1889)"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/France",
+          "http://dbpedia.org/resource/Versailles_(city)",
+          "http://dbpedia.org/resource/Eiffel_Tower",
+          "http://dbpedia.org/resource/Moulin_Rouge",
+          "http://dbpedia.org/resource/Pierre_Hermé",
+          "http://dbpedia.org/resource/Louis_XIV_of_France",
+          "http://dbpedia.org/resource/Paradis_Latin"
+        ]
+      }
+    },
+    {
+      "URL": "https://www.caesars.com/paris-las-vegas",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Las_Vegas_Strip",
+          "http://dbpedia.org/resource/Nevada",
+          "http://dbpedia.org/resource/Planet_Hollywood_Resort_and_Casino",
+          "http://dbpedia.org/resource/Caesars_Palace",
+          "http://dbpedia.org/resource/Treasure_Island_Hotel_and_Casino",
+          "http://dbpedia.org/resource/The_Mirage",
+          "http://dbpedia.org/resource/Las_Vegas_Boulevard",
+          "http://dbpedia.org/resource/Mandalay_Bay_Resort_and_Casino",
+          "http://dbpedia.org/resource/Bill's_Gamblin'_Hall_and_Saloon",
+          "http://dbpedia.org/resource/Flamingo_Las_Vegas",
+          "http://dbpedia.org/resource/Paradise,_Nevada",
+          "http://dbpedia.org/resource/Las_Vegas_Monorail",
+          "http://dbpedia.org/resource/Bellagio_(hotel_and_casino)",
+          "http://dbpedia.org/resource/Desert_Inn"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Las_Vegas",
+          "http://dbpedia.org/resource/Facebook"
+        ]
+      }
+    },
+    {
+      "URL": "http://wikitravel.org/en/Paris",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Gare_du_Nord",
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/RER",
+          "http://dbpedia.org/resource/Train_station",
+          "http://dbpedia.org/resource/Public_transport",
+          "http://dbpedia.org/resource/Paris-Charles_de_Gaulle_Airport",
+          "http://dbpedia.org/resource/Bus",
+          "http://dbpedia.org/resource/RER_B",
+          "http://dbpedia.org/resource/Rapid_transit",
+          "http://dbpedia.org/resource/Paris_Métro",
+          "http://dbpedia.org/resource/Paris_Métro_Line_14",
+          "http://dbpedia.org/resource/Bus_stop",
+          "http://dbpedia.org/resource/SNCF",
+          "http://dbpedia.org/resource/RER_D",
+          "http://dbpedia.org/resource/Public_transport_bus_service",
+          "http://dbpedia.org/resource/Metro_station",
+          "http://dbpedia.org/resource/Transilien",
+          "http://dbpedia.org/resource/Paris_RER",
+          "http://dbpedia.org/resource/Train",
+          "http://dbpedia.org/resource/Air_France",
+          "http://dbpedia.org/resource/RER_A",
+          "http://dbpedia.org/resource/Paris-Gare_de_Lyon",
+          "http://dbpedia.org/resource/S-Bahn",
+          "http://dbpedia.org/resource/Ticket_machine"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Paris,_Illinois",
+          "http://dbpedia.org/resource/Metro_International",
+          "http://dbpedia.org/resource/Paris-Charles_de_Gaulle_Airport",
+          "http://dbpedia.org/resource/France",
+          "http://dbpedia.org/resource/Paris_West_University_Nanterre_La_Défense",
+          "http://dbpedia.org/resource/Europe",
+          "http://dbpedia.org/resource/First_French_Empire",
+          "http://dbpedia.org/resource/The_Real_Estate_Roundtable",
+          "http://dbpedia.org/resource/SNCF",
+          "http://dbpedia.org/resource/Charles_de_Gaulle",
+          "http://dbpedia.org/resource/Gustave_Eiffel",
+          "http://dbpedia.org/resource/Seine"
+        ]
+      }
+    },
+    {
+      "URL": "http://whc.unesco.org/en/list/600",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/World_Heritage_Site",
+          "http://dbpedia.org/resource/UNESCO",
+          "http://dbpedia.org/resource/France",
+          "http://dbpedia.org/resource/Eiffel_Tower",
+          "http://dbpedia.org/resource/International_Council_on_Monuments_and_Sites",
+          "http://dbpedia.org/resource/Cultural_heritage",
+          "http://dbpedia.org/resource/World_Heritage_Sites",
+          "http://dbpedia.org/resource/Australia"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris",
+          "http://dbpedia.org/resource/Seine",
+          "http://dbpedia.org/resource/UNESCO",
+          "http://dbpedia.org/resource/Sainte-Chapelle",
+          "http://dbpedia.org/resource/Petit_Palais",
+          "http://dbpedia.org/resource/Grand_Palais",
+          "http://dbpedia.org/resource/Pont_de_Sully",
+          "http://dbpedia.org/resource/Notre_Dame_de_Paris"
+        ]
+      }
+    },
+    {
+      "URL": "https://www.timeout.com/paris/en",
+      "URIs": {
+        "concepts": [
+          "http://dbpedia.org/resource/Login",
+          "http://dbpedia.org/resource/User_(computing)",
+          "http://dbpedia.org/resource/Password",
+          "http://dbpedia.org/resource/Access_code",
+          "http://dbpedia.org/resource/Greatest_hits",
+          "http://dbpedia.org/resource/2016",
+          "http://dbpedia.org/resource/Jacqueline_Bisset"
+        ],
+        "entitiesDisambiguated": [
+          "http://dbpedia.org/resource/Paris,_Illinois",
+          "http://dbpedia.org/resource/Grand_Palais",
+          "http://dbpedia.org/resource/Maurizio_Cattelan",
+          "http://dbpedia.org/resource/Facebook",
+          "http://dbpedia.org/resource/Ken_Loach",
+          "http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland"
+        ]
+      }
+    }
+  ]
+}
