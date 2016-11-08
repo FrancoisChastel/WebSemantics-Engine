@@ -11,7 +11,7 @@ Open the file
 web/index.html
 ```
 
-Then, run the flask server which will intercepet AJAX requests from the view. You have to cd the directory web/flask and type 
+Then, run the flask server which will intercepet AJAX requests from the view. You have to cd the directory core/sel-app/server and type 
 ```shell
 export FLASK_APP=server.py
 ```

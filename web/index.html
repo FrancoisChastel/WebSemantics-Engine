@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <title>Web Facant!</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/materialize/dist/css/materialize.min.css">
     <script src="assets/jquery/dist/jquery.min.js"></script>
     <script src="assets/materialize/dist/js/materialize.min.js"></script>
-    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/x-icon" href="img/facant.jpg" />
     <link rel="stylesheet" href="css/home.css">
 </head>
@@ -76,15 +74,15 @@
         {
             recordSearch(keywords);
             var topHtml = '<div id="topSearch" class="row display-table">';
-            topHtml += '<div class="col-md-1 display-cell">';
-                topHtml += '<a href="/"><img src="img/facant.jpg"></a>';
+            topHtml += '<div class="col s2 display-cell">';
+                topHtml += '<a href=""><img src="img/facant.jpg"></a>';
             topHtml += '</div>';
-            topHtml += '<div class="col-md-5 display-cell">';
+            topHtml += '<div class="col s5 display-cell">';
 
                 topHtml += '<input type="text" class="form-control" value="'+keywords+'">';
                 topHtml += '<button class="btn btn-info">Rechercher</button>';
             topHtml += '</div>';
-            topHtml += '<div class="col-md-6 display-cell">';
+            topHtml += '<div class="col s5 display-cell">';
 
             topHtml += '</div>';
             topHtml += '</div>';
