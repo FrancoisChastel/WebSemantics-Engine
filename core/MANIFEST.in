@@ -1,0 +1,4 @@
+include VERSION
+include README.md
+include CHANGELOG.md
+include pytest.ini tox.ini
