@@ -1,34 +1,16 @@
-# How to setup Symfony project 
+# How to setup Web project 
 
-First, go into IHM folder with the command line and execute 
-```shell
-php composer.phar install
-```
-
-Then, execute 
-```shell
-bower install
-```
-
-Then, run 
-```shell
-php bin/symfony_requirements
-```
-Check the results, if it is all green, you can step to the next step
-
-Then, run 
-```shell
-php bin/console doctrine:database:create
-```
-
-Then, set a new VirtualHost which leads to the 'web' folder into the IHM folder
-
-You can now access with your preferred browser to the project by typing the name of the VHost you just created :
+Open the file 
 ```html
-http://host/app_dev.php
-```  
+web/index.html
+```
 
-Enjoy
+Then, run the flask server which will intercepet AJAX requests from the view. You have to cd the directory web/flask and type 
+```shell
+export FLASK_APP=server.py
+```
+
+You can now search whatever you want
 
 # How to use engine.sh
 
