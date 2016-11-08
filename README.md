@@ -1,5 +1,11 @@
 # How to setup Web project 
 
+First, install dependencies using bower in the web directory :
+```shell
+bower install
+```
+A folder named 'assets' must have been created.
+
 Open the file 
 ```html
 web/index.html

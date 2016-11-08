@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "webfacant",
   "homepage": "https://github.com/FrancoisChastel/WebSemantics-Engine",
   "authors": [
     "antoinepay <antoine.payan@hotmail.fr>"
@@ -12,6 +12,11 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "assets/"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+	"materialize":"^0.97.8"
+  }
 }
