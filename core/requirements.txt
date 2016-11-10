@@ -1,1 +1,4 @@
 flask
+pyspotlight
+SPARQLWrapper
+json

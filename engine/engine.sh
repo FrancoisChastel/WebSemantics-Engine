@@ -21,21 +21,49 @@ function checkResult
 ##   MAIN		##
 ##############
 
+# Variables
+isDebug=false
+nbResponses=10
 
 # Parsing parameters
-if [ -z ${1+x} ]; 
+#--------------------- Boucle de traitement des paramètres-----------------------
+
+for ((o=1; $#; o++))
+	do
+		case $1 in
+        -d)
+           isDebug=true           
+           ;;
+			  -n)
+			   	nbResponses=$2;
+			     ;;
+				-h)
+					echo -e "SYNTAXE: ./engine.sh [OPTIONS] request \nOPTIONS: \n\t-d unable debug (print verbose on stdout) \n \t-n [number of responses] \n" 
+					exit 0
+					;;
+				*)
+					InputRequest=$1
+					;;
+			esac
+		shift;
+	done
+
+
+
+if [ -z ${InputRequest+x} ]; 
 	then 
 		echo "Please specify à query. Example : ./engine.sh \"Kurt Cobain\""; 
 		exit 1;
 fi
 
-InputRequest=$1
+
+
+# -------------------- Script Begin --------------------------------------
 
 # Defining variables
 ApiKeyCustomSearch=`cat keys | jq -r .customSearch.apiKey`
 cx=`cat keys | jq -r .customSearch.cx`
 ApiKeyAlchemy=`cat keys | jq -r .alchemy.apiKey`
-
 
 # STEP 1: Send Google Request
 echo "-- Getting list of URL (CustomSearch) --"
@@ -44,13 +72,32 @@ checkResult
 cat Responses/customSearchResponse | jq -r .items[].link > Responses/URLs
 checkResult
 
-# STEP 2: Send to AlchimyAPI, To extract things
+# STEP 2: Send to AlchimyAPI, To extract things (Formated JSON) Every lines marked with "format line" comment, do JSON formating.
 echo "-- Getting informations from URLS (Alchemy) --"
+echo "{\"websites\":[" > Responses/tmpUrlUri # format line
+
 for line in $(cat Responses/URLs);
 do 
+	echo "{\"URL\":\"$line\"," >> Responses/tmpUrlUri # format line
 	echo "$line..."
-	curl -s -X POST -d "outputMode=json" -d "extract=entities, keywords, concepts" -d "sentiment=1" -d "maxRetreve=1" -d "url=$line" "https://gateway-a.watsonplatform.net/calls/url/URLGetCombinedData?apikey=$ApiKeyAlchemy">>Responses/AlchemyResponse; 
+
+	JsonResult=$(curl -s -X POST -d "outputMode=json" -d "url=$line" "https://gateway-a.watsonplatform.net/calls/url/URLGetCombinedData?apikey=$ApiKeyAlchemy")
 	checkResult
-	echo "," >>Responses/AlchemyResponse; 
+
+	echo "\"URIs\":{ \"concepts\":"			 >> Responses/tmpUrlUri	 # format line
+	echo $JsonResult | jq -r '[.concepts[].dbpedia]' >> Responses/tmpUrlUri # format line
+	echo ", \"entitiesDisambiguated\":" 		 >> Responses/tmpUrlUri # format line
+	echo $JsonResult | jq -r '[.entities[].disambiguated | select(.dbpedia!=null) | .dbpedia]' >> Responses/tmpUrlUri # format line
+	echo "}}" >> Responses/tmpUrlUri # format line
+	echo ","  >> Responses/tmpUrlUri # format line
 done  
+
+# Delete the last Line which contains a , (because of last loop)
+head -n -1 Responses/tmpUrlUri > tmp.txt ; mv tmp.txt Responses/tmpUrlUri # format line
+echo "]}"  >> Responses/tmpUrlUri # format line
+
+cat Responses/tmpUrlUri | jq . > Responses/FormatedUrlUri # format line
+
+rm Responses/tmpUrlUri
+
 

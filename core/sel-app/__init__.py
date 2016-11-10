@@ -3,6 +3,7 @@
 
 import logging
 
+
 def _create_logger(log_name, log_file):
     fmt = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     log = logging.getLogger(log_name)
