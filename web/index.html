@@ -5,7 +5,9 @@
     <title>Web Facant!</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/vis/dist/vis-network.min.css">
     <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vis/dist/vis.min.js"></script>
     <script src="assets/materialize/dist/js/materialize.min.js"></script>
     <link rel="icon" type="image/x-icon" href="img/facant.jpg" />
     <link rel="stylesheet" href="css/home.css">
@@ -26,10 +28,12 @@
                     <input id="keywords" style="height:3em" type="text" class="form-control" placeholder="Entrez vos mots-clés">
                 </div>
                 <div class="form-group" style="text-align: center;">
-                    <a onclick="hideHome()" class="waves-effect waves-light btn"><i class="material-icons left">search</i>Rechercher</a>
+                    <a id="Search" class="waves-effect waves-light btn"><i class="material-icons left">search</i>Rechercher</a>
                 </div>
             </form>
         </div>
+        <div id="graph"></div>
+        <div id="results"></div>
     </div>
 </div>
 </body>
@@ -61,15 +65,38 @@
         @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
     }
+
+    canvas
+    {
+        cursor:pointer;
+    }
+
+
 </style>
     <script type="text/javascript">
-        function hideHome()
+        $('#Search').on('click',function()
         {
             var keywords = $('#keywords').val();
             if (keywords.match(/[a-z]/i)) {
                 $('#homeSearch').fadeOut(500,displayOnTop(keywords));
+
             }
-        }
+            /*$.ajax({
+                url:'127.0.0.1:5000',
+                method:'POST',
+                data:{keywords:keywords},
+                dataType:'json',
+                success:function(data)
+                {
+
+                },
+                error:function(data)
+                {
+
+                }
+            });*/
+
+        });
         function displayOnTop(keywords)
         {
             recordSearch(keywords);
@@ -80,7 +107,7 @@
             topHtml += '<div class="col s5 display-cell">';
 
                 topHtml += '<input type="text" class="form-control" value="'+keywords+'">';
-                topHtml += '<button class="btn btn-info">Rechercher</button>';
+                topHtml += '<button class="btn waves-effect waves-light">Rechercher</button>';
             topHtml += '</div>';
             topHtml += '<div class="col s5 display-cell">';
 
@@ -88,6 +115,7 @@
             topHtml += '</div>';
             topHtml += '<hr>';
             $('#topSearch').hide().html(topHtml).fadeToggle(500);
+            setTimeout(draw,500);
         }
         
         function recordSearch(keywords)
@@ -111,5 +139,167 @@
             }
             //Ajax pour compléter la base via le controller Search
         }
-    </script>
+
+        var nodes = null;
+        var edges = null;
+        var network = null;
+        var dataSet = null;
+        var informations = null;
+        function draw()
+        {
+            var container = document.getElementById('graph');
+            var img = reduceImageSize('https://uploaad.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png');
+            document.body.appendChild(img);
+            nodes = [
+                {id : 'p1',value:20, link: 'http://www.helmee.fr',shape :'circularImage', image : 'http://kelmacaviation.com.au/wp-content/uploads/2015/01/1422547115_square-facebook-64.png'},
+                {id : 'p2',value:20, shape : 'circularImage', image : 'http://www.freeaiconspng.com/uploads/red-square-png-14.png', label:"importance"},
+                {id : 'p3',value:20, shape : 'circularImage', image : 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png'},
+                {id : 'f1p1',value:12, shape: 'circularImage', image : ''},
+                {id : 'f2p2', value: 12, shape: 'circularImage', image : ''}
+            ];
+
+            edges = [
+                { from : 'p1', to : 'p2'},
+                { from : 'p1', to : 'p3'},
+                { from : 'p3', to : 'p2'},
+            ];
+            addAllEdges();
+
+            var data = {
+                nodes : nodes,
+                edges : edges
+            };
+
+            var options = {
+                nodes : {
+                    borderWidth : 3,
+                    size:30,
+                    color : { border: '#222222'},
+                    font : {color:'#000000'}
+                },
+                edges : {
+                    color:'black'
+                }
+            };
+            network = new vis.Network(container,data,options);
+            dataSet = new vis.DataSet(nodes);
+
+            informations = [
+                {
+                    id:'f1p1',
+                    title:'Yolo',
+                    desc:{
+                        Lieu : 'Paris',
+                        Departement: '75'
+                    }
+                },
+                {
+                    id:'f2p2',
+                    title:'Héhé',
+                    desc:{
+                        Lieu : 'Popo',
+                        Departement: '75',
+                        Date : 'Aujourd\'hui'
+                    }
+                }
+            ];
+
+            addModals();
+            network.on( 'click', function(properties) {
+                if(properties.nodes[0].indexOf('f')!=-1)
+                {
+                    $('#modal'+properties.nodes).modal();
+                    $('#modal'+properties.nodes).modal('open');
+                }
+                else
+                {
+                    if(dataSet.get(properties.nodes)[0].link)
+                    {
+                        window.open(dataSet.get(properties.nodes)[0].link);
+                    }
+                }
+            });
+            resultsList();
+
+        }
+
+        function resultsList()
+        {
+            var contenu = '<ul class="collection">'+
+            '<li class="collection-item avatar">'+
+            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
+            '<span class="title">Title</span>'+
+            '<p>First Line <br>'+
+            'Second Line'+
+            '</p>'+
+            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
+            '</li>'+
+            '<li class="collection-item avatar">'+
+            '<i class="material-icons circle">folder</i>'+
+            '<span class="title">Title</span>'+
+            '<p>First Line <br>'+
+            'Second Line'+
+            '</p>'+
+            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
+            '</li>'+
+            '<li class="collection-item avatar">'+
+            '<i class="material-icons circle green">insert_chart</i>'+
+            '<span class="title">Title</span>'+
+            '<p>First Line <br>'+
+            'Second Line'+
+            '</p>'+
+            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
+            '</li>'+
+            '</ul>';
+            $('#results').html(contenu);
+        }
+
+        function reduceImageSize(link)
+        {
+            var img = new Image();
+            img.src = link;
+
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            canvas.width=64;
+            canvas.height=64;
+            ctx.drawImage(img, 0, 0, 300, 234);
+            return canvas;
+        }
+
+        function addModals()
+        {
+            for (var i=0;i<informations.length;i++) {
+                var contenu = '';
+                contenu += '<div id="modal' + informations[i]['id'] + '" class="modal">';
+                contenu += '<div class="modal-content">';
+                contenu += '<h4>' + informations[i]['title'] + '</h4>';
+                for (var keyInfo in informations[i]['desc']) {
+                    if (informations[i]['desc'].hasOwnProperty(keyInfo)) {
+                        contenu += '<bold>' + keyInfo + ' : </bold><p>' + informations[i]['desc'][keyInfo] + '</p>';
+                    }
+                }
+                contenu += '</div>';
+                contenu += '<div class="modal-footer">';
+                contenu += '<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>'
+                contenu += '</div>';
+                contenu += '</div>';
+                $('body').append(contenu);
+            }
+        }
+
+        function addAllEdges()
+        {
+            for(var i=0;i<nodes.length;i++)
+            {
+                if(nodes[i]['id'].indexOf('f') !== -1)
+                {
+                    var id = nodes[i]['id'];
+                    var parent = id.substr(id.indexOf('p'));
+                    edges.push({from : parent, to : id})
+                }
+            }
+        }
+</script>
+
 </html>
