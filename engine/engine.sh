@@ -61,9 +61,9 @@ fi
 # -------------------- Script Begin --------------------------------------
 
 # Defining variables
-ApiKeyCustomSearch=`cat keys | jq -r .customSearch.apiKey`
-cx=`cat keys | jq -r .customSearch.cx`
-ApiKeyAlchemy=`cat keys | jq -r .alchemy.apiKey`
+ApiKeyCustomSearch=`cat keys.json | jq -r .customSearch.apiKey`
+cx=`cat keys.json | jq -r .customSearch.cx`
+ApiKeyAlchemy=`cat keys.json | jq -r .alchemy.apiKey`
 
 # STEP 1: Send Google Request
 echo "-- Getting list of URL (CustomSearch) --"
@@ -72,7 +72,7 @@ checkResult
 cat Responses/customSearchResponse | jq -r .items[].link > Responses/URLs
 checkResult
 
-# STEP 2: Send to AlchimyAPI, To extract things (Formated JSON) Every lines marked with "format line" comment, do JSON formating.
+# STEP 2: Send to AlchimyAPI, To extract dbPedia URIs
 echo "-- Getting informations from URLS (Alchemy) --"
 echo "{\"websites\":[" > Responses/tmpUrlUri # format line
 
@@ -83,6 +83,7 @@ do
 
 	JsonResult=$(curl -s -X POST -d "outputMode=json" -d "url=$line" "https://gateway-a.watsonplatform.net/calls/url/URLGetCombinedData?apikey=$ApiKeyAlchemy")
 	checkResult
+	echo $JsonResult > Responses/Alchemy
 
 	echo "\"URIs\":{ \"concepts\":"			 >> Responses/tmpUrlUri	 # format line
 	echo $JsonResult | jq -r '[.concepts[].dbpedia]' >> Responses/tmpUrlUri # format line
