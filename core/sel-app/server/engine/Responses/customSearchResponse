@@ -1,0 +1,600 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - paris",
+    "totalResults": "137000000",
+    "searchTerms": "paris",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "008214837905171502064:yuy4kpi9ui0"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - paris",
+    "totalResults": "137000000",
+    "searchTerms": "paris",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "off",
+    "cx": "008214837905171502064:yuy4kpi9ui0"
+   }
+  ]
+ },
+ "context": {
+  "title": "Google"
+ },
+ "searchInformation": {
+  "searchTime": 0.413799,
+  "formattedSearchTime": "0.41",
+  "totalResults": "137000000",
+  "formattedTotalResults": "137,000,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Paris - Wikipedia",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Paris",
+   "displayLink": "en.wikipedia.org",
+   "snippet": "Paris is the capital and the most populous city of France. It has an area of 105 \nsquare kilometres (41 square miles) and a population in 2013 of 2,229,621 within\n ...",
+   "htmlSnippet": "\u003cb\u003eParis\u003c/b\u003e is the capital and the most populous city of France. It has an area of 105 \u003cbr\u003e\nsquare kilometres (41 square miles) and a population in 2013 of 2,229,621 within\u003cbr\u003e\n&nbsp;...",
+   "formattedUrl": "https://en.wikipedia.org/wiki/Paris",
+   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/\u003cb\u003eParis\u003c/b\u003e",
+   "pagemap": {
+    "hcard": [
+     {
+      "fn": "Paris",
+      "category": "Commune and department"
+     },
+     {
+      "fn": "Paris, Banks of the Seine",
+      "label": "Europe and North America",
+      "category": "UNESCO World Heritage Site"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "220",
+      "height": "146",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRG3uJ-ZkyEV_t8kiEXwCwAKHHpWkT8c1hfj4UhBkgwz9OBzsDUrjIePHQ"
+     }
+    ],
+    "metatags": [
+     {
+      "referrer": "origin-when-cross-origin"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Seine_and_Eiffel_Tower_from_Tour_Saint_Jacques_2013-08.JPG/275px-Seine_and_Eiffel_Tower_from_Tour_Saint_Jacques_2013-08.JPG"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Paris tourist office - Official website",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e tourist office - Official website",
+   "link": "http://en.parisinfo.com/",
+   "displayLink": "en.parisinfo.com",
+   "snippet": "Sep 22, 2016 ... Des informations pratiques pour organiser votre voyage et votre séjour à Paris : \nhôtels et hébergements, monuments à Paris, restaurants, ...",
+   "htmlSnippet": "Sep 22, 2016 \u003cb\u003e...\u003c/b\u003e Des informations pratiques pour organiser votre voyage et votre séjour à \u003cb\u003eParis\u003c/b\u003e : \u003cbr\u003e\nhôtels et hébergements, monuments à \u003cb\u003eParis\u003c/b\u003e, restaurants,&nbsp;...",
+   "cacheId": "NRDm9RPOpCoJ",
+   "formattedUrl": "en.parisinfo.com/",
+   "htmlFormattedUrl": "en.\u003cb\u003eparis\u003c/b\u003einfo.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "280",
+      "height": "180",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTcdLkvyc2RS6ktEkTluYpbvBdXhuJDuoDwNo4y28VZOGeFrr54tSbxTGai"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width,initial-scale=1",
+      "copyright": "Paris Convention and Visitors Bureau",
+      "author": "Paris Convention and Visitors Bureau",
+      "p:domain_verify": "33123360ef42db9ba00718bc651e2d20",
+      "og:title": "Paris tourist office - Official website",
+      "og:type": "website",
+      "og:url": "http://en.parisinfo.com/",
+      "og:image": "http://en.parisinfo.com/bundles/otcpotcp/images/paris_380x244.jpg",
+      "og:image:type": "image/jpeg",
+      "og:description": "Des informations pratiques pour organiser votre voyage et votre séjour à Paris : hôtels et hébergements, monuments à Paris, restaurants, événements, shopping, sorties…",
+      "og:site_name": "en.parisinfo.com"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://en.parisinfo.com/bundles/otcpotcp/images/paris_380x244.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Things to do in Paris, France | Facebook",
+   "htmlTitle": "Things to do in \u003cb\u003eParis\u003c/b\u003e, France | Facebook",
+   "link": "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+   "displayLink": "www.facebook.com",
+   "snippet": "Discover Paris, France with the help of your friends. Search for restaurants, hotels\n, museums and more.",
+   "htmlSnippet": "Discover \u003cb\u003eParis\u003c/b\u003e, France with the help of your friends. Search for restaurants, hotels\u003cbr\u003e\n, museums and more.",
+   "cacheId": "ZcNMweKzJwYJ",
+   "formattedUrl": "https://www.facebook.com/places/...to...Paris.../110774245616525/",
+   "htmlFormattedUrl": "https://www.facebook.com/places/...to...\u003cb\u003eParis\u003c/b\u003e.../110774245616525/",
+   "pagemap": {
+    "metatags": [
+     {
+      "referrer": "default",
+      "og:site_name": "Facebook",
+      "og:url": "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+      "og:title": "Things to do in Paris, France | Facebook",
+      "og:description": "Discover Paris, France with the help of your friends. Search for restaurants, hotels, museums and more.",
+      "og:image": "https://scontent-ort2-1.xx.fbcdn.net/t31.0-0/p240x240/11953561_1121758071184799_6072372974732153251_o.jpg"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://scontent-ort2-1.xx.fbcdn.net/t31.0-0/p240x240/11953561_1121758071184799_6072372974732153251_o.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Paris - Lonely Planet",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e - Lonely Planet",
+   "link": "https://www.lonelyplanet.com/france/paris",
+   "displayLink": "www.lonelyplanet.com",
+   "snippet": "Paris has a timeless familiarity for first-time and frequent visitors, with instantly \nrecognisable architectural icons, along with exquisite...",
+   "htmlSnippet": "\u003cb\u003eParis\u003c/b\u003e has a timeless familiarity for first-time and frequent visitors, with instantly \u003cbr\u003e\nrecognisable architectural icons, along with exquisite...",
+   "cacheId": "o9Kqj3n_x50J",
+   "formattedUrl": "https://www.lonelyplanet.com/france/paris",
+   "htmlFormattedUrl": "https://www.lonelyplanet.com/france/\u003cb\u003eparis\u003c/b\u003e",
+   "pagemap": {
+    "offer": [
+     {
+      "category": "Modern French"
+     },
+     {
+      "category": "Traditional French"
+     },
+     {
+      "category": "Modern French"
+     },
+     {
+      "category": "Gastronomic"
+     },
+     {
+      "category": "Brasserie"
+     },
+     {
+      "category": "Fusion"
+     },
+     {
+      "category": "Bistro"
+     },
+     {
+      "category": "Neobistro"
+     },
+     {
+      "category": "Traditional French"
+     },
+     {
+      "category": "French"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "275",
+      "height": "183",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRz0gW_BvXO01DyhWH2i9FrlXO7466wj13m8SH-KmQfa7XxdkHvuA65pWV0"
+     }
+    ],
+    "foodestablishment": [
+     {
+      "name": "Septime in Bastille & Eastern Paris"
+     },
+     {
+      "name": "L’AOC in Latin Quarter"
+     },
+     {
+      "name": "Derrière in Le Marais, Ménilmontant & Belleville"
+     },
+     {
+      "name": "L’Astrance in"
+     },
+     {
+      "name": "Bouillon Racine in St-Germain & Les Invalides"
+     },
+     {
+      "name": "Yam’Tcha in Louvre & Les Halles"
+     },
+     {
+      "name": "Frenchie in Louvre & Les Halles"
+     },
+     {
+      "name": "Le Chateaubriand in Le Marais, Ménilmontant & Belleville"
+     },
+     {
+      "name": "Le Grand Véfour in Louvre & Les Halles"
+     },
+     {
+      "name": "Le Hide in Champs-Élysées & Grands Boulevards"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1",
+      "title": "Paris - Lonely Planet",
+      "author": "Lonely Planet",
+      "theme-color": "#1d508d",
+      "fb:app_id": "111537044496",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@lonelyplanet",
+      "twitter:title": "Paris - Lonely Planet",
+      "twitter:image:src": "https://lonelyplanetimages.imgix.net/mastheads/GettyImages-500759045_super.jpg?sharp=10&vib=20&w=1200",
+      "og:site_name": "Lonely Planet",
+      "og:type": "website",
+      "og:title": "Paris - Lonely Planet",
+      "og:url": "http://www.lonelyplanet.com/france/paris",
+      "og:description": "Paris has a timeless familiarity for first-time and frequent visitors, with instantly recognisable architectural icons, along with exquisite...",
+      "og:image": "https://lonelyplanetimages.imgix.net/mastheads/GettyImages-500759045_super.jpg?sharp=10&vib=20&w=1200",
+      "sailthru.date": "2016-11-11 00:03:24 +0000",
+      "sailthru.tags": "Paris, architecture-and-buildings, art-and-literature, business-travel, cities, festivals-and-events, food-and-drink, history-heritage-and-tradition, honeymoons-and-romance, luxury-travel, movies-and-television, music, parks-and-reserves, shopping, train-travel-and-railways"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://lonelyplanetimages.imgix.net/mastheads/GettyImages-500759045_super.jpg?sharp=10&vib=20&w=1200"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "News about #paris on Twitter",
+   "htmlTitle": "News about #\u003cb\u003eparis\u003c/b\u003e on Twitter",
+   "link": "https://twitter.com/hashtag/paris",
+   "displayLink": "twitter.com",
+   "snippet": "Heavy security as Sting reopens Bataclan after Paris attacks PARIS (AP) — \nFrench security turned out in force Saturday night as British pop legend Sting ...",
+   "htmlSnippet": "Heavy security as Sting reopens Bataclan after \u003cb\u003eParis\u003c/b\u003e attacks \u003cb\u003ePARIS\u003c/b\u003e (AP) — \u003cbr\u003e\nFrench security turned out in force Saturday night as British pop legend Sting&nbsp;...",
+   "cacheId": "4z9-lV4fKZcJ",
+   "formattedUrl": "https://twitter.com/hashtag/paris",
+   "htmlFormattedUrl": "https://twitter.com/hashtag/\u003cb\u003eparis\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "192",
+      "height": "262",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQP_crbVTVdL6wBtfhjbuZtcPo7XKJkAzrmst8QhtOiiQuO9Ww_hJ55U4g"
+     }
+    ],
+    "metatags": [
+     {
+      "msapplication-tileimage": "//abs.twimg.com/favicons/win8-tile-144.png",
+      "msapplication-tilecolor": "#00aced",
+      "swift-page-name": "search"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://pbs.twimg.com/media/BfB6ukVIQAATRMI.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Paris 2016: Best of Paris, France Tourism - TripAdvisor",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e 2016: Best of \u003cb\u003eParis\u003c/b\u003e, France Tourism - TripAdvisor",
+   "link": "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
+   "displayLink": "www.tripadvisor.com",
+   "snippet": "Paris Tourism: TripAdvisor has 2741006 reviews of Paris Hotels, Attractions, and \nRestaurants making it your best Paris resource.",
+   "htmlSnippet": "\u003cb\u003eParis\u003c/b\u003e Tourism: TripAdvisor has 2741006 reviews of \u003cb\u003eParis\u003c/b\u003e Hotels, Attractions, and \u003cbr\u003e\nRestaurants making it your best \u003cb\u003eParis\u003c/b\u003e resource.",
+   "cacheId": "p_6FUA-4Qj0J",
+   "formattedUrl": "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France- Vacations.html",
+   "htmlFormattedUrl": "https://www.tripadvisor.com/Tourism-g187147-\u003cb\u003eParis\u003c/b\u003e_Ile_de_France- Vacations.html",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "260",
+      "height": "194",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScEvleisqvGXpRVe98WLnpY-Q5rOdh63p67BcLvjIsAj0Lq1ST2t5xg5A"
+     }
+    ],
+    "breadcrumb": [
+     {
+      "url": "Europe",
+      "title": "Europe"
+     },
+     {
+      "url": "France",
+      "title": "France"
+     },
+     {
+      "url": "Ile-de-France",
+      "title": "Ile-de-France"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Paris 2016: Best of Paris, France Tourism - TripAdvisor",
+      "og:description": "Paris Tourism: TripAdvisor has 2,741,006 reviews of Paris Hotels, Attractions, and Restaurants making it your best Paris resource.",
+      "og:image": "https://media-cdn.tripadvisor.com/media/photo-s/00/14/7a/9c/the-heart-of-paris-where.jpg",
+      "og:image:width": "550",
+      "og:image:height": "411",
+      "al:ios:app_name": "TripAdvisor",
+      "al:ios:app_store_id": "284876795",
+      "twitter:app:id:ipad": "284876795",
+      "twitter:app:id:iphone": "284876795",
+      "al:ios:url": "tripadvisor://www.tripadvisor.com/Tourism-g187147-m33762-Paris_Ile_de_France-Vacations.html",
+      "twitter:app:url:ipad": "tripadvisor://www.tripadvisor.com/Tourism-g187147-m33762-Paris_Ile_de_France-Vacations.html",
+      "twitter:app:url:iphone": "tripadvisor://www.tripadvisor.com/Tourism-g187147-m33762-Paris_Ile_de_France-Vacations.html"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media-cdn.tripadvisor.com/media/photo-s/00/14/7a/9c/the-heart-of-paris-where.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Paris travel guide - Wikitravel",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e travel guide - Wikitravel",
+   "link": "http://wikitravel.org/en/Paris",
+   "displayLink": "wikitravel.org",
+   "snippet": "Open source travel guide to Paris, featuring up-to-date information on attractions, \nhotels, restaurants, nightlife, travel tips and more. Free and reliable advice ...",
+   "htmlSnippet": "Open source travel guide to \u003cb\u003eParis\u003c/b\u003e, featuring up-to-date information on attractions, \u003cbr\u003e\nhotels, restaurants, nightlife, travel tips and more. Free and reliable advice&nbsp;...",
+   "cacheId": "wSrbusbUVz8J",
+   "formattedUrl": "wikitravel.org/en/Paris",
+   "htmlFormattedUrl": "wikitravel.org/en/\u003cb\u003eParis\u003c/b\u003e",
+   "pagemap": {
+    "hcard": [
+     {
+      "fn": "Eurolines",
+      "url": "http://www.eurolines.com/",
+      "url_text": "[1]"
+     },
+     {
+      "fn": "Megabus",
+      "url": "http://uk.megabus.com/default.aspx",
+      "url_text": "[2]"
+     },
+     {
+      "fn": "iDBUS",
+      "url": "http://www.idbus.com/",
+      "url_text": "[3]"
+     },
+     {
+      "fn": "FlixBus",
+      "url": "https://www.flixbus.fr/",
+      "url_text": "[4]"
+     },
+     {
+      "fn": "Starshipper",
+      "url": "http://www.starshipper.com/",
+      "url_text": "[5]"
+     },
+     {
+      "fn": "Roue Libre, Les Halles",
+      "note": "facing 120 rue Rambuteau, Métro: Les Halles"
+     },
+     {
+      "fn": "Taxis aéroport de Paris",
+      "nickname": "airport transfer",
+      "url": "http://www.taxiaeroportparis.fr/",
+      "url_text": "[7]"
+     },
+     {
+      "fn": "Transport Parisien",
+      "nickname": "transfert roissy",
+      "url": "http://www.transportparisien.com/",
+      "url_text": "[6]"
+     },
+     {
+      "fn": "Taxi Paris",
+      "nickname": "taxi roissy",
+      "url": "http://www.taxis-paris.org/",
+      "url_text": "[8]"
+     },
+     {
+      "fn": "Taxis net Paris",
+      "url": "http://www.taxiparis.org/",
+      "url_text": "[9]"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "296",
+      "height": "170",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ-OtudiQnyXo0T1Vyk2gApRYCma2YmwraKp_yxE2kXGho27WW31WfukMjk"
+     }
+    ],
+    "metatags": [
+     {
+      "dc.title": "Paris - &lt;wikititlesuffix&gt;",
+      "icbm": "48.856, 2.351",
+      "geo.position": "48.856;2.351"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://wikitravel.org/upload/shared//thumb/3/37/Paris_overview_map_with_listings.png/500px-Paris_overview_map_with_listings.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Paris Las Vegas Hotel | Your Choice for Romantic Hotels in Vegas",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e Las Vegas Hotel | Your Choice for Romantic Hotels in Vegas",
+   "link": "https://www.caesars.com/paris-las-vegas",
+   "displayLink": "www.caesars.com",
+   "snippet": "Las Vegas hotels. Enticing. Romantic. Sexy. Satisfy your Las Vegas lust at Paris \nHotel and Casino offering the most alluring accommodations. Book your luxury ...",
+   "htmlSnippet": "Las Vegas hotels. Enticing. Romantic. Sexy. Satisfy your Las Vegas lust at \u003cb\u003eParis\u003c/b\u003e \u003cbr\u003e\nHotel and Casino offering the most alluring accommodations. Book your luxury&nbsp;...",
+   "cacheId": "Yt1yeuXi5-IJ",
+   "formattedUrl": "https://www.caesars.com/paris-las-vegas",
+   "htmlFormattedUrl": "https://www.caesars.com/\u003cb\u003eparis\u003c/b\u003e-las-vegas",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "343",
+      "height": "147",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSrYyo4rD1Vm3r0Fxp5Qaqd-YHHGDDjHzcDVBYOqjnfWPQBOC31-VrYYhCr"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0",
+      "og:url": "https://www.caesars.com/paris-las-vegas",
+      "og:type": "website",
+      "og:title": "Paris Las Vegas Hotel | Your Choice for Romantic Hotels in Vegas",
+      "og:description": "Las Vegas hotels. Enticing. Romantic. Sexy. Satisfy your Las Vegas lust at Paris Hotel and Casino offering the most alluring accommodations. Book your luxury room today.",
+      "twitter:card": "summary",
+      "twitter:site": "@ParisVegas",
+      "apple-itunes-app": "app-id=720839830"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.caesars.com/content/cet-global/caesars-com/paris-las-vegas/_jcr_content/bookingimageheader/background.stdimg.uwide.src.cover.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Paris massacre: At least 128 die in attacks - CNN.com",
+   "htmlTitle": "\u003cb\u003eParis\u003c/b\u003e massacre: At least 128 die in attacks - CNN.com",
+   "link": "http://www.cnn.com/2015/11/13/world/paris-shooting/",
+   "displayLink": "www.cnn.com",
+   "snippet": "Nov 14, 2015 ... At least 128 people were killed in shootings, a hostage situation and explosions \nin Paris and a nearby city late Friday, according to French ...",
+   "htmlSnippet": "Nov 14, 2015 \u003cb\u003e...\u003c/b\u003e At least 128 people were killed in shootings, a hostage situation and explosions \u003cbr\u003e\nin \u003cb\u003eParis\u003c/b\u003e and a nearby city late Friday, according to French&nbsp;...",
+   "cacheId": "QwhEHDZKjvQJ",
+   "formattedUrl": "www.cnn.com/2015/11/13/world/paris-shooting/",
+   "htmlFormattedUrl": "www.cnn.com/2015/11/13/world/\u003cb\u003eparis\u003c/b\u003e-shooting/",
+   "pagemap": {
+    "thumbnail": [
+     {
+      "src": "http://i2.cdn.cnn.com/cnnnext/dam/assets/151113163940-01-paris-shooting-screengrab-super-tease.jpg"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0",
+      "section": "world",
+      "og:pubdate": "2015-11-13T21:06:43Z",
+      "pubdate": "2015-11-13T21:06:43Z",
+      "lastmod": "2015-11-14T14:48:52Z",
+      "og:url": "http://www.cnn.com/2015/11/13/world/paris-shooting/index.html",
+      "author": "Steve Almasy, Pierre Meilhan and Jim Bittermann, CNN",
+      "og:title": "Paris massacre: At least 128 die in attacks",
+      "og:description": "At least 128 people were killed in shootings, a hostage situation and explosions in Paris and a nearby city late Friday, according to French officials.",
+      "og:site_name": "CNN",
+      "twitter:card": "summary_large_image",
+      "og:type": "article",
+      "og:image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/151113163940-01-paris-shooting-screengrab-super-tease.jpg",
+      "thumbnail": "http://i2.cdn.cnn.com/cnnnext/dam/assets/151113163940-01-paris-shooting-screengrab-super-tease.jpg",
+      "vr:canonical": "http://www.cnn.com/2015/11/13/world/paris-shooting/index.html",
+      "fb:app_id": "80401312489",
+      "fb:pages": "5550296508,18793419640",
+      "template-top": "world,art-vid-vls-col,col-paris-attacks"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://i2.cdn.cnn.com/cnnnext/dam/assets/151113163940-01-paris-shooting-screengrab-super-tease.jpg",
+      "type": "1",
+      "width": "299",
+      "height": "168"
+     }
+    ],
+    "newsarticle": [
+     {
+      "articlesection": "world",
+      "datecreated": "2015-11-13T21:06:43Z",
+      "datepublished": "2015-11-13T21:06:43Z",
+      "datemodified": "2015-11-14T14:48:52Z",
+      "url": "http://www.cnn.com/2015/11/13/world/paris-shooting/index.html",
+      "author": "Steve Almasy, Pierre Meilhan and Jim Bittermann, CNN",
+      "headline": "Paris massacre: At least 128 die in attacks - CNN.com",
+      "description": "At least 128 people were killed in shootings, a hostage situation and explosions in Paris and a nearby city late Friday, according to French officials.",
+      "keywords": "world, Paris massacre: At least 128 die in attacks - CNN.com",
+      "image": "http://i2.cdn.cnn.com/cnnnext/dam/assets/151113163940-01-paris-shooting-screengrab-super-tease.jpg",
+      "thumbnailurl": "http://i2.cdn.cnn.com/cnnnext/dam/assets/151113163940-01-paris-shooting-screengrab-super-tease.jpg",
+      "alternativeheadline": "Paris massacre: At least 128 killed in gunfire and blasts, French officials say",
+      "articlebody": "Story highlights Eight extremists are dead after the attacks, Paris prosecutor's officeObama speaks with HollandeRussian President Vladimir Putin offers condolences, helpParis (CNN)On a night..."
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Time Out Paris | Paris Events, Activities & Things To Do",
+   "htmlTitle": "Time Out \u003cb\u003eParis\u003c/b\u003e | \u003cb\u003eParis\u003c/b\u003e Events, Activities &amp; Things To Do",
+   "link": "https://www.timeout.com/paris/en",
+   "displayLink": "www.timeout.com",
+   "snippet": "Paris's guide to theatre, restaurants, bars, movies, shopping, events, activities, \nthings to do, music, clubs, dance and nightlife.",
+   "htmlSnippet": "\u003cb\u003eParis&#39;s\u003c/b\u003e guide to theatre, restaurants, bars, movies, shopping, events, activities, \u003cbr\u003e\nthings to do, music, clubs, dance and nightlife.",
+   "cacheId": "7fxTGti6cRUJ",
+   "formattedUrl": "https://www.timeout.com/paris/en",
+   "htmlFormattedUrl": "https://www.timeout.com/\u003cb\u003eparis\u003c/b\u003e/en",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "225",
+      "height": "225",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnyVDkP9yn-4Doech9S3sO6lahuH8M0_K7RP_gduIAMmF38FxjXmmI15OQ"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1",
+      "platform": "v4",
+      "language": "en",
+      "locale": "en-GB",
+      "site": "fr-paris",
+      "category_mapping": "{\"shopping_and_style_(category)\":\"category_1\",\"health_and_beauty_(category)\":\"category_1\",\"restaurants_(category)\":\"category_2\",\"bars_and_pubs_(category)\":\"category_2\",\"art_(category)\":\"category_3\",\"theatre_(category)\":\"category_4\",\"music_(category)\":\"category_5\",\"nightlife_(category)\":\"category_5\",\"clubs_(category)\":\"category_5\",\"things_to_do_(category)\":\"category_6\",\"attractions_(category)\":\"category_6\",\"museums_(category)\":\"category_6\",\"sport_and_fitness_(category)\":\"category_6\",\"comedy_(category)\":\"category_7\",\"film_genres\":\"category_8\",\"cinemas_(category)\":\"category_8\",\"film_(category)\":\"category_8\",\"dance_(category)\":\"category_9\",\"default\":\"category_10\"}",
+      "home_url": "/paris/en",
+      "og:image": "https://media.timeout.com/images/100004143/image.jpg",
+      "og:title": "Your ultimate guide to Paris",
+      "fb:app_id": "283840528317085",
+      "og:url": "https://www.timeout.com/paris/en",
+      "og:site_name": "Time Out Paris",
+      "og:description": "Paris’s guide to theatre, restaurants, bars, movies, shopping, events, activities, things to do, music, clubs, dance and nightlife.",
+      "og:type": "article",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "Your ultimate guide to Paris",
+      "twitter:description": "Discover Paris’s best things to do, restaurants, theatre and nightlife",
+      "twitter:site": "@time_out_paris",
+      "twitter:creator": "@time_out_paris",
+      "twitter:image:src": "https://media.timeout.com/images/100004143/image.jpg",
+      "fb:pages": "167113240025188",
+      "asset_path": "//dist.timeout.com/dist/"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media.timeout.com/images/100004143/image.jpg"
+     }
+    ]
+   }
+  }
+ ]
+}

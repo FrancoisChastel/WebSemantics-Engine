@@ -6,10 +6,10 @@ from __future__ import with_statement, print_function, division
 import json
 
 
-def generate_matrix(query):
-    parsed_query = json.loads(query)
+def generate_matrix(parsed_query):
+    #parsed_query = json.loads(query)
 
-    return compute_similarities(parsed_query['websites'])
+    return compute_similarities(parsed_query['Websites'])
 
 
 def compute_similarities(parsed_query):
@@ -29,8 +29,8 @@ def compute_similarity(element,
                        compare_to,
                        weight_concepts=1,
                        weight_disambiguated=1):
-    element = element["URIs"]
-    compare_to = compare_to["URIs"]
+    element = element["URI"]
+    compare_to = compare_to["URI"]
 
     return (((weight_concepts) * (len(set(element["concepts"]).intersection(set(compare_to["concepts"])))
                                   / max(len(element["concepts"]), len(compare_to["concepts"]))))

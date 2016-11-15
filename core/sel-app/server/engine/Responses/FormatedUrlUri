@@ -69,15 +69,15 @@
           "http://dbpedia.org/resource/Eiffel_Tower",
           "http://dbpedia.org/resource/Gustave_Eiffel",
           "http://dbpedia.org/resource/7th_arrondissement_of_Paris",
+          "http://dbpedia.org/resource/Jardin_des_Plantes",
           "http://dbpedia.org/resource/France"
         ],
         "entitiesDisambiguated": [
-          "http://dbpedia.org/resource/Paris",
           "http://dbpedia.org/resource/Eiffel_Tower",
           "http://dbpedia.org/resource/Twitter",
-          "http://dbpedia.org/resource/Europe",
           "http://dbpedia.org/resource/European_Court_of_Human_Rights",
-          "http://dbpedia.org/resource/Seine"
+          "http://dbpedia.org/resource/Seine",
+          "http://dbpedia.org/resource/Louis_Vuitton"
         ]
       }
     },
