@@ -148,78 +148,116 @@
         function draw()
         {
             var container = document.getElementById('graph');
-            var img = reduceImageSize('https://uploaad.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png');
-            document.body.appendChild(img);
-            nodes = [
+            //var img = reduceImageSize('https://uploaad.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png');
+            //document.body.appendChild(img);
+            /*nodes = [
                 {id : 'p1',value:20, link: 'http://www.helmee.fr',shape :'circularImage', image : 'http://kelmacaviation.com.au/wp-content/uploads/2015/01/1422547115_square-facebook-64.png'},
                 {id : 'p2',value:20, shape : 'circularImage', image : 'http://www.freeaiconspng.com/uploads/red-square-png-14.png', label:"importance"},
                 {id : 'p3',value:20, shape : 'circularImage', image : 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png'},
                 {id : 'f1p1',value:12, shape: 'circularImage', image : ''},
                 {id : 'f2p2', value: 12, shape: 'circularImage', image : ''}
-            ];
-
-            edges = [
-                { from : 'p1', to : 'p2'},
-                { from : 'p1', to : 'p3'},
-                { from : 'p3', to : 'p2'},
-            ];
-            addAllEdges();
-
-            var data = {
-                nodes : nodes,
-                edges : edges
-            };
-
-            var options = {
-                nodes : {
-                    borderWidth : 3,
-                    size:30,
-                    color : { border: '#222222'},
-                    font : {color:'#000000'}
-                },
-                edges : {
-                    color:'black'
+            ];*/
+            nodes = [];
+            edges = [];
+            $.getJSON("example.json", function(json) {
+                var allUrls = [];
+                for(i=0;i<json["link_url"].length;i++)
+                {
+                    allUrls.push(json["link_url"][i]['urls'][0]);
+                    allUrls.push(json["link_url"][i]['urls'][1]);
                 }
-            };
-            network = new vis.Network(container,data,options);
-            dataSet = new vis.DataSet(nodes);
-
-            informations = [
+                var uniqueNodes = [];
+                $.each(allUrls, function(i, el){
+                    if($.inArray(el, uniqueNodes) === -1) uniqueNodes.push(el);
+                });
+                for(i=0;i<uniqueNodes.length;i++)
                 {
-                    id:'f1p1',
-                    title:'Yolo',
-                    desc:{
-                        Lieu : 'Paris',
-                        Departement: '75'
-                    }
-                },
-                {
-                    id:'f2p2',
-                    title:'Héhé',
-                    desc:{
-                        Lieu : 'Popo',
-                        Departement: '75',
-                        Date : 'Aujourd\'hui'
-                    }
-                }
-            ];
-
-            addModals();
-            network.on( 'click', function(properties) {
-                if(properties.nodes[0].indexOf('f')!=-1)
-                {
-                    $('#modal'+properties.nodes).modal();
-                    $('#modal'+properties.nodes).modal('open');
-                }
-                else
-                {
-                    if(dataSet.get(properties.nodes)[0].link)
+                    var urlWithoutHttp = uniqueNodes[i].substr(uniqueNodes[i].indexOf("/")+2);
+                    if(urlWithoutHttp.indexOf("/") != -1)
                     {
-                        window.open(dataSet.get(properties.nodes)[0].link);
+                        urlWithoutHttp = urlWithoutHttp.substr(0,urlWithoutHttp.indexOf("/"));
+                    }
+                    nodes.push({id : uniqueNodes[i], link : uniqueNodes[i], shape : 'circularImage', image:'https://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'+urlWithoutHttp+'%2F'})
+                }
+                var notSameNodesEdges = [];
+                for(i=0;i<json["link_url"].length;i++)
+                {
+                    if(json["link_url"][i]['urls'][0] != json["link_url"][i]['urls'][1])
+                    {
+                        edges.push({length: 0.3, from : json["link_url"][i]['urls'][0], to : json["link_url"][i]['urls'][1],width : json["link_url"][i]['weight'][0]*10, label : json["link_url"][i]['weight'][0]});
                     }
                 }
+                /*edges = [
+                 { from : 'p1', to : 'p2'},
+                 { from : 'p1', to : 'p3'},
+                 { from : 'p3', to : 'p2'},
+                 ];*/
+
+
+
+                //addAllEdges();
+
+                var data = {
+                    nodes : nodes,
+                    edges : edges
+                };
+                console.log(data);
+                var options = {
+                    nodes : {
+                        borderWidth : 3,
+                        size:30,
+                        color : { border: '#222222'},
+                        font : {color:'#000000'}
+                    },
+                    edges : {
+                        color:'black',
+                        length:10,
+                    },
+                    physics : {
+                        enabled:false
+                    }
+                };
+                network = new vis.Network(container,data,options);
+                dataSet = new vis.DataSet(nodes);
+
+                informations = [
+                    {
+                        id:'f1p1',
+                        title:'Yolo',
+                        desc:{
+                            Lieu : 'Paris',
+                            Departement: '75'
+                        }
+                    },
+                    {
+                        id:'f2p2',
+                        title:'Héhé',
+                        desc:{
+                            Lieu : 'Popo',
+                            Departement: '75',
+                            Date : 'Aujourd\'hui'
+                        }
+                    }
+                ];
+
+                addModals();
+                network.on( 'click', function(properties) {
+                    if(properties.nodes[0].indexOf('f')!=-1)
+                    {
+                        $('#modal'+properties.nodes).modal();
+                        $('#modal'+properties.nodes).modal('open');
+                    }
+                    else
+                    {
+                        if(dataSet.get(properties.nodes)[0].link)
+                        {
+                            window.open(dataSet.get(properties.nodes)[0].link);
+                        }
+                    }
+                });
+                resultsList();
             });
-            resultsList();
+
 
         }
 

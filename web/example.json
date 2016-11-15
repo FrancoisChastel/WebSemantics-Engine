@@ -1,0 +1,148 @@
+{
+  "link_url": [
+    {
+      "urls": [
+        "https://en.wikipedia.org/wiki/Paris",
+        "https://en.wikipedia.org/wiki/Paris"
+      ],
+      "weight": [
+        1
+      ]
+    },
+    {
+      "urls": [
+        "https://en.wikipedia.org/wiki/Paris",
+        "http://en.parisinfo.com/"
+      ],
+      "weight": [
+        0.4
+      ]
+    },
+    {
+      "urls": [
+        "https://en.wikipedia.org/wiki/Paris",
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/"
+      ],
+      "weight": [
+        0.3
+      ]
+    },
+    {
+      "urls": [
+        "https://en.wikipedia.org/wiki/Paris",
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html"
+      ],
+      "weight": [
+        0.6
+      ]
+    },
+    {
+      "urls": [
+        "http://en.parisinfo.com/",
+        "https://en.wikipedia.org/wiki/Paris"
+      ],
+      "weight": [
+        0.3
+      ]
+    },
+    {
+      "urls": [
+        "http://en.parisinfo.com/",
+        "http://en.parisinfo.com/"
+      ],
+      "weight": [
+        1
+      ]
+    },
+    {
+      "urls": [
+        "http://en.parisinfo.com/",
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/"
+      ],
+      "weight": [
+        0.1
+      ]
+    },
+    {
+      "urls": [
+        "http://en.parisinfo.com/",
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html"
+      ],
+      "weight": [
+        0.5
+      ]
+    },
+    {
+      "urls": [
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+        "https://en.wikipedia.org/wiki/Paris"
+      ],
+      "weight": [
+        0.2
+      ]
+    },
+    {
+      "urls": [
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+        "http://en.parisinfo.com/"
+      ],
+      "weight": [
+        0.4
+      ]
+    },
+    {
+      "urls": [
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/"
+      ],
+      "weight": [
+        1
+      ]
+    },
+    {
+      "urls": [
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/",
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html"
+      ],
+      "weight": [
+        0.6
+      ]
+    },
+    {
+      "urls": [
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
+        "https://en.wikipedia.org/wiki/Paris"
+      ],
+      "weight": [
+        0.7
+      ]
+    },
+    {
+      "urls": [
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
+        "http://en.parisinfo.com/"
+      ],
+      "weight": [
+        0.3
+      ]
+    },
+    {
+      "urls": [
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
+        "https://www.facebook.com/places/Things-to-do-in-Paris-France/110774245616525/"
+      ],
+      "weight": [
+        0.1
+      ]
+    },
+    {
+      "urls": [
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
+        "https://www.tripadvisor.com/Tourism-g187147-Paris_Ile_de_France-Vacations.html"
+      ],
+      "weight": [
+        1
+      ]
+    }
+  ]
+}
