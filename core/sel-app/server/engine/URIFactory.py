@@ -41,13 +41,14 @@ class Engine:
             # extracting Concepts
             concepts = self.extractingConceptsJSON(resultatAlchemy)
             disambiguated = self.extractingDisambiguatedJSON(resultatAlchemy)
+            mergedList = concepts + disambiguated
         except Exception as e:
             print("Exception raised : Unable to extract concepts and disambiguatedEntities " + type(e))
             return;
         try:
             # formatting JSON
             self.jsonOutput["Websites"].append(
-                {"URL": url, "URI": {"concepts": concepts, "entitiesDisambiguated": disambiguated}})
+                {"URL": url, "URIs":mergedList})
         except Exception as e:
             print("Exception raised : Unable to append to the JSON. ")
 
