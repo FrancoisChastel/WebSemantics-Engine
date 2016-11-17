@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import with_statement, print_function, division
+from SPARQLWrapper import SPARQLWrapper, JSON
+import json
 
-from SPARQLWrapper import SPARQLWrapper
 
 
 def generate_matrix(parsed_query):
@@ -19,7 +20,6 @@ def compute_similarities(parsed_query):
                 similarities_matrix[index][p_index] = 1
             else:
                 similarities_matrix[index][p_index] = compute_similarity(element, compare_to)
-
     return similarities_matrix
 
 
@@ -38,13 +38,17 @@ def compute_similarity(element,
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
 
 
-def obtain_bests_predicates(URI,
-                            URIs):
-    for elemnt in obtain_same_type(URI)
+#def obtain_bests_predicates(URI,
+#                            URIs):
+#    for element in obtain_same_type(URI):
+#        for attributes in obtain_attributes(element):
 
 
+#################
+#   SPARQL API  #
+#################
 def obtain_attributes(URI):
-    query = "SELECT * WHERE { <"+URI+"> ?data ?value. }"
+    query = "SELECT ?data WHERE { <"+URI+"> ?data ?o. FILTER(lang(?o) = '' || lang(?o) = 'en'). }"
 
     response = query_sparql(query)
 
@@ -77,4 +81,5 @@ def query_sparql(query):
     sparql.setQuery(query)
 
     sparql.setReturnFormat(JSON)
+
     return sparql.query().convert()
