@@ -44,6 +44,9 @@ def obtain_bests_predicates(URI,
         for attributes in obtain_attributes(element):
 
 
+#################
+#   SPARQL API  #
+#################
 def obtain_attributes(URI):
     query = "SELECT ?data WHERE { <"+URI+"> ?data ?o. FILTER(lang(?o) = '' || lang(?o) = 'en'). }"
 
