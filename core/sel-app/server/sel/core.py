@@ -3,7 +3,7 @@
 
 from __future__ import with_statement, print_function, division
 
-from SPARQLWrapper import SPARQLWrapper
+from SPARQLWrapper import SPARQLWrapper, JSON
 
 
 def generate_matrix(parsed_query):
@@ -40,11 +40,12 @@ def compute_similarity(element,
 
 def obtain_bests_predicates(URI,
                             URIs):
-    for elemnt in obtain_same_type(URI)
+    for element in obtain_same_type(URI):
+        for attributes in obtain_attributes(element):
 
 
 def obtain_attributes(URI):
-    query = "SELECT * WHERE { <"+URI+"> ?data ?value. }"
+    query = "SELECT ?data WHERE { <"+URI+"> ?data ?o. FILTER(lang(?o) = '' || lang(?o) = 'en'). }"
 
     response = query_sparql(query)
 
