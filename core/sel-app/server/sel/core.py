@@ -2,13 +2,16 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import with_statement, print_function, division
+<<<<<<< HEAD
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
+=======
+
+from SPARQLWrapper import SPARQLWrapper
+>>>>>>> 1b2725e6253047dd77d79b401db262a78d775b7d
 
 
 def generate_matrix(parsed_query):
-    #parsed_query = json.loads(query)
-
     return compute_similarities(parsed_query['Websites'])
 
 
@@ -40,12 +43,41 @@ def compute_similarity(element,
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
 
 
+def obtain_bests_predicates(URI,
+                            URIs):
+    for elemnt in obtain_same_type(URI)
+
+
+def obtain_attributes(URI):
+    query = "SELECT * WHERE { <"+URI+"> ?data ?value. }"
+
+    response = query_sparql(query)
+
+    for element in response["results"]["bindings"]:
+        yield element["data"]["value"]
+
+
+def obtain_same_type(URI):
+    query = "SELECT * WHERE {{ ?same_type rdf:type {}. }}".format(" ; ".join(obtain_types(URI)))
+
+    response = query_sparql(query)
+
+    for element in response["results"]["bindings"]:
+        yield element["same_type"]["value"]
+
+
 def obtain_types(URI):
     query = '''
     SELECT * WHERE {
     <'''+URI+'''> rdf:type ?type.
     }'''
+    response = query_sparql(query)
 
+    for element in response["results"]["bindings"]:
+        yield element["type"]["value"]
+
+
+def query_sparql(query):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql.setQuery(query)
 
@@ -54,5 +86,5 @@ def obtain_types(URI):
 
     for element in converted_query["results"]["bindings"]:
         yield element["type"]["value"]
-
-    
+ 
+    return sparql.query().convert()

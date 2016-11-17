@@ -4,7 +4,10 @@
       "URL": "https://en.wikipedia.org/wiki/Paris",
       "URIs": {
         "concepts": [
-          "http://dbpedia.org/resource/Paris",
+          {
+            "res": "http://dbpedia.org/resource/Paris",
+            "type" : ["http://dbpedia.org/resource/Paris"
+          }
           "http://dbpedia.org/resource/Seine",
           "http://dbpedia.org/resource/France",
           "http://dbpedia.org/resource/French_Revolution",
