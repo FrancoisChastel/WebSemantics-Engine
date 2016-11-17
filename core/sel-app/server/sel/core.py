@@ -2,13 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import with_statement, print_function, division
-<<<<<<< HEAD
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
-=======
 
-from SPARQLWrapper import SPARQLWrapper
->>>>>>> 1b2725e6253047dd77d79b401db262a78d775b7d
 
 
 def generate_matrix(parsed_query):
@@ -18,7 +14,7 @@ def generate_matrix(parsed_query):
 def compute_similarities(parsed_query):
     similarities_matrix = [[0 for i in range(len(parsed_query))] for j in range(len(parsed_query))]
 
-    for index, element in enumerate(parsed_query):
+for index, element in enumerate(parsed_query):
         for p_index, compare_to in enumerate(parsed_query):
             if index == p_index:
                 similarities_matrix[index][p_index] = 1
@@ -45,11 +41,15 @@ def compute_similarity(element,
 
 def obtain_bests_predicates(URI,
                             URIs):
-    for elemnt in obtain_same_type(URI)
+    for element in obtain_same_type(URI):
+        for attributes in obtain_attributes(element):
 
 
+#################
+#   SPARQL API  #
+#################
 def obtain_attributes(URI):
-    query = "SELECT * WHERE { <"+URI+"> ?data ?value. }"
+    query = "SELECT ?data WHERE { <"+URI+"> ?data ?o. FILTER(lang(?o) = '' || lang(?o) = 'en'). }"
 
     response = query_sparql(query)
 
