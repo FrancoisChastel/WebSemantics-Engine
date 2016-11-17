@@ -35,20 +35,20 @@ class Engine:
 			resultatAlchemy = r.json()	
 			url = resultatAlchemy["url"]
 		except Exception as e:
-			print "Exception raised : Incorrect JSON responses. Content:"+r.text+" Exception : "+type(e) 
+			print ("Exception raised : Incorrect JSON responses. Content:"+r.text+" Exception : "+type(e))
 			return;
 		try :
 			# extracting Concepts
 			concepts 			= self.extractingConceptsJSON(resultatAlchemy)
 			disambiguated = self.extractingDisambiguatedJSON(resultatAlchemy)
 		except Exception as e :
-			print "Exception raised : Unable to extract concepts and disambiguatedEntities "+type(e)
+			print ("Exception raised : Unable to extract concepts and disambiguatedEntities "+type(e))
 			return;
 		try:	
 			# formatting JSON
 			self.jsonOutput["Websites"].append({"URL":url,"URI":{"concepts":concepts,"entitiesDisambiguated":disambiguated}})	
 		except Exception as e :
-			print "Exception raised : Unable to append to the JSON. "
+			print ("Exception raised : Unable to append to the JSON. ")
 
 
 		
@@ -98,7 +98,7 @@ class Engine:
 def main():
 	
 	if len(sys.argv) < 2 :
-		print "Synthaxe error : please specify a request"
+		print ("Synthaxe error : please specify a request")
 		sys.exit(1)
 		
 	request = sys.argv[1]
