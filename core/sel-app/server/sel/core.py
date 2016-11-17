@@ -3,7 +3,7 @@
 
 from __future__ import with_statement, print_function, division
 
-import json
+from SPARQLWrapper import SPARQLWrapper
 
 
 def generate_matrix(parsed_query):
@@ -40,17 +40,33 @@ def compute_similarity(element,
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
 
 
+def obtain_same_type(URI):
+    query = '''
+    SELECT * WHERE {
+        ?same_type rdf:type {}.
+    }
+    '''.format(" ; ".join(obtain_types(URI)))
+
+    response = query_sparql(query)
+
+    for element in response["results"]["bindings"]:
+        yield element["same_type"]["value"]
+
+
 def obtain_types(URI):
     query = '''
     SELECT * WHERE {
     <'''+URI+'''> rdf:type ?type.
     }'''
+    response = query_sparql(query)
 
+    for element in response["results"]["bindings"]:
+        yield element["type"]["value"]
+
+
+def query_sparql(query):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql.setQuery(query)
 
     sparql.setReturnFormat(JSON)
     converted_query = sparql.query().convert()
-
-    for element in converted_query["results"]["bindings"]:
-        yield element["type"]["value"]
