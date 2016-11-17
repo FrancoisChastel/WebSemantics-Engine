@@ -38,3 +38,19 @@ def compute_similarity(element,
         len(set(element["entitiesDisambiguated"]).intersection(set(compare_to["entitiesDisambiguated"])))
         / max(len(element["entitiesDisambiguated"]), len(
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
+
+
+def obtain_types(URI):
+    query = '''
+    SELECT * WHERE {
+    <'''+URI+'''> rdf:type ?type.
+    }'''
+
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    sparql.setQuery(query)
+
+    sparql.setReturnFormat(JSON)
+    converted_query = sparql.query().convert()
+
+    for element in converted_query["results"]["bindings"]:
+        yield element["type"]["value"]
