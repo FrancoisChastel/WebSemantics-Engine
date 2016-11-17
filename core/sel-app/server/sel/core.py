@@ -7,8 +7,6 @@ from SPARQLWrapper import SPARQLWrapper
 
 
 def generate_matrix(parsed_query):
-    #parsed_query = json.loads(query)
-
     return compute_similarities(parsed_query['Websites'])
 
 
@@ -40,12 +38,22 @@ def compute_similarity(element,
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
 
 
+def obtain_bests_predicates(URI,
+                            URIs):
+    for elemnt in obtain_same_type(URI)
+
+
+def obtain_attributes(URI):
+    query = "SELECT * WHERE { <"+URI+"> ?data ?value. }"
+
+    response = query_sparql(query)
+
+    for element in response["results"]["bindings"]:
+        yield element["data"]["value"]
+
+
 def obtain_same_type(URI):
-    query = '''
-    SELECT * WHERE {
-        ?same_type rdf:type {}.
-    }
-    '''.format(" ; ".join(obtain_types(URI)))
+    query = "SELECT * WHERE {{ ?same_type rdf:type {}. }}".format(" ; ".join(obtain_types(URI)))
 
     response = query_sparql(query)
 
@@ -69,4 +77,4 @@ def query_sparql(query):
     sparql.setQuery(query)
 
     sparql.setReturnFormat(JSON)
-    converted_query = sparql.query().convert()
+    return sparql.query().convert()
