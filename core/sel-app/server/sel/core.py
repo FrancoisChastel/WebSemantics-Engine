@@ -82,4 +82,4 @@ def query_sparql(query):
 
     sparql.setReturnFormat(JSON)
 
-   return sparql.query().convert()
+    return sparql.query().convert()
