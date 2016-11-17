@@ -1,0 +1,58 @@
+{
+	"websites": [{
+		"URL": "https://en.wikipedia.org/wiki/Paris",
+		"URIs": {
+			"concepts": [{
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}, {
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}, {
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}],
+			"entitiesDisambiguated": [{
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}, {
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}]
+		}
+	}, {
+		"URL": "https://en.wikipedia.org/wiki/Paris",
+		"URIs": {
+			"concepts": [{
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}, {
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}, {
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}],
+			"entitiesDisambiguated": [{
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}, {
+				"name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
+				"types":  ["Ville", "Type1", "Type2", "Type3", "Type4"]
+			}]
+		}
+	}],
+	"typeRank": [{
+		"type": "type1",
+		"rank": 1
+	}, {
+		"type": "type2",
+		"rank": 2
+	}, {
+		"type": "type3",
+		"rank": 3
+	}, {
+		"type": "type4",
+		"rank": 4
+	}]
+}
