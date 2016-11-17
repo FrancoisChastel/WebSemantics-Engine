@@ -1,5 +1,5 @@
 from flask import Flask
-import engine.URIFactory as engine
+import URIFactory.URIFactory as engine
 import sel.core as core
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
