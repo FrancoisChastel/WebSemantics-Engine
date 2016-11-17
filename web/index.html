@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <title>Web Facant!</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/jquery-ui/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="assets/vis/dist/vis-network.min.css">
     <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-ui/jquery-ui.min.js"></script>
     <script src="assets/vis/dist/vis.min.js"></script>
     <script src="assets/materialize/dist/js/materialize.min.js"></script>
     <link rel="icon" type="image/x-icon" href="img/facant.jpg" />
@@ -74,6 +76,81 @@
 
 </style>
     <script type="text/javascript">
+
+        $('#keywords').autocomplete({
+            source : function(request, response){
+                var keywords = recordSearch($('#keywords').val());
+                var searchWords = '';
+                for(var i=0;i<keywords.length-1;i++)
+                {
+                    searchWords+=keywords[i]+'+';
+                }
+                searchWords+=keywords[keywords.length-1];
+
+                $.ajax({
+                    url : 'http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=5&QueryString='+searchWords,
+                    method:'GET',
+                    headers: {
+                        "Accept":"application/json"
+                    },
+                    dataType : 'json',
+
+                    success : function(data){
+                        var suggestions = [];
+                        for(var j=0;j<data['results'].length;j++)
+                        {
+                            suggestions.push(data['results'][j]['label']);
+                        }
+                        response(suggestions);
+                    },
+                    error:function(data)
+                    {
+                        console.log(data);
+                    }
+                });
+
+            }
+        });
+
+
+
+        $('#inputSearchTop').autocomplete(
+            {
+                source : function(request, response){
+                    var keywords = recordSearch($('#inputSearch').val());
+                    var searchWords = '';
+                    for(var i=0;i<keywords.length-1;i++)
+                    {
+                        searchWords+=keywords[i]+'+';
+                    }
+                    searchWords+=keywords[keywords.length-1];
+
+                    $.ajax({
+                        url : 'http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=5&QueryString='+searchWords,
+                        method:'GET',
+                        headers: {
+                            "Accept":"application/json"
+                        },
+                        dataType : 'json',
+
+                        success : function(data){
+                            var suggestions = [];
+                            for(var j=0;j<data['results'].length;j++)
+                            {
+                                suggestions.push(data['results'][j]['label']);
+                            }
+                            response(suggestions);
+                        },
+                        error:function(data)
+                        {
+                            console.log(data);
+                        }
+                    });
+
+                }
+            }
+        );
+
         $('#Search').on('click',function()
         {
             var keywords = $('#keywords').val();
@@ -106,7 +183,7 @@
             topHtml += '</div>';
             topHtml += '<div class="col s5 display-cell">';
 
-                topHtml += '<input type="text" class="form-control" value="'+keywords+'">';
+                topHtml += '<input id="inputSearchTop" type="text" class="form-control" value="'+keywords+'">';
                 topHtml += '<button class="btn waves-effect waves-light">Rechercher</button>';
             topHtml += '</div>';
             topHtml += '<div class="col s5 display-cell">';
@@ -137,6 +214,7 @@
                     i--;
                 }
             }
+            return arrayKeywords;
             //Ajax pour compléter la base via le controller Search
         }
 
@@ -145,6 +223,9 @@
         var network = null;
         var dataSet = null;
         var informations = null;
+        var data = null;
+        var options = null;
+
         function draw()
         {
             var container = document.getElementById('graph');
@@ -161,7 +242,7 @@
             edges = [];
             $.getJSON("example.json", function(json) {
                 var allUrls = [];
-                for(i=0;i<json["link_url"].length;i++)
+                for(var i=0;i<json["link_url"].length;i++)
                 {
                     allUrls.push(json["link_url"][i]['urls'][0]);
                     allUrls.push(json["link_url"][i]['urls'][1]);
@@ -170,17 +251,17 @@
                 $.each(allUrls, function(i, el){
                     if($.inArray(el, uniqueNodes) === -1) uniqueNodes.push(el);
                 });
-                for(i=0;i<uniqueNodes.length;i++)
+                for(var i=0;i<uniqueNodes.length;i++)
                 {
                     var urlWithoutHttp = uniqueNodes[i].substr(uniqueNodes[i].indexOf("/")+2);
                     if(urlWithoutHttp.indexOf("/") != -1)
                     {
                         urlWithoutHttp = urlWithoutHttp.substr(0,urlWithoutHttp.indexOf("/"));
                     }
-                    nodes.push({id : uniqueNodes[i], link : uniqueNodes[i], shape : 'circularImage', image:'https://www.google.com/s2/favicons?domain_url=http%3A%2F%2F'+urlWithoutHttp+'%2F'})
+                    addNodeImage(uniqueNodes[i]);
                 }
                 var notSameNodesEdges = [];
-                for(i=0;i<json["link_url"].length;i++)
+                for(var i=0;i<json["link_url"].length;i++)
                 {
                     if(json["link_url"][i]['urls'][0] != json["link_url"][i]['urls'][1])
                     {
@@ -197,12 +278,11 @@
 
                 //addAllEdges();
 
-                var data = {
+                data = {
                     nodes : nodes,
                     edges : edges
                 };
-                console.log(data);
-                var options = {
+                options = {
                     nodes : {
                         borderWidth : 3,
                         size:30,
@@ -261,12 +341,124 @@
 
         }
 
+        function redraw()
+        {
+            var container = document.getElementById('graph');
+            data = {
+                nodes : nodes,
+                edges : edges
+            };
+            options = {
+                nodes : {
+                    borderWidth : 3,
+                    size:30,
+                    color : { border: '#222222'},
+                    font : {color:'#000000'}
+                },
+                edges : {
+                    color:'black',
+                    length:10,
+                },
+                physics : {
+                    enabled:false
+                }
+            };
+            network = new vis.Network(container,data,options);
+            dataSet = new vis.DataSet(nodes);
+
+            informations = [
+                {
+                    id:'f1p1',
+                    title:'Yolo',
+                    desc:{
+                        Lieu : 'Paris',
+                        Departement: '75'
+                    }
+                },
+                {
+                    id:'f2p2',
+                    title:'Héhé',
+                    desc:{
+                        Lieu : 'Popo',
+                        Departement: '75',
+                        Date : 'Aujourd\'hui'
+                    }
+                }
+            ];
+
+            addModals();
+            network.on( 'click', function(properties) {
+                if(properties.nodes[0].indexOf('f')!=-1)
+                {
+                    $('#modal'+properties.nodes).modal();
+                    $('#modal'+properties.nodes).modal('open');
+                }
+                else
+                {
+                    if(dataSet.get(properties.nodes)[0].link)
+                    {
+                        window.open(dataSet.get(properties.nodes)[0].link);
+                    }
+                }
+            });
+            resultsList();
+        }
+
+        function addNodeImage(url)
+        {
+            $.ajax(
+                {
+                    url: url,
+                    success: function(data) {
+                        var html = $.parseHTML( data ),
+                            img = $(html).find("img"),
+                            len = img.length;
+                        if( len > 0 ){
+                            var found = false;
+                            $(img).each(function(){
+
+                                if($(this).attr("src") != null)
+                                {
+                                    if($(this).attr("src").substr(0,4) == "http" && !found)
+                                    {
+                                        var srcHttp = $(this).attr("src");
+                                        nodes.push({id : url, link : url, shape : 'circularImage', image:srcHttp});
+                                        found = true;
+
+                                        redraw();
+                                    }
+                                    else if($(this).attr("src").substr(0,2) == '//' && !found)
+                                    {
+                                        var src = $(this).attr("src");
+                                        var srcHttp = src.replace('//','https://');
+                                        nodes.push({id : url, link : url, shape : 'circularImage', image:srcHttp});
+                                        found = true;
+                                        redraw();
+                                    }
+
+                                }
+                            });
+                        } else {
+                            console.log("Image not found");
+                        }
+                    }
+                });
+        }
+
+
+
         function resultsList()
         {
-            var contenu = '<ul class="collection">'+
-            '<li class="collection-item avatar">'+
-            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
-            '<span class="title">Title</span>'+
+            var contenu = '<ul class="collection">';
+            for(var i=0;i<nodes.length;i++)
+            {
+                contenu+='<li class="collection-item avatar">'+
+                    '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>';
+                contenu+='<span class="title">'+nodes[i].id+'</span>';
+                contenu+='</li>';
+            }
+            /*+
+            +
             '<p>First Line <br>'+
             'Second Line'+
             '</p>'+
@@ -287,8 +479,8 @@
             'Second Line'+
             '</p>'+
             '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
-            '</li>'+
-            '</ul>';
+            '</li>'*/
+            contenu+='</ul>';
             $('#results').html(contenu);
         }
 
