@@ -36,16 +36,16 @@ def alimentByType(parsed_query):
         for uri in uris:
             name = uri
             uri = dict()
-            uri['uri'] = name
-            uri['type'] = list()
+            uri['name'] = name
+            uri['types'] = list()
             for type in core.obtain_types(uri):
                 uri['type'].append(type)
         uris = url['URIs']['entitiesDisambiguated']
         for uri in uris:
             name = uri
             uri = dict()
-            uri['uri'] = name
-            uri['type'] = list()
+            uri['name'] = name
+            uri['types'] = list()
             for type in core.obtain_types(uri):
                 uri.append(type)
 

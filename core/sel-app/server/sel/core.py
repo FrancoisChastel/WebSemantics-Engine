@@ -14,13 +14,12 @@ def generate_matrix(parsed_query):
 def compute_similarities(parsed_query):
     similarities_matrix = [[0 for i in range(len(parsed_query))] for j in range(len(parsed_query))]
 
-for index, element in enumerate(parsed_query):
+    for index, element in enumerate(parsed_query):
         for p_index, compare_to in enumerate(parsed_query):
             if index == p_index:
                 similarities_matrix[index][p_index] = 1
             else:
                 similarities_matrix[index][p_index] = compute_similarity(element, compare_to)
-
     return similarities_matrix
 
 
@@ -39,10 +38,10 @@ def compute_similarity(element,
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
 
 
-def obtain_bests_predicates(URI,
-                            URIs):
-    for element in obtain_same_type(URI):
-        for attributes in obtain_attributes(element):
+#def obtain_bests_predicates(URI,
+#                            URIs):
+#    for element in obtain_same_type(URI):
+#        for attributes in obtain_attributes(element):
 
 
 #################
@@ -82,9 +81,5 @@ def query_sparql(query):
     sparql.setQuery(query)
 
     sparql.setReturnFormat(JSON)
-    converted_query = sparql.query().convert()
 
-    for element in converted_query["results"]["bindings"]:
-        yield element["type"]["value"]
- 
-    return sparql.query().convert()
+   return sparql.query().convert()
