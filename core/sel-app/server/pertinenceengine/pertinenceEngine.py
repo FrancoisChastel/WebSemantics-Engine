@@ -23,7 +23,8 @@ class PertinenceEngine:
 				uri["sum"] = sum
 				sumUrl = sumUrl+sum
 			website["rank"] = sumUrl
-		print json.dumps(self.outputMap)
+		#print json.dumps(self.outputMap)
+		return self.outputMap
 
 def main():
 	# Buidling the demo Map
