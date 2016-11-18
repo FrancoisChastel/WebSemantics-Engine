@@ -50,7 +50,8 @@ def obtain_revelant_attributes(URI):
     response = query_sparql(query)
 
     for var in response["head"]["vars"]:
-        yield (var,response["results"]["bindings"][0][var]["value"])
+        if var in response["results"]["bindings"][0]:
+            yield (var,response["results"]["bindings"][0][var]["value"])
 
 def obtain_bests_predicates(URI,
                             top=20):
