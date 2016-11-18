@@ -8,15 +8,14 @@ import logging
 
 app = Flask(__name__)
 
+
 @app.route('/getResults')
 def findResults():
-
     return 'H'
 
 
 @app.route('/infoURI', methods=['GET', 'POST'])
 def findInfoUri():
-
     uri = request.form['uri']
     response = list()
 
@@ -32,57 +31,48 @@ def generate_json(query):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     engined = engine.Engine()
     parsed_query = engined.run(query)
-    #matrix = generate_matrix(query)
-    #matrix = [[[1],[0.4],[0.3],[0.6]],[[0.3],[1],[0.1],[0.5]],[[0.2],[0.4],[1],[0.6]],[[0.7],[0.3],[0.1],[1]]]
-    #matrix = core.generate_matrix(dictUrlUri)
-    #parse query
-    #parsed_query = json.loads(query)
     parsed_query = parsed_query['Websites']
     alimentByType(parsed_query)
     dictType = dict()
-    evaluateType(dictType,parsed_query)
+    evaluateType(dictType, parsed_query)
 
-    
-    
-            
-    to_return =  json.dumps(data_json)
+    to_return = json.dumps(data_json)
     return to_return
+
 
 @app.route('/search/<query>')
 def search(query):
-	# -- Pipeline --
-		
-	# URIFactory
-	urifactory = URIFactory.URIFactory()
-	outputJson = urifactory.run(query)
-	parsed_query = outputJson['Websites']
-	logging.info('Step 1 : Done')
-	
-	# TypeFactory
-	alimentByType(parsed_query)
-	logging.info('Step 2 : Done')
-	
-	# TypeRanker
-	evaluated_types = dict()
-	evaluateType(evaluated_types,parsed_query)
-	outputJson['typeRank'] = evaluated_types
-	logging.info('Step 3 : Done')
-	
-	# Pertinence
-	pertinenceEngine = PertinenceEngine.PertinenceEngine(outputJson)
-	outputJson = pertinenceEngine.run()
-	logging.info('Step 4 : Done')
-	
-	print json.dumps(outputJson)
-	return outputJson
+    # -- Pipeline --
 
+    # URIFactory
+    urifactory = URIFactory.URIFactory()
+    outputJson = urifactory.run(query)
+    parsed_query = outputJson['Websites']
+    logging.info('Step 1 : Done')
 
+    # TypeFactory
+    alimentByType(parsed_query)
+    logging.info('Step 2 : Done')
+
+    # TypeRanker
+    evaluated_types = dict()
+    evaluateType(evaluated_types, parsed_query)
+    outputJson['typeRank'] = evaluated_types
+    logging.info('Step 3 : Done')
+
+    # Pertinence
+    pertinenceEngine = PertinenceEngine.PertinenceEngine(outputJson)
+    outputJson = pertinenceEngine.run()
+    logging.info('Step 4 : Done')
+
+    print(json.dumps(outputJson))
+    return outputJson
 
 
 def alimentByType(parsed_query):
     for url in parsed_query:
         uris = url["URIs"]
-        for i , uri in enumerate(uris):
+        for i, uri in enumerate(uris):
             name = uri
             uri = dict()
             uri['name'] = name
@@ -93,13 +83,12 @@ def alimentByType(parsed_query):
     return parsed_query
 
 
-
-def evaluateType(dictType,parsed_query):
+def evaluateType(dictType, parsed_query):
     for url in parsed_query:
         uris = url['URIs']
         for uri in uris:
-            for typed in uri['types'] :
+            for typed in uri['types']:
                 if typed in dictType.keys():
                     dictType[typed] += 1
-                else :
+                else:
                     dictType[typed] = 1
