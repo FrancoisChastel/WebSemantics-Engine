@@ -19,6 +19,9 @@
 <div id="wrapper">
     <div id="container">
         <div id="topSearch"></div>
+        <div style="display:none" id="loadingSpin" class="progress">
+            <div class="indeterminate"></div>
+        </div>
         <div id="homeSearch">
             <div style="width:40%;margin:auto;text-align: center;">
                 <a href="/">
@@ -76,7 +79,7 @@
 
 </style>
     <script type="text/javascript">
-
+        var searchKeywords;
         $('#keywords').autocomplete({
             source : function(request, response){
                 var keywords = recordSearch($('#keywords').val());
@@ -112,51 +115,13 @@
             }
         });
 
-
-
-        $('#inputSearchTop').autocomplete(
-            {
-                source : function(request, response){
-                    var keywords = recordSearch($('#inputSearch').val());
-                    var searchWords = '';
-                    for(var i=0;i<keywords.length-1;i++)
-                    {
-                        searchWords+=keywords[i]+'+';
-                    }
-                    searchWords+=keywords[keywords.length-1];
-
-                    $.ajax({
-                        url : 'http://lookup.dbpedia.org/api/search/PrefixSearch?QueryClass=&MaxHits=5&QueryString='+searchWords,
-                        method:'GET',
-                        headers: {
-                            "Accept":"application/json"
-                        },
-                        dataType : 'json',
-
-                        success : function(data){
-                            var suggestions = [];
-                            for(var j=0;j<data['results'].length;j++)
-                            {
-                                suggestions.push(data['results'][j]['label']);
-                            }
-                            response(suggestions);
-                        },
-                        error:function(data)
-                        {
-                            console.log(data);
-                        }
-                    });
-
-                }
-            }
-        );
-
         $('#Search').on('click',function()
         {
             var keywords = $('#keywords').val();
-            if (keywords.match(/[a-z]/i)) {
+            if (keywords.match(/[a-z]/i))
+            {
                 $('#homeSearch').fadeOut(500,displayOnTop(keywords));
-
+                searchKeywords=keywords;
             }
             /*$.ajax({
                 url:'127.0.0.1:5000',
@@ -183,9 +148,9 @@
             topHtml += '</div>';
             topHtml += '<div class="col s5 display-cell">';
                 topHtml += '<div class="col s12 display-cell">';
-                topHtml += '<input id="inputSearchTop" type="text" class="form-control" value="'+keywords+'"></div>';
+                topHtml += '<input id="inputSearchTop" type="text" class="form-control"  value="'+keywords+'"></div>';
                 topHtml += '<div class="col s12 display-cell">';
-                topHtml += '<button style="width:100%;margin:0" class="btn waves-effect waves-light"><i class="material-icons left">search</i>Rechercher</button></div>';
+                topHtml += '<button style="width:100%;margin:0" onclick="draw()" class="btn waves-effect waves-light"><i class="material-icons left">search</i>Rechercher</button></div>';
             topHtml += '</div>';
             topHtml += '<div class="col s5 display-cell">';
 
@@ -229,6 +194,7 @@
 
         function draw()
         {
+            $('#loadingSpin').css('display','block');
             var container = document.getElementById('graph');
             //var img = reduceImageSize('https://uploaad.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png');
             //document.body.appendChild(img);
@@ -241,7 +207,18 @@
             ];*/
             nodes = [];
             edges = [];
-            $.getJSON("http://127.0.0.1:5000/search/Barack+Obama", function(json) {
+            if($('#inputSearchTop').val() != null)
+            {
+                searchKeywords = $('#inputSearchTop').val();
+            }
+            var keywords = recordSearch(searchKeywords);
+            var searchWords = '';
+            for(var i=0;i<keywords.length-1;i++)
+            {
+                searchWords+=keywords[i]+'+';
+            }
+            searchWords+=keywords[keywords.length-1];
+            $.getJSON("http://127.0.0.1:5000/search/"+searchWords, function(json) {
                 /*var allUrls = [];
                 for(var i=0;i<json["link_url"].length;i++)
                 {
@@ -489,39 +466,24 @@
 
         function resultsList()
         {
-            var contenu = '<ul class="collection">';
+            var contenu = '<div class="col s12">';
             for(var i=0;i<nodes.length;i++)
             {
-                contenu+='<li class="collection-item avatar">'+
-                    '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>';
-                contenu+='<span class="title">'+nodes[i].id+'</span>';
-                contenu+='</li>';
+                contenu+='<div class="card horizontal"><div class="card-image">';
+                contenu+='<img src="http://lorempixel.com/100/190/nature/6"></div>';
+                contenu+='<div class="card-stacked">'+
+                '<div class="card-content">'+
+                '<p>Yolo</p>'+
+                '</div>'+
+                '<div class="card-action">'+
+                '<a href="#" target="_blank">Plus d\'infos</a>'+
+                '</div>'+
+                '</div>'+
+                '</div>';
             }
-            /*+
-            +
-            '<p>First Line <br>'+
-            'Second Line'+
-            '</p>'+
-            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
-            '</li>'+
-            '<li class="collection-item avatar">'+
-            '<i class="material-icons circle">folder</i>'+
-            '<span class="title">Title</span>'+
-            '<p>First Line <br>'+
-            'Second Line'+
-            '</p>'+
-            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
-            '</li>'+
-            '<li class="collection-item avatar">'+
-            '<i class="material-icons circle green">insert_chart</i>'+
-            '<span class="title">Title</span>'+
-            '<p>First Line <br>'+
-            'Second Line'+
-            '</p>'+
-            '<a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>'+
-            '</li>'*/
-            contenu+='</ul>';
+            contenu+='</div>';
             $('#results').html(contenu);
+            $('#loadingSpin').css('display','none');
         }
 
         function reduceImageSize(link)
