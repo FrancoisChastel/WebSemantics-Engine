@@ -14,17 +14,18 @@ def findResults():
     return 'H'
 
 
-@app.route('/infoURI/<uri>')
-def findInfoUri(uri):
-    responseDict = dict()
-    responseDict['infos'] = list()
+@app.route('/infoURI', methods=['GET', 'POST'])
+def findInfoUri():
+
+    uri = request.form['uri']
+    response = list()
 
     for value in core.obtain_revelant_attributes(uri):
         miniDict = dict()
         miniDict['attribut'] = value[0]
         miniDict['valeur'] = value[1]
-        responseDict['infos'].append(miniDict)
-    json.dumps(responseDict)
+        response.append(miniDict)
+    return json.dumps(response)
 
 
 def generate_json(query):
