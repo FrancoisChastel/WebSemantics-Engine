@@ -28,36 +28,6 @@
             "type3",
             "Type3"
           ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
         }
       ],
       "rank": 30
@@ -65,36 +35,6 @@
     {
       "URL": "https://es.wikipedia.org/wiki/Paris",
       "URIs": [
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
-        },
         {
           "sum": 6,
           "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
@@ -128,44 +68,6 @@
             "Ville",
             "Type1",
             "Type2",
-            "Type3",
-            "Type4"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
-            "Type3"
-          ]
-        },
-        {
-          "sum": 0,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "Type3",
-            "Type4"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3"
-          ]
-        },
-        {
-          "sum": 6,
-          "name": "http://dbpedia.org/resource/5th_arrondissement_of_Paris",
-          "types": [
-            "type1",
-            "type2",
-            "type3",
             "Type3",
             "Type4"
           ]
