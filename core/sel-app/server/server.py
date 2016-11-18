@@ -1,5 +1,5 @@
 from flask import Flask
-import engine.engine as engine
+import URIFactory.URIFactory as engine
 import sel.core as core
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
@@ -14,15 +14,14 @@ def findResults():
 
 @app.route('/infoURI/<uri>')
 def findInfoUri(uri):
-    responseDict = dict()
-    responseDict['infos'] = list()
+    response = list()
 
     for value in core.obtain_revelant_attributes(uri):
         miniDict = dict()
         miniDict['attribut'] = value[0]
         miniDict['valeur'] = value[1]
-        responseDict['infos'].append(miniDict)
-    json.dumps(responseDict)
+        response.append(miniDict)
+    return json.dumps(response)
 
 
 def generate_json(query):
@@ -46,11 +45,21 @@ def generate_json(query):
     return to_return
 
 
-def alimentByType(query):
+def test(query):
     engined = engine.Engine()
-    parsed_query = engined.run(query)
+    query = engined.run(query)
+    parsed_query = query['Websites']
+    alimentByType(parsed_query)
+    evaluated_types = dict()
+    evaluateType(evaluated_types,parsed_query)
+    query['typeRank'] = evaluated_types
+    return query
+
+
+
+
+def alimentByType(parsed_query):
     for url in parsed_query:
-        print(url)
         uris = url["URIs"]
         for i , uri in enumerate(uris):
             name = uri
@@ -66,17 +75,10 @@ def alimentByType(query):
 
 def evaluateType(dictType,parsed_query):
     for url in parsed_query:
-        uris = url['URIs']['concepts']
+        uris = url['URIs']
         for uri in uris:
-            for type in core.obtain_types(uri):
-                if type in dictType.keys():
-                    dictType[type] += 1
+            for typed in uri['types'] :
+                if typed in dictType.keys():
+                    dictType[typed] += 1
                 else :
-                    dictType[type] = 1
-        uris = url['URIs']['entitiesDisambiguated']
-        for uri in uris:
-            for type in core.obtain_types(uri):
-                if type in dictType.keys():
-                    dictType[type] += 1
-                else :
-                    dictType[type] = 1
+                    dictType[typed] = 1
