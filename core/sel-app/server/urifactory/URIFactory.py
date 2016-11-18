@@ -93,7 +93,7 @@ class URIFactory:
             data = self.findDatasOfAnUrl(element["URL"], resultat)
             element["title"] = data["title"]
             element["summary"] = data["snippet"]
-            element["image"] = data["htmlFormattedUrl"]["cse_image"]["src"]
+            element["image"] = data["htmlFormattedUrl"]["cse_image"][0]["src"]
             element["linkToDisplay"] = data["displayLink"]
 
         return self.jsonOutput
