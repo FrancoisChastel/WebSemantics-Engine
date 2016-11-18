@@ -48,7 +48,7 @@ class URIFactory:
         try:
             # formatting JSON
             self.jsonOutput["Websites"].append(
-                {"URL": url, "URIs":mergedList})
+                {"URL": url, "URIs": mergedList})
         except Exception as e:
             print("Exception raised : Unable to append to the JSON. ")
 
@@ -91,19 +91,20 @@ class URIFactory:
         # STEP 3: Make JSON more richer with image, title and description
         for element in self.jsonOutput["Websites"]:
             data = self.findDatasOfAnUrl(element["url"], resultat)
-            element["title"] =  data["title"]
+            element["title"] = data["title"]
             element["summary"] = data["snippet"]
-            element["image"] =  data["htmlFormattedUrl"]["cse_image"]["src"]
+            element["image"] = data["htmlFormattedUrl"]["cse_image"]["src"]
             element["linkToDisplay"] = data["displayLink"]
 
         return self.jsonOutput
 
     def findDatasOfAnUrl(self, url, gSon):
         gSon = gSon["urls"]
-        
+
         for element in gSon:
             if element["link"] == url:
                 return element
+
 
 ##############
 ##   MAIN   ##
