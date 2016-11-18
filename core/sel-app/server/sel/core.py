@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import with_statement, print_function, division
+
+from collections import Counter
+
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
-
 
 
 def generate_matrix(parsed_query):
@@ -38,17 +40,39 @@ def compute_similarity(element,
             compare_to["entitiesDisambiguated"]))))) / (weight_disambiguated + weight_concepts)
 
 
-#def obtain_bests_predicates(URI,
-#                            URIs):
-#    for element in obtain_same_type(URI):
-#        for attributes in obtain_attributes(element):
+def obtain_revelant_attributes(URI):
+    def transform_obtain_bests_predicates(URI):
+        for element in obtain_bests_predicates(URI):
+            yield " OPTIONAL{ <"+URI+"> <"+element+"> ?"+str(element).split("/")[-1].replace("#", "")+" }"
 
+    query = "SELECT * WHERE {{ {} }}".format(" ".join(transform_obtain_bests_predicates(URI)))
+
+    response = query_sparql(query)
+
+    for var in response["head"]["vars"]:
+        yield (var,response["results"]["bindings"][0][var]["value"])
+
+def obtain_bests_predicates(URI,
+                            top=20):
+    redundancy = Counter()
+
+    for element in obtain_same_type(URI):
+        for attributes in obtain_attributes(element):
+            redundancy[attributes] += 1
+
+    current_top = 0
+    for element in redundancy.most_common():
+        if element[1] < 1000:
+            current_top+=1
+            yield element[0]
+        if current_top >= top:
+            break
 
 #################
 #   SPARQL API  #
 #################
 def obtain_attributes(URI):
-    query = "SELECT ?data WHERE { <"+URI+"> ?data ?o. FILTER(lang(?o) = '' || lang(?o) = 'en'). }"
+    query = "SELECT ?data WHERE { <"+URI+"> ?data ?o. }"
 
     response = query_sparql(query)
 
@@ -57,12 +81,22 @@ def obtain_attributes(URI):
 
 
 def obtain_same_type(URI):
-    query = "SELECT * WHERE {{ ?same_type rdf:type {}. }}".format(" ; ".join(obtain_types(URI)))
+    query = "SELECT * WHERE {{ ?same_type rdf:type <{}>. }} LIMIT 1000".format("> , <".join(obtain_best_types(URI)))
 
     response = query_sparql(query)
 
     for element in response["results"]["bindings"]:
         yield element["same_type"]["value"]
+
+
+def obtain_best_types(URI,
+                      top=10):
+    current_top = 0
+    for element in obtain_types(URI):
+        current_top+=1
+        if top <= current_top :
+            break
+        yield element
 
 
 def obtain_types(URI):
