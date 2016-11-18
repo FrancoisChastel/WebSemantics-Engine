@@ -63,7 +63,7 @@ class URIFactory:
             data = json.load(data_file)
             customSearchApiKey = data['customSearch']['apiKey']
             customSearchCx = data['customSearch']['cx']
-            AlchemyApiKey = data['alchemy']['apiKey'][1]
+            AlchemyApiKey = data['alchemy']['apiKey'][2]
 
         # STEP 1: Send Google Request
         # print "-- Getting list of URL (CustomSearch) --"

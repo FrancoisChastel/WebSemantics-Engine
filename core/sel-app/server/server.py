@@ -3,6 +3,7 @@ from flask import request
 import urifactory.URIFactory as URIFactory
 import sel.core as core
 import pertinenceengine.pertinenceEngine as PertinenceEngine
+import similariteengine.similariteEngine as SimilariteEngine
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import logging
@@ -43,6 +44,7 @@ def generate_json(query):
 
 @app.route('/search/<query>')
 def search(query):
+<<<<<<< fd5a6a29d494b50a112a25b42e8a19ed8cf7c4a4
     # -- Pipeline --
 
     # URIFactory
@@ -69,6 +71,38 @@ def search(query):
     return json.dumps(outputJson)
 
 
+=======
+	# -- Pipeline --
+		
+	# URIFactory
+	urifactory = URIFactory.URIFactory()
+	outputJson = urifactory.run(query)
+	parsed_query = outputJson['Websites']
+	logging.info('Step 1 : Done')
+	
+	# TypeFactory
+	alimentByType(parsed_query)
+	logging.info('Step 2 : Done')
+	
+	# TypeRanker
+	evaluated_types = dict()
+	evaluateType(evaluated_types,parsed_query)
+	outputJson['typeRank'] = evaluated_types
+	logging.info('Step 3 : Done')
+	
+	# Pertinence
+	pertinenceEngine = PertinenceEngine.PertinenceEngine(outputJson)
+	outputJson = pertinenceEngine.run()
+	logging.info('Step 4 : Done')
+	
+	# Similarity 
+	similariteEngine = SimilariteEngine.SimilariteEngine(outputJson)
+	result = similariteEngine.run()
+	outputJson["similarities"] = result
+	#print json.dumps(outputJson)
+	return outputJson
+
+>>>>>>> Add - functionnal version of pertinence
 def alimentByType(parsed_query):
     for url in parsed_query:
         uris = url["URIs"]
