@@ -90,7 +90,7 @@ class URIFactory:
 
         # STEP 3: Make JSON more richer with image, title and description
         for element in self.jsonOutput["Websites"]:
-            data = self.findDatasOfAnUrl(element["url"], resultat)
+            data = self.findDatasOfAnUrl(element["URL"], resultat)
             element["title"] = data["title"]
             element["summary"] = data["snippet"]
             element["image"] = data["htmlFormattedUrl"]["cse_image"]["src"]
@@ -99,7 +99,7 @@ class URIFactory:
         return self.jsonOutput
 
     def findDatasOfAnUrl(self, url, gSon):
-        gSon = gSon["urls"]
+        gSon = gSon["items"]
 
         for element in gSon:
             if element["link"] == url:
