@@ -53,6 +53,15 @@ def obtain_revelant_attributes(URI):
         if var in response["results"]["bindings"][0]:
             yield (var,response["results"]["bindings"][0][var]["value"])
 
+
+def obtain_thumbnail(URI):
+    query = '''
+        SELECT * WHERE {
+        OPTIONAL{<''' + URI + '''> <http://dbpedia.org/ontology/thumbnail> ?thumbnail.}
+        }'''
+    return query_sparql(query)["results"]["bindinfs"][0]["thumbnail"]["value"]
+
+
 def obtain_bests_predicates(URI,
                             top=20):
     redundancy = Counter()
