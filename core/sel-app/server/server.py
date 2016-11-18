@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 import urifactory.URIFactory as URIFactory
 import sel.core as core
 import pertinenceengine.pertinenceEngine as PertinenceEngine
@@ -65,8 +66,7 @@ def search(query):
     outputJson = pertinenceEngine.run()
     logging.info('Step 4 : Done')
 
-    print(json.dumps(outputJson))
-    return outputJson
+    return json.dumps(outputJson)
 
 
 def alimentByType(parsed_query):
