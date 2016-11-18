@@ -241,7 +241,7 @@
             ];*/
             nodes = [];
             edges = [];
-            $.getJSON("example2.json", function(json) {
+            $.getJSON("http://127.0.0.1:5000/search/Barack+Obama", function(json) {
                 /*var allUrls = [];
                 for(var i=0;i<json["link_url"].length;i++)
                 {
@@ -256,9 +256,24 @@
                 var ranks = [];
                 for(var i=0;i<json["Websites"].length;i++)
                 {
+                    //getInfoURI(json["Websites"][i]["URIs"][0]["name"]);
                     uniqueNodes.push(json["Websites"][i]["URL"]);
                     ranks.push(json["Websites"][i]["rank"]);
                 }
+                var ranksScaled = [];
+                var maxRank = 0;
+                for(var i=0;i<ranks.length;i++)
+                {
+                    if(parseInt(ranks[i]) > maxRank)
+                    {
+                        maxRank=parseInt(ranks[i]);
+                    }
+                }
+                for(var i=0;i<ranks.length;i++)
+                {
+                    ranksScaled[i]=parseInt((ranks[i]/maxRank)*30+20);
+                }
+
                 for(var i=0;i<uniqueNodes.length;i++)
                 {
                     var urlWithoutHttp = uniqueNodes[i].substr(uniqueNodes[i].indexOf("/")+2);
@@ -266,7 +281,7 @@
                     {
                         urlWithoutHttp = urlWithoutHttp.substr(0,urlWithoutHttp.indexOf("/"));
                     }
-                    addNodeImage(uniqueNodes[i],ranks[i]);
+                    addNodeImage(uniqueNodes[i],ranksScaled[i]);
                 }
                 var notSameNodesEdges = [];
                 /*for(var i=0;i<json["link_url"].length;i++)
@@ -345,6 +360,24 @@
                 resultsList();
             });
 
+
+        }
+
+        function getInfoURI(uri) {
+            $.ajax({
+                url:'http://127.0.0.1:5000/infoURI',
+                method:'POST',
+                data:{uri:uri},
+                dataType:'json',
+                success:function(data)
+                {
+                    console.log(data);
+                },
+                error:function(data)
+                {
+                    console.log(data);
+                }
+            });
 
         }
 
