@@ -1,8 +1,10 @@
 from flask import Flask
-import URIFactory.URIFactory as engine
+import urifactory.URIFactory as URIFactory
 import sel.core as core
+import pertinenceengine.pertinenceEngine as PertinenceEngine
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
+import logging
 
 app = Flask(__name__)
 
@@ -45,16 +47,33 @@ def generate_json(query):
     to_return =  json.dumps(data_json)
     return to_return
 
-
-def test(query):
-    engined = engine.Engine()
-    query = engined.run(query)
-    parsed_query = query['Websites']
-    alimentByType(parsed_query)
-    evaluated_types = dict()
-    evaluateType(evaluated_types,parsed_query)
-    query['typeRank'] = evaluated_types
-    return query
+@app.route('/search/<query>')
+def search(query):
+	# -- Pipeline --
+		
+	# URIFactory
+	urifactory = URIFactory.URIFactory()
+	outputJson = urifactory.run(query)
+	parsed_query = outputJson['Websites']
+	logging.info('Step 1 : Done')
+	
+	# TypeFactory
+	alimentByType(parsed_query)
+	logging.info('Step 2 : Done')
+	
+	# TypeRanker
+	evaluated_types = dict()
+	evaluateType(evaluated_types,parsed_query)
+	outputJson['typeRank'] = evaluated_types
+	logging.info('Step 3 : Done')
+	
+	# Pertinence
+	pertinenceEngine = PertinenceEngine.PertinenceEngine(outputJson)
+	outputJson = pertinenceEngine.run()
+	logging.info('Step 4 : Done')
+	
+	print json.dumps(outputJson)
+	return outputJson
 
 
 

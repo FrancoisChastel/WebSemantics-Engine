@@ -11,7 +11,7 @@ import time
 ## Class Engine ##
 ##################
 
-class Engine:
+class URIFactory:
     # extract "concept" dbpedia URI from a well formed Alchemy JSON
     def extractingConceptsJSON(self, jsonIN):
         concepts = []
@@ -63,7 +63,7 @@ class Engine:
             data = json.load(data_file)
             customSearchApiKey = data['customSearch']['apiKey']
             customSearchCx = data['customSearch']['cx']
-            AlchemyApiKey = data['alchemy']['apiKey']
+            AlchemyApiKey = data['alchemy']['apiKey'][1]
 
         # STEP 1: Send Google Request
         # print "-- Getting list of URL (CustomSearch) --"
@@ -89,7 +89,7 @@ class Engine:
         # print "requests sent"
         grequests.map(rs)
         # print "all responses received"
-        print(json.dumps(self.jsonOutput))
+        #print(json.dumps(self.jsonOutput))
         return self.jsonOutput
 
 
@@ -103,7 +103,7 @@ def main():
         sys.exit(1)
 
     request = sys.argv[1]
-    engine = Engine()
+    engine = URIFactory()
     engine.run(request)
 
 
