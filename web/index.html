@@ -241,8 +241,8 @@
             ];*/
             nodes = [];
             edges = [];
-            $.getJSON("example.json", function(json) {
-                var allUrls = [];
+            $.getJSON("example2.json", function(json) {
+                /*var allUrls = [];
                 for(var i=0;i<json["link_url"].length;i++)
                 {
                     allUrls.push(json["link_url"][i]['urls'][0]);
@@ -251,7 +251,14 @@
                 var uniqueNodes = [];
                 $.each(allUrls, function(i, el){
                     if($.inArray(el, uniqueNodes) === -1) uniqueNodes.push(el);
-                });
+                });*/
+                var uniqueNodes = [];
+                var ranks = [];
+                for(var i=0;i<json["Websites"].length;i++)
+                {
+                    uniqueNodes.push(json["Websites"][i]["URL"]);
+                    ranks.push(json["Websites"][i]["rank"]);
+                }
                 for(var i=0;i<uniqueNodes.length;i++)
                 {
                     var urlWithoutHttp = uniqueNodes[i].substr(uniqueNodes[i].indexOf("/")+2);
@@ -259,16 +266,16 @@
                     {
                         urlWithoutHttp = urlWithoutHttp.substr(0,urlWithoutHttp.indexOf("/"));
                     }
-                    addNodeImage(uniqueNodes[i]);
+                    addNodeImage(uniqueNodes[i],ranks[i]);
                 }
                 var notSameNodesEdges = [];
-                for(var i=0;i<json["link_url"].length;i++)
+                /*for(var i=0;i<json["link_url"].length;i++)
                 {
                     if(json["link_url"][i]['urls'][0] != json["link_url"][i]['urls'][1])
                     {
                         edges.push({length: 0.3, from : json["link_url"][i]['urls'][0], to : json["link_url"][i]['urls'][1],width : json["link_url"][i]['weight'][0]*10, label : json["link_url"][i]['weight'][0]});
                     }
-                }
+                }*/
                 /*edges = [
                  { from : 'p1', to : 'p2'},
                  { from : 'p1', to : 'p3'},
@@ -286,7 +293,6 @@
                 options = {
                     nodes : {
                         borderWidth : 3,
-                        size:30,
                         color : { border: '#222222'},
                         font : {color:'#000000'}
                     },
@@ -405,7 +411,7 @@
             resultsList();
         }
 
-        function addNodeImage(url)
+        function addNodeImage(url,rank)
         {
             $.ajax(
                 {
@@ -432,7 +438,7 @@
                                     {
                                         var src = $(this).attr("src");
                                         var srcHttp = src.replace('//','https://');
-                                        nodes.push({id : url, link : url, shape : 'circularImage', image:srcHttp});
+                                        nodes.push({id : url, link : url,size : rank, shape : 'circularImage', image:srcHttp});
                                         found = true;
                                         redraw();
                                     }
