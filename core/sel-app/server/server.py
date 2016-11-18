@@ -12,8 +12,10 @@ def findResults():
     return 'H'
 
 
-@app.route('/infoURI/<uri>')
-def findInfoUri(uri):
+@app.route('/infoURI', methods=['GET', 'POST'])
+def findInfoUri():
+
+    uri = request.form['uri']
     response = list()
 
     for value in core.obtain_revelant_attributes(uri):
