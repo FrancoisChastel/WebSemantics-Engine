@@ -36,7 +36,7 @@ class URIFactory:
             url = resultatAlchemy["url"]
         except Exception as e:
             print("Exception raised : Incorrect JSON responses. Content:" + r.text + " Exception : " + type(e))
-            return;
+            return
         try:
             # extracting Concepts
             concepts = self.extractingConceptsJSON(resultatAlchemy)
@@ -44,7 +44,7 @@ class URIFactory:
             mergedList = concepts + disambiguated
         except Exception as e:
             print("Exception raised : Unable to extract concepts and disambiguatedEntities " + type(e))
-            return;
+            return
         try:
             # formatting JSON
             self.jsonOutput["Websites"].append(
@@ -86,15 +86,27 @@ class URIFactory:
                 "https://gateway-a.watsonplatform.net/calls/url/URLGetCombinedData?apikey=" + AlchemyApiKey + "&url=" + url + "&outputMode=json")
 
         rs = (grequests.get(u, hooks=dict(response=self.alchemyResponseCallback)) for u in urlToRequest)
-        # print "requests sent"
         grequests.map(rs)
-        # print "all responses received"
-        #print(json.dumps(self.jsonOutput))
+
+        # STEP 3: Make JSON more richer with image, title and description
+        for element in self.jsonOutput["Websites"]:
+            data = self.findDatasOfAnUrl(element["url"], resultat)
+            element["title"] =  data["title"]
+            element["summary"] = data["snippet"]
+            element["image"] =  data["htmlFormattedUrl"]["cse_image"]["src"]
+            element["linkToDisplay"] = data["displayLink"]
+
         return self.jsonOutput
 
+    def findDatasOfAnUrl(self, url, gSon):
+        gSon = gSon["urls"]
+        
+        for element in gSon:
+            if element["link"] == url:
+                return element
 
 ##############
-##   MAIN		##
+##   MAIN   ##
 ##############
 
 def main():
