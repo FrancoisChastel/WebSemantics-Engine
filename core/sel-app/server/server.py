@@ -74,6 +74,15 @@ def search(query):
     return json.dumps(outputJson)
 
 
+@app.route('/getthumbnail', methods=['GET', 'POST'])
+def thumbnail():
+    uri = request.form['uri']
+    value = core.obtain_thumbnail(uri)
+    response = dict()
+    response['link'] = value
+    return json.dumps(response)
+
+
 def alimentByType(parsed_query):
     for url in parsed_query:
         uris = url["URIs"]
