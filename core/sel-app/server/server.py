@@ -71,7 +71,7 @@ def search(query):
     result = similariteEngine.run()
     outputJson["similarities"] = result
     # print json.dumps(outputJson)
-    return outputJson
+    return json.dumps(outputJson)
 
 
 def alimentByType(parsed_query):

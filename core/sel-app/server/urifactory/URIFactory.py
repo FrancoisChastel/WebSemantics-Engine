@@ -63,7 +63,7 @@ class URIFactory:
             data = json.load(data_file)
             customSearchApiKey = data['customSearch']['apiKey']
             customSearchCx = data['customSearch']['cx']
-            AlchemyApiKey = data['alchemy']['apiKey'][2]
+            AlchemyApiKey = data['alchemy']['apiKey'][3]
 
         # STEP 1: Send Google Request
         # print "-- Getting list of URL (CustomSearch) --"
@@ -91,10 +91,16 @@ class URIFactory:
         # STEP 3: Make JSON more richer with image, title and description
         for element in self.jsonOutput["Websites"]:
             data = self.findDatasOfAnUrl(element["URL"], resultat)
-            element["title"] = data["title"]
-            element["summary"] = data["snippet"]
-            element["image"] = data["htmlFormattedUrl"]["cse_image"][0]["src"]
-            element["linkToDisplay"] = data["displayLink"]
+            if data is not None:
+                if "title" in data.keys():
+                    element["title"] = data["title"]
+                if "snippet" in data.keys():
+                    element["summary"] = data["snippet"]
+                if "pagemap" in data.keys():
+                    if "cse_image" in data["pagemap"].keys():
+                        element["image"] = data["pagemap"]["cse_image"][0]["src"]
+                if "displayLink" in data.keys():
+                    element["linkToDisplay"] = data["displayLink"]
 
         return self.jsonOutput
 

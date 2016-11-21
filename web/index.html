@@ -39,6 +39,7 @@
         </div>
         <div id="graph"></div>
         <div id="results"></div>
+        <div id="modals"></div>
     </div>
 </div>
 </body>
@@ -191,7 +192,7 @@
         var informations = null;
         var data = null;
         var options = null;
-
+        var infoURIs = [];
         function draw()
         {
             $('#loadingSpin').css('display','block');
@@ -219,24 +220,39 @@
             }
             searchWords+=keywords[keywords.length-1];
             $.getJSON("http://127.0.0.1:5000/search/"+searchWords, function(json) {
-                /*var allUrls = [];
-                for(var i=0;i<json["link_url"].length;i++)
-                {
-                    allUrls.push(json["link_url"][i]['urls'][0]);
-                    allUrls.push(json["link_url"][i]['urls'][1]);
-                }
+
                 var uniqueNodes = [];
-                $.each(allUrls, function(i, el){
-                    if($.inArray(el, uniqueNodes) === -1) uniqueNodes.push(el);
-                });*/
-                var uniqueNodes = [];
+                var imageNodes = [];
                 var ranks = [];
+                var titlesNodes = [];
+                var weightEdges = [];
+                var linkNodes = [];
+                var summaryNodes = [];
                 for(var i=0;i<json["Websites"].length;i++)
                 {
                     //getInfoURI(json["Websites"][i]["URIs"][0]["name"]);
                     uniqueNodes.push(json["Websites"][i]["URL"]);
+                    imageNodes.push(json["Websites"][i]["image"]);
                     ranks.push(json["Websites"][i]["rank"]);
+                    titlesNodes.push(json["Websites"][i]["title"]);
+                    linkNodes.push(json["Websites"][i]["linkToDisplay"]);
+                    summaryNodes.push(json["Websites"][i]["summary"]);
+
+                    var maxSum = 0;
+                    var bestURI;
+                    var bestURL;
+                    for(var j=0;j<json["Websites"][i]["URIs"].length;j++)
+                    {
+                        if(json["Websites"][i]["URIs"][j]['sum']>maxSum)
+                        {
+                            maxSum=json["Websites"][i]["URIs"][j]['sum'];
+                            bestURI=json["Websites"][i]["URIs"][j]['name'];
+                            bestURL=json["Websites"][i]["URL"];
+                        }
+                    }
+                    getInfoURI(bestURL,bestURI);
                 }
+
                 var ranksScaled = [];
                 var maxRank = 0;
                 for(var i=0;i<ranks.length;i++)
@@ -248,35 +264,34 @@
                 }
                 for(var i=0;i<ranks.length;i++)
                 {
-                    ranksScaled[i]=parseInt((ranks[i]/maxRank)*30+20);
+                    ranksScaled[i]=parseInt((ranks[i]/maxRank)*50+20);
                 }
-
                 for(var i=0;i<uniqueNodes.length;i++)
                 {
-                    var urlWithoutHttp = uniqueNodes[i].substr(uniqueNodes[i].indexOf("/")+2);
-                    if(urlWithoutHttp.indexOf("/") != -1)
+                    if(imageNodes[i] == undefined)
                     {
-                        urlWithoutHttp = urlWithoutHttp.substr(0,urlWithoutHttp.indexOf("/"));
+                        imageNodes[i] = 'http://fr.seaicons.com/wp-content/uploads/2015/10/Internet-icon.png';
                     }
-                    addNodeImage(uniqueNodes[i],ranksScaled[i]);
+                    nodes.push({id : uniqueNodes[i], idModal : i, parent : true, summary: summaryNodes[i], linkToDisplay: linkNodes[i], link : uniqueNodes[i],size : ranksScaled[i], shape : 'circularImage', image:imageNodes[i], label : titlesNodes[i]})
                 }
-                var notSameNodesEdges = [];
-                /*for(var i=0;i<json["link_url"].length;i++)
+
+                for(var i=0;i<json['similarities'].length;i++)
                 {
-                    if(json["link_url"][i]['urls'][0] != json["link_url"][i]['urls'][1])
+                    if(json['similarities'][i]['to'] != json['similarities'][i]['from'])
                     {
-                        edges.push({length: 0.3, from : json["link_url"][i]['urls'][0], to : json["link_url"][i]['urls'][1],width : json["link_url"][i]['weight'][0]*10, label : json["link_url"][i]['weight'][0]});
+                        weightEdges[i]={id:i, value:parseFloat(json["similarities"][i]["weight"])};
                     }
-                }*/
-                /*edges = [
-                 { from : 'p1', to : 'p2'},
-                 { from : 'p1', to : 'p3'},
-                 { from : 'p3', to : 'p2'},
-                 ];*/
+                }
+                var indexEdges = [];
+                weightEdges.sort(function(a, b)
+                {
+                    return b.value-a.value
+                });
 
-
-
-                //addAllEdges();
+                for(var i=0;i<10 && i<weightEdges.length;i++)
+                {
+                    edges.push({to : json['similarities'][weightEdges[i].id]["to"], from: json['similarities'][weightEdges[i].id]["from"], width: parseInt(weightEdges[i].value*5), label : (parseInt(weightEdges[i].value*100)).toString() + ' %'})
+                }
 
                 data = {
                     nodes : nodes,
@@ -290,7 +305,7 @@
                     },
                     edges : {
                         color:'black',
-                        length:10,
+                        length:20,
                     },
                     physics : {
                         enabled:false
@@ -298,40 +313,13 @@
                 };
                 network = new vis.Network(container,data,options);
                 dataSet = new vis.DataSet(nodes);
-
-                informations = [
-                    {
-                        id:'f1p1',
-                        title:'Yolo',
-                        desc:{
-                            Lieu : 'Paris',
-                            Departement: '75'
-                        }
-                    },
-                    {
-                        id:'f2p2',
-                        title:'Héhé',
-                        desc:{
-                            Lieu : 'Popo',
-                            Departement: '75',
-                            Date : 'Aujourd\'hui'
-                        }
-                    }
-                ];
-
                 addModals();
                 network.on( 'click', function(properties) {
-                    if(properties.nodes[0].indexOf('f')!=-1)
+                    if(dataSet.get(properties.nodes)[0].idModal > 9)
                     {
-                        $('#modal'+properties.nodes).modal();
-                        $('#modal'+properties.nodes).modal('open');
-                    }
-                    else
-                    {
-                        if(dataSet.get(properties.nodes)[0].link)
-                        {
-                            window.open(dataSet.get(properties.nodes)[0].link);
-                        }
+                        var id = dataSet.get(properties.nodes)[0].idModal;
+                        $('#modal'+id).modal();
+                        $('#modal'+id).modal('open');
                     }
                 });
                 resultsList();
@@ -339,8 +327,8 @@
 
 
         }
-
-        function getInfoURI(uri) {
+        var idModals = 10;
+        function getInfoURI(url,uri) {
             $.ajax({
                 url:'http://127.0.0.1:5000/infoURI',
                 method:'POST',
@@ -348,7 +336,11 @@
                 dataType:'json',
                 success:function(data)
                 {
-                    console.log(data);
+                    nodes.push({id : uri, idModal : idModals, parent : false, summary: '', linkToDisplay: '', link : uri,size : 20, shape : 'circularImage', image:'', label : ''})
+                    infoURIs.push({id:  idModals++,url : url, uri : uri, data : data});
+                    edges.push({to : uri, from : url, width:10});
+                    redraw();
+                    addModals();
                 },
                 error:function(data)
                 {
@@ -358,125 +350,73 @@
 
         }
 
-        function redraw()
-        {
+        function redraw() {
             var container = document.getElementById('graph');
             data = {
-                nodes : nodes,
-                edges : edges
+                nodes: nodes,
+                edges: edges
             };
             options = {
-                nodes : {
-                    borderWidth : 3,
-                    size:30,
-                    color : { border: '#222222'},
-                    font : {color:'#000000'}
+                nodes: {
+                    borderWidth: 3,
+                    color: {border: '#222222'},
+                    font: {color: '#000000'}
                 },
-                edges : {
-                    color:'black',
-                    length:10,
+                edges: {
+                    color: 'black',
+                    length: 20,
                 },
-                physics : {
-                    enabled:false
+                physics: {
+                    enabled: false
                 }
             };
-            network = new vis.Network(container,data,options);
+            network = new vis.Network(container, data, options);
             dataSet = new vis.DataSet(nodes);
 
-            informations = [
-                {
-                    id:'f1p1',
-                    title:'Yolo',
-                    desc:{
-                        Lieu : 'Paris',
-                        Departement: '75'
-                    }
-                },
-                {
-                    id:'f2p2',
-                    title:'Héhé',
-                    desc:{
-                        Lieu : 'Popo',
-                        Departement: '75',
-                        Date : 'Aujourd\'hui'
-                    }
-                }
-            ];
-
-            addModals();
-            network.on( 'click', function(properties) {
-                if(properties.nodes[0].indexOf('f')!=-1)
-                {
-                    $('#modal'+properties.nodes).modal();
-                    $('#modal'+properties.nodes).modal('open');
-                }
-                else
-                {
-                    if(dataSet.get(properties.nodes)[0].link)
-                    {
-                        window.open(dataSet.get(properties.nodes)[0].link);
-                    }
+            network.on('click', function (properties) {
+                if (dataSet.get(properties.nodes)[0].idModal > 9) {
+                    var id = dataSet.get(properties.nodes)[0].idModal;
+                    $('#modal' + id).modal();
+                    $('#modal' + id).modal('open');
                 }
             });
             resultsList();
         }
 
-        function addNodeImage(url,rank)
-        {
-            $.ajax(
-                {
-                    url: url,
-                    success: function(data) {
-                        var html = $.parseHTML( data ),
-                            img = $(html).find("img"),
-                            len = img.length;
-                        if( len > 0 ){
-                            var found = false;
-                            $(img).each(function(){
-
-                                if($(this).attr("src") != null)
-                                {
-                                    if($(this).attr("src").substr(0,4) == "http" && !found)
-                                    {
-                                        var srcHttp = $(this).attr("src");
-                                        nodes.push({id : url, link : url, shape : 'circularImage', image:srcHttp});
-                                        found = true;
-
-                                        redraw();
-                                    }
-                                    else if($(this).attr("src").substr(0,2) == '//' && !found)
-                                    {
-                                        var src = $(this).attr("src");
-                                        var srcHttp = src.replace('//','https://');
-                                        nodes.push({id : url, link : url,size : rank, shape : 'circularImage', image:srcHttp});
-                                        found = true;
-                                        redraw();
-                                    }
-
-                                }
-                            });
-                        } else {
-                            console.log("Image not found");
-                        }
-                    }
-                });
-        }
-
-
 
         function resultsList()
         {
             var contenu = '<div class="col s12">';
+
+
             for(var i=0;i<nodes.length;i++)
             {
+                var link = nodes[i].link;
+                var image = nodes[i].image;
+                var label = nodes[i].label;
+                var summary = nodes[i].summary;
+                var linkToDisplay = nodes[i].linkToDisplay;
+                if(label == undefined)
+                {
+                    label = link;
+                }
+                if(summary == undefined)
+                {
+                    summary = link;
+                }
+                if(linkToDisplay == undefined)
+                {
+                    linkToDisplay = link;
+                }
                 contenu+='<div class="card horizontal"><div class="card-image">';
-                contenu+='<img src="http://lorempixel.com/100/190/nature/6"></div>';
+                contenu+='<img style="width:100px;margin:auto" src="'+image+'"></div>';
                 contenu+='<div class="card-stacked">'+
                 '<div class="card-content">'+
-                '<p>Yolo</p>'+
+                '<p>'+label+'</p>'+
+                '<p>'+summary+'</p>'+
                 '</div>'+
                 '<div class="card-action">'+
-                '<a href="#" target="_blank">Plus d\'infos</a>'+
+                '<a href="'+link+'" target="_blank">'+linkToDisplay+'</a>'+
                 '</div>'+
                 '</div>'+
                 '</div>';
@@ -501,14 +441,22 @@
 
         function addModals()
         {
-            for (var i=0;i<informations.length;i++) {
+            $('#modals').empty();
+            for (var i=0;i<infoURIs.length;i++) {
                 var contenu = '';
-                contenu += '<div id="modal' + informations[i]['id'] + '" class="modal">';
+                contenu += '<div id="modal'+infoURIs[i].id+'" class="modal">';
                 contenu += '<div class="modal-content">';
-                contenu += '<h4>' + informations[i]['title'] + '</h4>';
-                for (var keyInfo in informations[i]['desc']) {
-                    if (informations[i]['desc'].hasOwnProperty(keyInfo)) {
-                        contenu += '<bold>' + keyInfo + ' : </bold><p>' + informations[i]['desc'][keyInfo] + '</p>';
+                contenu += '<h4>' + infoURIs[i].uri + '</h4>';
+                for (var keyInfo in infoURIs[i].data) {
+                    if (infoURIs[i].data.hasOwnProperty(keyInfo)) {
+                        if(infoURIs[i].data[keyInfo].attribut == "thumbnail")
+                        {
+                            contenu += '<bold>' + infoURIs[i].data[keyInfo].attribut + ' : </bold><p><img src="' + infoURIs[i].data[keyInfo].valeur + '"></p>';
+                        }
+                        else
+                        {
+                            contenu += '<bold>' + infoURIs[i].data[keyInfo].attribut + ' : </bold><p>' + infoURIs[i].data[keyInfo].valeur + '</p>';
+                        }
                     }
                 }
                 contenu += '</div>';
@@ -516,7 +464,7 @@
                 contenu += '<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>'
                 contenu += '</div>';
                 contenu += '</div>';
-                $('body').append(contenu);
+                $('#modals').append(contenu);
             }
         }
 
